@@ -1,2 +1,19 @@
+    <footer>
+      <div>
+        &copy; Copyright 2022 Restaurant Name
+      </div>
+      <div>
+        <img src="" alt="Logo">
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Test link</a></li>
+          <li><a href="#">Test link</a></li>
+          <li><a href="#">Test link</a></li>
+          <li><a href="#">Test link</a></li>
+          <li><a href="/login">Staff Login</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
