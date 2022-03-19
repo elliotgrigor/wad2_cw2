@@ -1,1 +1,34 @@
 * { margin: 0; padding: 0; }
+
+.nav {
+  background: #333;
+  color: #fff;
+  height: 10vh;
+}
+.nav__list {
+  list-style-type: none;
+  width: 50%;
+  margin: 0 auto;
+  height: inherit;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav__listitem {
+  height: inherit;
+
+  display: flex;
+}
+.nav__link {
+  text-decoration: none;
+  color: inherit;
+  width: 5vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__linktext {
+  font-size: 1.5rem;
+}

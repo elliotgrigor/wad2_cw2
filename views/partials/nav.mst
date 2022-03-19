@@ -1,9 +1,31 @@
-<nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/menu">Menu</a></li>
-    <li><img src="" alt="Logo"></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/aboutus">About</a></li>
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__listitem">
+      <a class="nav__link" href="/">
+        <span class="nav__linktext">Home</span>
+      </a>
+    </li>
+
+    <li class="nav__listitem">
+      <a class="nav__link" href="/menu">
+        <span class="nav__linktext">Menu</span>
+      </a>
+    </li>
+
+    <li class="nav__listitem">
+      <img class="nav__logo" src="" alt="Logo" />
+    </li>
+
+    <li class="nav__listitem">
+      <a class="nav__link" href="/contact">
+        <span class="nav__linktext">Contact</span>
+      </a>
+    </li>
+
+    <li class="nav__listitem">
+      <a class="nav__link" href="/aboutus">
+        <span class="nav__linktext">About</span>
+      </a>
+    </li>
   </ul>
 </nav>
