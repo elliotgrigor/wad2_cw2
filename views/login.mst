@@ -1,5 +1,25 @@
 {{ >partials/header }}
 
-  <h1>Staff login</h1>
+  <div class="viewport">
+
+    <div class="login">
+      <img class="login__img" src="" alt="Logo" />
+
+      <form class="login__form" action="/login" method="post">
+        <div class="login__formgroup">
+          <label class="login__label" for="id">Staff ID</label>
+          <input class="login__input" type="text" name="id" />
+        </div>
+
+        <div class="login__formgroup">
+          <label class="login__label" for="password">Password</label>
+          <input class="login__input" type="password" name="password" />
+        </div>
+
+        <input class="login__button" type="submit" value="Log in">
+      </form>
+    </div>
+    
+  </div>
 
 {{ >partials/nofooter }}
