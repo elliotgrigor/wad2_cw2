@@ -5,5 +5,9 @@ exports.home = (req, res) => {
 };
 
 exports.login = (req, res) => {
-  res.render('login', {});
+  const css = [
+    { url: '/css/login.css' },
+  ];
+
+  res.render('login', { css });
 };
