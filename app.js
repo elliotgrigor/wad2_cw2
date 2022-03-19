@@ -6,6 +6,8 @@ const mustacheExpress = require('mustache-express');
 
 const pageRouter = require('./routes/pageRoutes');
 
+app.use(express.static('public'));
+
 app.engine('mst', mustacheExpress(`${__dirname}/views`, '.mst'));
 app.set('view engine', 'mst');
 
