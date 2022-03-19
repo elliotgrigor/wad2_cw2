@@ -1,5 +1,6 @@
 {{ >partials/header }}
+{{ >partials/nav }}
 
-<h1>Restaurant homepage</h1>
+  <h1>Restaurant homepage</h1>
 
 {{ >partials/footer }}
