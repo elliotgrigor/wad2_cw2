@@ -1,4 +1,7 @@
 node_modules/
 db/
+
 package-lock.json
+run.sh
+
 .env
