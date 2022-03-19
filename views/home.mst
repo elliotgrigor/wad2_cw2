@@ -1,0 +1,5 @@
+{{ >partials/header }}
+
+<h1>Restaurant homepage</h1>
+
+{{ >partials/footer }}

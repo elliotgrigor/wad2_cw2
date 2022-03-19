@@ -1,4 +1,5 @@
+const { render } = require('mustache-express');
 
 exports.home = (req, res) => {
-  res.send('<h1>Restaurant homepage</h1>');
+  res.render('home', {});
 };

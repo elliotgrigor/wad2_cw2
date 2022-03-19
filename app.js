@@ -2,8 +2,12 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
+const mustacheExpress = require('mustache-express');
 
 const pageRouter = require('./routes/pageRoutes');
+
+app.engine('mst', mustacheExpress(`${__dirname}/views`, '.mst'));
+app.set('view engine', 'mst');
 
 app.use('/', pageRouter);
 
