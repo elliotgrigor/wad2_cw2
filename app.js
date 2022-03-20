@@ -10,6 +10,7 @@ const SQLiteStore = require('@gristlabs/connect-sqlite3')(session);
 
 const pageRouter = require('./routes/pageRoutes');
 const authRouter = require('./routes/authRoutes');
+const staffRouter = require('./routes/staffRoutes');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended:false }));
@@ -27,6 +28,7 @@ app.set('view engine', 'mst');
 
 app.use('/', pageRouter);
 app.use('/', authRouter);
+app.use('/staff', staffRouter);
 
 app.listen(process.env.PORT, process.env.HOST, (req, res) => {
   console.log(`Listening on http://${process.env.HOST}:${process.env.PORT}`);
