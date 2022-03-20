@@ -1,7 +1,7 @@
 const Datastore = require('@seald-io/nedb');
 
 class StaffModel {
-  consstructor(dbPath) {
+  constructor(dbPath) {
     if (dbPath) {
       this.db = new Datastore({ filename: dbPath, autoload: true });
       console.log('DB connected to ', dbPath);
