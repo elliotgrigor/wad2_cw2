@@ -11,6 +11,16 @@ class StaffModel {
     }
   }
 
+  getStaffMember(staffId) {
+    this.db.findOne(
+      { staffId },
+      (err, doc) => {
+        if (err) return console.log(err.message);
+        return doc;
+      }
+    );
+  }
+
   seed() {
     this.db.insert({
       staffId: 'A001',
