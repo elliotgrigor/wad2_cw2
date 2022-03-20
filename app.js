@@ -4,12 +4,23 @@ const express = require('express');
 const app = express();
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const session = require('express-session');
+const SQLiteStore = require('@gristlabs/connect-sqlite3')(session);
 
 const pageRouter = require('./routes/pageRoutes');
 const authRouter = require('./routes/authRoutes');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended:false }));
+
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false,
+  store: new SQLiteStore({ db: 'sessions.db', dir: './db' })
+}));
+app.use(passport.authenticate('session'));
 
 app.engine('mst', mustacheExpress(`${__dirname}/views`, '.mst'));
 app.set('view engine', 'mst');

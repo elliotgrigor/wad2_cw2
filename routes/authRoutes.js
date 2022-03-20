@@ -25,17 +25,17 @@ passport.use(new LocalStrategy((username, password, done) => {
   );
 }));
 
-// passport.serializeUser((user, done) => {
-//   process.nextTick(() => {
-//     done(null, { ...user });
-//   });
-// });
+passport.serializeUser((user, done) => {
+  process.nextTick(() => {
+    done(null, { ...user });
+  });
+});
 
-// passport.deserializeUser((user, done) => {
-//   process.nextTick(() => {
-//     return done(null, user);
-//   });
-// });
+passport.deserializeUser((user, done) => {
+  process.nextTick(() => {
+    return done(null, user);
+  });
+});
 
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/staff',
