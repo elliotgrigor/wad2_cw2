@@ -32,8 +32,8 @@ class StaffModel {
           password: hash,
           email: 'john@restaurant.co.uk',
         });
-      }
-    }
+      });
+    });
   }
 }
 
