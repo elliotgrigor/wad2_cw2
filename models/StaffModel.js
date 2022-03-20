@@ -1,4 +1,5 @@
 const Datastore = require('@seald-io/nedb');
+const bcrypt = require('bcrypt');
 
 class StaffModel {
   constructor(dbPath) {
@@ -22,13 +23,17 @@ class StaffModel {
   }
 
   seed() {
-    this.db.insert({
-      staffId: 'A001',
-      firstName: 'John',
-      lastName: 'Smith',
-      password: 'myhashedpassword',
-      email: 'john@restaurant.co.uk',
-    });
+    bcrypt.genSalt(10, (err, salt) => {
+      bcrypt.hash('verysecurepassword', salt, (err, hash) => {
+        this.db.insert({
+          staffId: 'A001',
+          firstName: 'John',
+          lastName: 'Smith',
+          password: hash,
+          email: 'john@restaurant.co.uk',
+        });
+      }
+    }
   }
 }
 
