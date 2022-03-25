@@ -1,6 +1,7 @@
 {{ >partials/header }}
 
   <div class="viewport">
+    <a class="viewport__backbtn" href="/">Back to site</a>
 
     <div class="login">
       <img class="login__img" src="" alt="Logo" />

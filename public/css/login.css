@@ -6,6 +6,11 @@
   justify-content: center;
   align-items: center;
 }
+.viewport__backbtn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
 
 .login {
   width: 40rem;
