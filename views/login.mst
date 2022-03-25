@@ -1,4 +1,4 @@
-{{ >partials/header }}
+{{ >partials/head }}
 
   <div class="viewport">
     <a class="viewport__backbtn" href="/">Back to site</a>
