@@ -1,0 +1,13 @@
+<nav class="staffheader">
+  <ul class="staffheader__list">
+    <li class="staffheader__listitem">
+      Administration Dashboard
+    </li>
+
+    <li class="staffheader__listitem">
+      <a class="staffheader__link" href="/logout">
+        <span class="staffheader__linktext">Log out</span>
+      </a>
+    </li>
+  </ul>
+</nav>
