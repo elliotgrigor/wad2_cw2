@@ -1,5 +1,5 @@
-{{ >partials/header }}
-{{ >staff/partials/nav }}
+{{ >staff/partials/head }}
+{{ >staff/partials/header }}
 
 <h1>Staff Dashboard</h1>
 

@@ -1,7 +1,9 @@
-<nav class="staffheader">
+<header class="staffheader">
   <ul class="staffheader__list">
     <li class="staffheader__listitem">
-      Administration Dashboard
+      <a class="staffheader__link" href="/staff/dashboard">
+        <span class="staffheader__linktext">Administration Dashboard</span>
+      </a>
     </li>
 
     <li class="staffheader__listitem">
@@ -10,4 +12,4 @@
       </a>
     </li>
   </ul>
-</nav>
+</header>
