@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mustacheExpress = require('mustache-express');
-const bodyParser = require('body-parser');
 const passport = require('passport');
 const session = require('express-session');
 const SQLiteStore = require('@gristlabs/connect-sqlite3')(session);
@@ -13,7 +12,7 @@ const authRouter = require('./routes/authRoutes');
 const staffRouter = require('./routes/staffRoutes');
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended:false }));
 
 app.use(session({
   secret: process.env.SECRET,
