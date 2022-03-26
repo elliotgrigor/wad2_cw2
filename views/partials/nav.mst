@@ -13,7 +13,10 @@
     </li>
 
     <li class="nav__listitem">
-      <img class="nav__logo" src="" alt="Logo" />
+      <object class="nav__logo" type="image/svg+xml" data="/svg/temp-logo.svg"
+        width="50" height="50">
+          <img src="/img/temp-logo.png" alt="Logo" />
+      </object>
     </li>
 
     <li class="nav__listitem">

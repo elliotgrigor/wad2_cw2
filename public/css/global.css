@@ -19,6 +19,7 @@
   height: inherit;
 
   display: flex;
+  align-items: center;
 }
 .nav__link {
   text-decoration: none;
