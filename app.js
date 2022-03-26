@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+console.log(process.env.SESSION_DB_PATH, typeof process.env.SESSION_DB_PATH)
+
 const express = require('express');
 const app = express();
 const mustacheExpress = require('mustache-express');
@@ -18,7 +20,7 @@ app.use(session({
   secret: process.env.SECRET,
   resave: false,
   saveUninitialized: false,
-  store: new SQLiteStore({ db: 'sessions.db', dir: './db' })
+  store: new SQLiteStore({ db: 'sessions.db', dir: process.env.SESSION_DB_PATH })
 }));
 app.use(passport.authenticate('session'));
 
