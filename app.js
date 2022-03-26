@@ -1,7 +1,5 @@
 require('dotenv').config();
 
-console.log(process.env.SESSION_DB_PATH, typeof process.env.SESSION_DB_PATH)
-
 const express = require('express');
 const app = express();
 const mustacheExpress = require('mustache-express');
