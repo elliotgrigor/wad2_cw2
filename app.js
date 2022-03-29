@@ -7,6 +7,8 @@ const passport = require('passport');
 const session = require('express-session');
 const SQLiteStore = require('@gristlabs/connect-sqlite3')(session);
 
+const { passportAuthCheck } = require('./middleware/passport');
+
 const pageRouter = require('./routes/pageRoutes');
 const authRouter = require('./routes/authRoutes');
 const staffRouter = require('./routes/staffRoutes');
@@ -27,7 +29,9 @@ app.set('view engine', 'mst');
 
 app.use('/', pageRouter);
 app.use('/', authRouter);
+app.use(passportAuthCheck);
 app.use('/staff', staffRouter);
+app.get('*', (_, res) => res.redirect('/'));
 
 app.listen(process.env.PORT, process.env.HOST, (req, res) => {
   console.log(`Listening on http://${process.env.HOST}:${process.env.PORT}`);
