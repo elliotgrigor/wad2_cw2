@@ -4,6 +4,7 @@ exports.home = (req, res) => {
 };
 
 exports.login = (req, res) => {
+  // no need to access login if already auth'd
   if (req.isAuthenticated()) {
     return res.redirect('/staff');
   }
