@@ -4,6 +4,10 @@ exports.home = (req, res) => {
 };
 
 exports.login = (req, res) => {
+  if (req.isAuthenticated()) {
+    return res.redirect('/staff');
+  }
+
   const css = [
     { url: '/css/login.css' },
   ];
