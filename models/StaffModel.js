@@ -39,4 +39,6 @@ class StaffModel {
   }
 }
 
-module.exports = StaffModel;
+const staff = new StaffModel(); // *** USING IN-MEMORY DB ***
+
+module.exports = staff;
