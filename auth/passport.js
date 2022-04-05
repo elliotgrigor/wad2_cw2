@@ -1,43 +1,28 @@
-const bcrypt = require('bcrypt');
 const passport = require('passport');
-const LocalStrategy = require('passport-local');
+const JwtStrategy = require('passport-jwt').Strategy;
 
-const StaffModel = require('../models/StaffModel');
-const staff = new StaffModel(); // *** USING IN-MEMORY DB ***
+const staff = require('../models/StaffModel');
 
-passport.use(new LocalStrategy((username, password, done) => {
-  staff.db.findOne(
-    { staffId: username },
-    (err, doc) => {
-      if (err) return done(err);
-      if (!doc) return done(null, false, { message: 'Incorrect username or password.' });
-
-      bcrypt.compare(password, doc.password, (err, result) => {
-        if (err) return done(err);
-        if (!result) {
-          return done(null, false, { message: 'Incorrect username or password.' });
-        }
-        return done(null, doc);
-      });
-    }
-  );
-}));
-
-passport.serializeUser((user, done) => {
-  process.nextTick(() => {
-    done(null, { ...user });
-  });
-});
-
-passport.deserializeUser((user, done) => {
-  process.nextTick(() => {
-    return done(null, user);
-  });
-});
-
-exports.passportAuthCheck = (req, res, next) => {
-  if (req.isAuthenticated()) {
-    return next();
+const cookieExtractor = (req) => {
+  let token = null;
+  if (req && req.cookies) {
+    token = req.cookies['jwt'];
   }
-  res.redirect('/');
-}
+  return token;
+};
+
+const opts = {
+  jwtFromRequest: cookieExtractor,
+  secretOrKey: process.env.SECRET,
+};
+
+passport.use(new JwtStrategy(opts, (jwt_payload, done) => {
+  staff.db.findOne(
+    { staffId: jwt_payload.id },
+    (err, user) => {
+      if (err) return done(err, false);
+      if (user) return done(null, user);
+      return done(null, false);
+    });
+  })
+);
