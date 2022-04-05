@@ -1,0 +1,6 @@
+{{ >partials/head }}
+{{ >partials/nav }}
+
+  <h1>Contact</h1>
+
+{{ >partials/footer }}

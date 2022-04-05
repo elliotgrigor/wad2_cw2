@@ -5,6 +5,7 @@ const pages = require('../controllers/pageController');
 
 router.get('/', pages.home);
 router.get('/menu', pages.menu);
+router.get('/contact', pages.contact);
 
 router.get('/login', pages.login);
 
