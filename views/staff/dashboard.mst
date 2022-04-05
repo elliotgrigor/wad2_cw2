@@ -1,6 +1,10 @@
 {{ >staff/partials/head }}
 {{ >staff/partials/header }}
 
-<h1>Staff Dashboard</h1>
+<div class="contentwrapper">
+  {{ >staff/partials/sidebar }}
+
+  <h1>Staff Dashboard</h1>
+</div>
 
 {{ >partials/nofooter }}

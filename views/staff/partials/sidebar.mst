@@ -1,0 +1,8 @@
+<div class="staffsidebar">
+  <ul class="staffsidebar__list">
+    <li class="staffsidebar__listitem">
+      <img src="" alt="Dashboard icon">
+      <a href="/staff/dashboard">Dashboard</a>
+    </li>
+  </ul>
+</div>

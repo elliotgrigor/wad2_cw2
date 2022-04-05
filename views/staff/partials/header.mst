@@ -1,15 +1,16 @@
-<header class="staffheader">
-  <ul class="staffheader__list">
-    <li class="staffheader__listitem">
-      <a class="staffheader__link" href="/staff/dashboard">
-        <span class="staffheader__linktext">Administration Dashboard</span>
-      </a>
-    </li>
+<div class="viewport">
+  <header class="staffheader">
+    <ul class="staffheader__list">
+      <li class="staffheader__listitem">
+        <a class="staffheader__link" href="/staff/dashboard">
+          <span class="staffheader__linktext">Administration Dashboard</span>
+        </a>
+      </li>
 
-    <li class="staffheader__listitem">
-      <a class="staffheader__link" href="/logout">
-        <span class="staffheader__linktext">Log out</span>
-      </a>
-    </li>
-  </ul>
-</header>
+      <li class="staffheader__listitem">
+        <a class="staffheader__link" href="/logout">
+          <span class="staffheader__linktext">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </header>
