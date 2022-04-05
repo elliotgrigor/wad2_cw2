@@ -1,16 +1,13 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-const staff = require('../models/StaffModel');
+const Staff = require('../models/StaffModel');
 
 exports.login = (req, res) => {
-  staff.db.findOne(
-    { staffId: req.body.id },
-    { 'staffId': 1, 'password': 1 },
-    (err, user) => {
-      if (err) return console.log(err);
+  Staff.findOne({ staffId: req.body.id }, { 'staffId': 1, 'password': 1 })
+    .then(user => {
       if (!user) return console.log("Couldn't find user");
-      
+
       bcrypt.compare(req.body.password, user.password, (err, result) => {
         if (err) return console.log(err);
         if (!result) return console.log("Passwords don't match!");
@@ -20,8 +17,8 @@ exports.login = (req, res) => {
         });
         res.cookie('jwt', token).redirect('/staff');
       });
-    }
-  );
+    })
+    .catch(err => console.log(err));
 };
 
 exports.logout = (req, res) => {
