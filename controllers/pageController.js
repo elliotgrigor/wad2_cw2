@@ -9,7 +9,11 @@ exports.menu = (req, res) => {
 
 exports.contact = (req, res) => {
   res.render('contact', {});
-}
+};
+
+exports.aboutUs = (req, res) => {
+  res.render('about', {});
+};
 
 exports.login = (req, res) => {
   const css = [

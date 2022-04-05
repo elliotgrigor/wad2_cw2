@@ -1,0 +1,6 @@
+{{ >partials/head }}
+{{ >partials/nav }}
+
+  <h1>About</h1>
+
+{{ >partials/footer }}
