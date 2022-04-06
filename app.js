@@ -23,6 +23,6 @@ app.use('/', authRouter);
 app.use('/staff', passport.authenticate('jwt', { session: false }), staffRouter);
 app.get('*', (_, res) => res.redirect('/'));
 
-app.listen(process.env.PORT, process.env.HOST, (req, res) => {
+app.listen(process.env.PORT, process.env.HOST, () => {
   console.log(`Listening on http://${process.env.HOST}:${process.env.PORT}`);
 });
