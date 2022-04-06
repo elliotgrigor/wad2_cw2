@@ -1,0 +1,5 @@
+{{ >partials/head }}
+
+  <h1>Error: Not found (404)</h1>
+
+{{ >partials/nofooter }}
