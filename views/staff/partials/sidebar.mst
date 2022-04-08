@@ -1,8 +1,25 @@
 <div class="staffsidebar">
   <ul class="staffsidebar__list">
+
     <li class="staffsidebar__listitem">
       <img src="" alt="Dashboard icon">
       <a href="/staff/dashboard">Dashboard</a>
     </li>
+
+    <li class="staffsidebar__listitem">
+      <img src="" alt="Dashboard icon">
+      <a href="/staff/menus">Menus</a>
+    </li>
+
+    <li class="staffsidebar__listitem">
+      <img src="" alt="Dashboard icon">
+      <a href="/staff/messages">Messages</a>
+    </li>
+
+    <li class="staffsidebar__listitem">
+      <img src="" alt="Dashboard icon">
+      <a href="/staff/faqs">FAQs</a>
+    </li>
+
   </ul>
 </div>
