@@ -1,6 +1,9 @@
 :root {
   --headerHeight: 5rem;
+  --headerBg: #333;
+
   --sidebarWidth: 15rem;
+  --sidebarBg: #444;
 }
 
 * { margin: 0; padding: 0; }
@@ -16,7 +19,7 @@
 }
 
 .staffheader {
-  background: #333;
+  background: var(--headerBg);
   color: #fff;
   height: var(--headerHeight);
 }
@@ -51,5 +54,5 @@
 .staffsidebar {
   width: var(--sidebarWidth);
   height: calc(100vh - var(--headerHeight));
-  background: #444;
+  background: var(--sidebarBg);
 }
