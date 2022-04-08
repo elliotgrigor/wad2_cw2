@@ -2,23 +2,23 @@
   <ul class="staffsidebar__list">
 
     <li class="staffsidebar__listitem">
-      <img src="" alt="Dashboard icon">
-      <a href="/staff/dashboard">Dashboard</a>
+      <img class="staffsidebar__img" src="" alt="Dashboard icon">
+      <a class="staffsidebar__link" href="/staff/dashboard">Dashboard</a>
     </li>
 
     <li class="staffsidebar__listitem">
-      <img src="" alt="Dashboard icon">
-      <a href="/staff/menus">Menus</a>
+      <img class="staffsidebar__img" src="" alt="Dashboard icon">
+      <a class="staffsidebar__link" href="/staff/menus">Menus</a>
     </li>
 
     <li class="staffsidebar__listitem">
-      <img src="" alt="Dashboard icon">
-      <a href="/staff/messages">Messages</a>
+      <img class="staffsidebar__img" src="" alt="Dashboard icon">
+      <a class="staffsidebar__link" href="/staff/messages">Messages</a>
     </li>
 
     <li class="staffsidebar__listitem">
-      <img src="" alt="Dashboard icon">
-      <a href="/staff/faqs">FAQs</a>
+      <img class="staffsidebar__img" src="" alt="Dashboard icon">
+      <a class="staffsidebar__link" href="/staff/faqs">FAQs</a>
     </li>
 
   </ul>

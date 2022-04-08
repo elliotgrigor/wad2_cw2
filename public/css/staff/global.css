@@ -2,7 +2,7 @@
   --headerHeight: 5rem;
   --headerBg: #333;
 
-  --sidebarWidth: 15rem;
+  --sidebarWidth: 12%;
   --sidebarBg: #444;
 }
 
@@ -55,4 +55,22 @@
   width: var(--sidebarWidth);
   height: calc(100vh - var(--headerHeight));
   background: var(--sidebarBg);
+}
+.staffsidebar__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+.staffsidebar__listitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.staffsidebar__img {
+  /**/
+}
+.staffsidebar__link {
+  color: #fff;
+  text-decoration: none;
 }
