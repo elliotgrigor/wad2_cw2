@@ -1,0 +1,11 @@
+{{ >staff/partials/head }}
+{{ >staff/partials/header }}
+
+<div class="contentwrapper">
+  {{ >staff/partials/sidebar }}
+
+  <h1>Menu</h1>
+  <a href="/staff/dishes/add">Add Dish</a>
+</div>
+
+{{ >partials/nofooter }}

@@ -1,0 +1,60 @@
+{{ >staff/partials/head }}
+{{ >staff/partials/header }}
+
+<div class="contentwrapper">
+  {{ >staff/partials/sidebar }}
+
+  <h1>Add Dish</h1>
+
+  <form action="/staff/dishes/add" method="POST">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" />
+    </div>
+
+    <div>
+      <label for="desc">Description</label>
+      <textarea name="desc"></textarea>
+    </div>
+
+    <div>
+      <label for="dish_type">Dish Type</label>
+      <select name="dish_type">
+        <option value="allday">All Day</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="price">Price:</label>
+      £<input type="text" name="price" />
+    </div>
+
+    <div>
+      <label for="is_special">Chef Special</label>
+      <input type="checkbox" name="is_special" />
+    </div>
+
+    <hr/>
+
+    <div>
+      <label for="ingredients">Ingredients (comma separated)</label>
+      <textarea name="ingredients"></textarea>
+    </div>
+
+    <div>
+      <label for="allergens">Allergens (comma separated)</label>
+      <textarea name="allergens"></textarea>
+    </div>
+
+    <div>
+      <label for="allergy_advice">Allergy Advice</label>
+      <textarea name="allergy_advice"></textarea>
+    </div>
+
+    <input type="submit" value="Save">
+  </form>
+</div>
+
+{{ >partials/nofooter }}

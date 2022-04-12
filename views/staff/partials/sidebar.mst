@@ -8,7 +8,7 @@
 
     <li class="staffsidebar__listitem">
       <img class="staffsidebar__img" src="" alt="Dashboard icon">
-      <a class="staffsidebar__link" href="/staff/menus">Menus</a>
+      <a class="staffsidebar__link" href="/staff/dishes">Menus</a>
     </li>
 
     <li class="staffsidebar__listitem">
