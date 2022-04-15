@@ -1,6 +1,6 @@
 const { Model } = require('nedb-models');
 
-class Menu extends Model {
+class Dish extends Model {
   static datastore() {
     return {
       filename: process.env.MENU_DB,
@@ -25,4 +25,4 @@ class Menu extends Model {
   }
 }
 
-module.exports = Menu;
+module.exports = Dish;
