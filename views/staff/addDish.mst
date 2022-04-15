@@ -4,67 +4,75 @@
 <div class="contentwrapper">
   {{ >staff/partials/sidebar }}
 
-  <h1>Add Dish</h1>
+  <div class="workspace">
 
-  <form action="/staff/dishes/add" method="POST">
-    <div>
-      <label for="name">Name</label>
-      <input type="text" name="name" />
-    </div>
+    <div class="formcontainer">
+      <h1 class="formcontainer__heading">Add Dish</h1>
 
-    <div>
-      <label for="desc">Description</label>
-      <textarea name="desc"></textarea>
-    </div>
+      <form class="formcontainer__form" action="/staff/dishes/add" method="POST">
+        <div class="formcontainer__formgroup">
+          <label for="name">Name</label>
+          <input type="text" name="name" />
+        </div>
 
-    <div>
-      <label for="dish_type">Dish Type</label>
-      <select name="dish_type">
-        <option value="allday">All Day</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-      </select>
-    </div>
+        <div class="formcontainer__formgroup">
+          <label for="desc">Description</label>
+          <textarea name="desc"></textarea>
+        </div>
 
-    <div>
-      <label for="price">Price:</label>
-      £<input type="text" name="price" />
-    </div>
+        <div class="formcontainer__formgroup">
+          <label for="dish_type">Dish Type</label>
+          <select name="dish_type">
+            <option value="allday">All Day</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select>
+        </div>
 
-    <div>
-      <label for="is_special">Chef Special</label>
-      <input type="checkbox" name="is_special" />
-    </div>
+        <div class="formcontainer__formgroup">
+          <label for="price">Price:</label>
+          £<input type="text" name="price" />
+        </div>
 
-    <hr/>
+        <div>
+          <label for="is_special">Chef Special</label>
+          <input type="checkbox" name="is_special" />
+        </div>
 
-    <div>
-      <label for="ingredients">Ingredients (comma separated)</label>
-      <textarea name="ingredients"></textarea>
-    </div>
+        <hr/>
 
-    <div>
-      <label for="allergens">Allergens (comma separated)</label>
-      <textarea name="allergens"></textarea>
-    </div>
+        <div class="formcontainer__formgroup">
+          <label for="ingredients">Ingredients (comma separated)</label>
+          <textarea name="ingredients"></textarea>
+        </div>
 
-    <div>
-      <label for="allergy_advice">Allergy Advice</label>
-      <textarea name="allergy_advice"></textarea>
-    </div>
+        <div class="formcontainer__formgroup">
+          <label for="allergens">Allergens (comma separated)</label>
+          <textarea name="allergens"></textarea>
+        </div>
 
-    <div>
-      <label for="is_vegetarian">Vegetarian</label>
-      <input type="checkbox" name="is_vegetarian" />
-    </div>
+        <div class="formcontainer__formgroup">
+          <label for="allergy_advice">Allergy Advice</label>
+          <textarea name="allergy_advice"></textarea>
+        </div>
 
-    <div>
-      <label for="is_vegan">Vegan</label>
-      <input type="checkbox" name="is_vegan" />
-    </div>
+        <div>
+          <label for="is_vegetarian">Vegetarian</label>
+          <input type="checkbox" name="is_vegetarian" />
+        </div>
 
-    <input type="submit" value="Save">
-  </form>
-</div>
+        <div>
+          <label for="is_vegan">Vegan</label>
+          <input type="checkbox" name="is_vegan" />
+        </div>
+
+        <div class="formcontainer__submitwrapper">
+          <input class="formcontainer__submitbtn" type="submit" value="Save">
+        </div>
+      </form>
+    </div> <!-- end .formcontainer -->
+
+  </div> <!-- end .workspace -->
+</div> <!-- end .contentwrapper -->
 
 {{ >partials/nofooter }}

@@ -18,6 +18,14 @@
   flex-direction: row;
 }
 
+.workspace {
+  flex: 1; /* fill remaining space after sidebar */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .staffheader {
   background: var(--headerBg);
   color: #fff;
