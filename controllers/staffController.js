@@ -1,4 +1,4 @@
-const Menu = require('../models/MenuModel');
+const Dish = require('../models/DishModel');
 
 exports.dashboard = (req, res) => {
   res.render('staff/dashboard', {});
