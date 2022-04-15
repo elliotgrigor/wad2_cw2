@@ -25,24 +25,23 @@ exports.addDishPOST = (req, res) => {
   const ingredientList = ingredients.replace(/\s/g, '').split(',');
   const allergenList = allergens.replace(/\s/g, '').split(',');
 
-  Menu
-    .insert({
-      name,
-      description: desc,
-      content: {
-        ingredients: ingredientList,
-        allergyInfo: {
-          allergens: allergenList,
-          advice: allergy_advice,
-        },
+  Menu.insert({
+    name,
+    description: desc,
+    content: {
+      ingredients: ingredientList,
+      allergyInfo: {
+        allergens: allergenList,
+        advice: allergy_advice,
       },
-      chefSpecial: is_special === 'on' ? true : false,
-      dishType: dish_type,
-      price,
-    })
-    .then(doc => {
-      console.log('Inserted:', doc);
-      res.redirect('/staff'); 
-    })
-    .catch(err => console.log(err));
+    },
+    chefSpecial: is_special === 'on' ? true : false,
+    dishType: dish_type,
+    price,
+  })
+  .then(doc => {
+    console.log('Inserted:', doc);
+    res.redirect('/staff'); 
+  })
+  .catch(err => console.log(err));
 };
