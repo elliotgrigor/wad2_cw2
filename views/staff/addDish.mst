@@ -39,7 +39,7 @@
           <input type="checkbox" name="is_special" />
         </div>
 
-        <hr/>
+        <hr class="formcontainer__separator" />
 
         <div class="formcontainer__formgroup">
           <label for="ingredients">Ingredients (comma separated)</label>
@@ -59,9 +59,7 @@
         <div>
           <label for="is_vegetarian">Vegetarian</label>
           <input type="checkbox" name="is_vegetarian" />
-        </div>
-
-        <div>
+          
           <label for="is_vegan">Vegan</label>
           <input type="checkbox" name="is_vegan" />
         </div>
