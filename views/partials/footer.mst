@@ -15,5 +15,8 @@
         </ul>
       </div>
     </footer>
+    {{ #js }}
+      <script type="text/javascript" src="{{ url }}"></script>
+    {{ /js }}
   </body>
 </html>
