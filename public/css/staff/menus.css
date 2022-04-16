@@ -1,0 +1,43 @@
+.title-padding, .dish-padding {
+  padding: 0.5rem;
+}
+
+.menucontainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 65%;
+  height: 95%;
+  border: 1px solid grey;
+}
+.menucontainer__header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.menucontainer__title {
+  flex: 99;
+  text-align: center;
+}
+.menucontainer__addbtn {
+  flex: 1; /* 1% width */
+  padding: 0 1rem;
+}
+.menucontainer__scroll {
+  overflow-y: auto;
+}
+.menucontainer__section {
+  display: flex;
+  flex-direction: column;
+}
+.menucontainer__sectiontitle {
+  border-bottom: 1px solid grey;
+}
+.menucontainer__sectioncategorytitle {
+  border-bottom: 1px solid grey;
+}
+.menucontainer__sectioncategorydish {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

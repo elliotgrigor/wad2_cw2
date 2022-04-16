@@ -4,8 +4,60 @@
 <div class="contentwrapper">
   {{ >staff/partials/sidebar }}
 
-  <h1>Menu</h1>
-  <a href="/staff/dishes/add">Add Dish</a>
-</div>
+  <div class="workspace">
+
+    <div class="menucontainer">
+
+      <div class="menucontainer__header">
+        <h1 class="menucontainer__title">Menus</h1>
+        <a class="menucontainer__addbtn" href="/staff/dishes/add">Add</a>
+      </div>
+
+      <div class="menucontainer__scroll">
+
+        <div class="menucontainer__section">
+          <h2 class="menucontainer__sectiontitle title-padding">All Day</h2>
+          <div class="menucontainer__sectioncategory">
+            <h4 class="menucontainer__sectioncategorytitle title-padding">Specials</h4>
+            <div class="menucontainer__sectioncategorydish dish-padding">
+              <p>Dish Example</p>
+              <p>This is an example description for a dish</p>
+              <p>£12.34</p>
+              <div class="menucontainer__sectioncategorydishcommands">
+                <!--  -->
+              </div>
+            </div>
+          </div>
+          <div class="menucontainer__sectioncategory">
+            <h4 class="menucontainer__sectioncategorytitle title-padding">Dishes</h4>
+          </div>
+        </div>
+
+        <div class="menucontainer__section">
+          <h2 class="menucontainer__sectiontitle title-padding">Lunch</h2>
+          <div class="menucontainer__sectioncategory">
+            <h4 class="menucontainer__sectioncategorytitle title-padding">Specials</h4>
+          </div>
+          <div class="menucontainer__sectioncategory">
+            <h4 class="menucontainer__sectioncategorytitle title-padding">Dishes</h4>
+          </div>
+        </div>
+
+        <div class="menucontainer__section">
+          <h2 class="menucontainer__sectiontitle title-padding">Dinner</h2>
+          <div class="menucontainer__sectioncategory">
+            <h4 class="menucontainer__sectioncategorytitle title-padding">Specials</h4>
+          </div>
+          <div class="menucontainer__sectioncategory">
+            <h4 class="menucontainer__sectioncategorytitle title-padding">Dishes</h4>
+          </div>
+        </div>
+
+      </div> <!-- end .menucontainer__scroll -->
+
+    </div> <!-- end .menucontainer -->
+
+  </div> <!-- end .workspace -->
+</div> <!-- end .contentwrapper -->
 
 {{ >partials/nofooter }}
