@@ -10,10 +10,11 @@ const cookieParser = require('cookie-parser');
 const pageRouter = require('./routes/pageRoutes');
 const authRouter = require('./routes/authRoutes');
 const staffRouter = require('./routes/staffRoutes');
+
 const error = require('./controllers/errorController');
 
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.engine('mst', mustacheExpress(`${__dirname}/views`, '.mst'));
