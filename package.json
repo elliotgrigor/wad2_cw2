@@ -4,7 +4,8 @@
   "description": "Restaurant web application for WAD2 Coursework 2, Part 2",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "node .",
+    "dev": "nodemon .",
     "test": "jest"
   },
   "keywords": [],
@@ -21,5 +22,8 @@
     "nedb-models": "^4.0.1",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

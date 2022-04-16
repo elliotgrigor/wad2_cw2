@@ -16,10 +16,10 @@
       <div class="menucontainer__scroll">
 
         <div class="menucontainer__section">
-          <h2 class="menucontainer__sectiontitle title-padding">All Day</h2>
+          <h2 class="menucontainer__sectiontitle title-padding title-color">All Day</h2>
           <div class="menucontainer__sectioncategory">
 
-            <h4 class="menucontainer__sectioncategorytitle title-padding">Specials</h4>
+            <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Specials</h4>
 
             <div class="menucontainer__sectioncategorydish dish-padding">
               <div class="menucontainer__sectioncategorydishdetails">
@@ -36,69 +36,7 @@
           </div>
           <div class="menucontainer__sectioncategory">
 
-            <h4 class="menucontainer__sectioncategorytitle title-padding">Dishes</h4>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="menucontainer__section">
-          <h2 class="menucontainer__sectiontitle title-padding">Lunch</h2>
-          <div class="menucontainer__sectioncategory">
-
-            <h4 class="menucontainer__sectioncategorytitle title-padding">Specials</h4>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="menucontainer__sectioncategory">
-
-            <h4 class="menucontainer__sectioncategorytitle title-padding">Dishes</h4>
+            <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Dishes</h4>
 
             <div class="menucontainer__sectioncategorydish dish-padding">
               <div class="menucontainer__sectioncategorydishdetails">
@@ -140,10 +78,10 @@
         </div>
 
         <div class="menucontainer__section">
-          <h2 class="menucontainer__sectiontitle title-padding">Dinner</h2>
+          <h2 class="menucontainer__sectiontitle title-padding title-color">Lunch</h2>
           <div class="menucontainer__sectioncategory">
 
-            <h4 class="menucontainer__sectioncategorytitle title-padding">Specials</h4>
+            <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Specials</h4>
 
             <div class="menucontainer__sectioncategorydish dish-padding">
               <div class="menucontainer__sectioncategorydishdetails">
@@ -160,7 +98,69 @@
           </div>
           <div class="menucontainer__sectioncategory">
 
-            <h4 class="menucontainer__sectioncategorytitle title-padding">Dishes</h4>
+            <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Dishes</h4>
+
+            <div class="menucontainer__sectioncategorydish dish-padding">
+              <div class="menucontainer__sectioncategorydishdetails">
+                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
+                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
+                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+              </div>
+              <div class="menucontainer__sectioncategorydishcommands">
+                <a href="#edit">Edit</a>
+                <a href="#remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="menucontainer__sectioncategorydish dish-padding">
+              <div class="menucontainer__sectioncategorydishdetails">
+                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
+                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
+                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+              </div>
+              <div class="menucontainer__sectioncategorydishcommands">
+                <a href="#edit">Edit</a>
+                <a href="#remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="menucontainer__sectioncategorydish dish-padding">
+              <div class="menucontainer__sectioncategorydishdetails">
+                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
+                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
+                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+              </div>
+              <div class="menucontainer__sectioncategorydishcommands">
+                <a href="#edit">Edit</a>
+                <a href="#remove">Remove</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="menucontainer__section">
+          <h2 class="menucontainer__sectiontitle title-padding title-color">Dinner</h2>
+          <div class="menucontainer__sectioncategory">
+
+            <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Specials</h4>
+
+            <div class="menucontainer__sectioncategorydish dish-padding">
+              <div class="menucontainer__sectioncategorydishdetails">
+                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
+                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
+                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+              </div>
+              <div class="menucontainer__sectioncategorydishcommands">
+                <a href="#edit">Edit</a>
+                <a href="#remove">Remove</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="menucontainer__sectioncategory">
+
+            <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Dishes</h4>
 
             <div class="menucontainer__sectioncategorydish dish-padding">
               <div class="menucontainer__sectioncategorydishdetails">

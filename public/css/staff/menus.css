@@ -4,6 +4,14 @@
 .dish-padding {
   padding: 0.7rem 1rem;
 }
+.title-color {
+  background: #445e93;
+  color: #fff;
+}
+.category-color {
+  background: #d6efff;
+}
+
 
 .menucontainer {
   display: flex;
@@ -34,9 +42,10 @@
   flex-direction: column;
 }
 .menucontainer__sectiontitle {
-  border-bottom: 1px solid grey;
+  /*  */
 }
 .menucontainer__sectioncategorytitle {
+  border-top: 1px solid grey;
   border-bottom: 1px solid grey;
 }
 .menucontainer__sectioncategorydish {
@@ -55,5 +64,5 @@
   margin-right: 3rem;
 }
 .menucontainer__sectioncategorydishdescription {
-  /**/
+  /*  */
 }
