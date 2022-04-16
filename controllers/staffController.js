@@ -5,7 +5,15 @@ exports.dashboard = (req, res) => {
 };
 
 exports.dishes = (req, res) => {
-  res.render('staff/menus', {});
+  const css = [
+    { url: '/css/staff/menus.css' },
+  ];
+
+  const js = [
+    { url: '/js/setHeightScrollContainer.js' },
+  ];
+
+  res.render('staff/menus', { css, js });
 };
 
 exports.addDish = (req, res) => {
@@ -31,7 +39,7 @@ exports.addDishPOST = (req, res) => {
     is_vegetarian = 'on';
   }
 
-  Menu.insert({
+  Dish.insert({
     name,
     description: desc,
     content: {
