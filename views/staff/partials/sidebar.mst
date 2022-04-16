@@ -7,17 +7,17 @@
     </li>
 
     <li class="staffsidebar__listitem">
-      <img class="staffsidebar__img" src="" alt="Dashboard icon">
+      <img class="staffsidebar__img" src="" alt="Menus icon">
       <a class="staffsidebar__link" href="/staff/dishes">Menus</a>
     </li>
 
     <li class="staffsidebar__listitem">
-      <img class="staffsidebar__img" src="" alt="Dashboard icon">
+      <img class="staffsidebar__img" src="" alt="Messages icon">
       <a class="staffsidebar__link" href="/staff/messages">Messages</a>
     </li>
 
     <li class="staffsidebar__listitem">
-      <img class="staffsidebar__img" src="" alt="Dashboard icon">
+      <img class="staffsidebar__img" src="" alt="FAQs icon">
       <a class="staffsidebar__link" href="/staff/faqs">FAQs</a>
     </li>
 
