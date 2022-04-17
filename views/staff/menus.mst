@@ -21,58 +21,38 @@
 
             <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Specials</h4>
 
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+            {{ #menus.allday.specials }}
+              <div class="menucontainer__sectioncategorydish dish-padding">
+                <div class="menucontainer__sectioncategorydishdetails">
+                  <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
+                </div>
+                <div class="menucontainer__sectioncategorydishcommands">
+                  <a href="#edit">Edit</a>
+                  <a href="#remove">Remove</a>
+                </div>
               </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
+            {{ /menus.allday.specials }}
 
           </div>
           <div class="menucontainer__sectioncategory">
 
             <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Dishes</h4>
 
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+            {{ #menus.allday.dishes }}
+              <div class="menucontainer__sectioncategorydish dish-padding">
+                <div class="menucontainer__sectioncategorydishdetails">
+                  <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
+                </div>
+                <div class="menucontainer__sectioncategorydishcommands">
+                  <a href="#edit">Edit</a>
+                  <a href="#remove">Remove</a>
+                </div>
               </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
+            {{ /menus.allday.dishes }}
 
           </div>
         </div>
@@ -83,58 +63,38 @@
 
             <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Specials</h4>
 
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+            {{ #menus.lunch.specials }}
+              <div class="menucontainer__sectioncategorydish dish-padding">
+                <div class="menucontainer__sectioncategorydishdetails">
+                  <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
+                </div>
+                <div class="menucontainer__sectioncategorydishcommands">
+                  <a href="#edit">Edit</a>
+                  <a href="#remove">Remove</a>
+                </div>
               </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
+            {{ /menus.lunch.specials }}
 
           </div>
           <div class="menucontainer__sectioncategory">
 
             <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Dishes</h4>
 
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+            {{ #menus.lunch.dishes }}
+              <div class="menucontainer__sectioncategorydish dish-padding">
+                <div class="menucontainer__sectioncategorydishdetails">
+                  <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
+                </div>
+                <div class="menucontainer__sectioncategorydishcommands">
+                  <a href="#edit">Edit</a>
+                  <a href="#remove">Remove</a>
+                </div>
               </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
+            {{ /menus.lunch.dishes }}
 
           </div>
         </div>
@@ -145,58 +105,38 @@
 
             <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Specials</h4>
 
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+            {{ #menus.dinner.specials }}
+              <div class="menucontainer__sectioncategorydish dish-padding">
+                <div class="menucontainer__sectioncategorydishdetails">
+                  <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
+                </div>
+                <div class="menucontainer__sectioncategorydishcommands">
+                  <a href="#edit">Edit</a>
+                  <a href="#remove">Remove</a>
+                </div>
               </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
+            {{ /menus.dinner.specials }}
 
           </div>
           <div class="menucontainer__sectioncategory">
 
             <h4 class="menucontainer__sectioncategorytitle title-padding category-color">Dishes</h4>
 
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
+            {{ #menus.dinner.dishes }}
+              <div class="menucontainer__sectioncategorydish dish-padding">
+                <div class="menucontainer__sectioncategorydishdetails">
+                  <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
+                </div>
+                <div class="menucontainer__sectioncategorydishcommands">
+                  <a href="#edit">Edit</a>
+                  <a href="#remove">Remove</a>
+                </div>
               </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
-
-            <div class="menucontainer__sectioncategorydish dish-padding">
-              <div class="menucontainer__sectioncategorydishdetails">
-                <p class="menucontainer__sectioncategorydishtitle">Dish Example</p>
-                <p class="menucontainer__sectioncategorydishprice">£12.34</p>
-                <p class="menucontainer__sectioncategorydishdescription">This is an example description for a dish</p>
-              </div>
-              <div class="menucontainer__sectioncategorydishcommands">
-                <a href="#edit">Edit</a>
-                <a href="#remove">Remove</a>
-              </div>
-            </div>
+            {{ /menus.dinner.dishes }}
 
           </div>
         </div>
