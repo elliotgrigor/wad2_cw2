@@ -67,18 +67,36 @@
 .staffsidebar__list {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
+
+  height: calc(100vh - var(--headerHeight) - 1rem);
 }
 .staffsidebar__listitem {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.staffsidebar__img {
-  /**/
+
+  padding-top: 3rem;
 }
 .staffsidebar__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   color: #fff;
   text-decoration: none;
+  transition: all 0.3s;
+}
+.staffsidebar__link:hover {
+  color: cornflowerblue;
+}
+.staffsidebar__linkimg {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  margin-bottom: 0.3rem;
+}
+.staffsidebar__linktext {
+  font-size: 1.2rem;
 }
