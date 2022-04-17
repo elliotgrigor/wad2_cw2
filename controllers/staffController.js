@@ -50,7 +50,7 @@ exports.dishes = (req, res) => {
 
 exports.addDish = (req, res) => {
   const css = [
-    { url: '/css/staff/addDish.css' },
+    { url: '/css/staff/dishForm.css' },
   ];
 
   res.render('staff/addDish', { css });
@@ -92,4 +92,12 @@ exports.addDishPOST = (req, res) => {
     res.redirect('/staff/dishes');
   })
   .catch(err => console.log(err));
+};
+
+exports.editDish = (req, res) => {
+  const css = [
+    { url: '/css/staff/dishForm.css' },
+  ];
+
+  res.render('staff/editDish', { css });
 };
