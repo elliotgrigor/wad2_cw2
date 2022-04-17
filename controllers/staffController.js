@@ -99,5 +99,26 @@ exports.editDish = (req, res) => {
     { url: '/css/staff/dishForm.css' },
   ];
 
-  res.render('staff/editDish', { css });
+  Dish.findOne({ _id: req.params.id })
+    .then(dish => {
+      typeOptions = [
+        { value: 'allday', text: 'All Day' },
+        { value: 'lunch', text: 'Lunch' },
+        { value: 'dinner', text: 'Dinner' },
+      ];
+
+      typeOptions.forEach(option => {
+        if (dish.dishType === option.value) {
+          option.selected = true;
+        }
+      });
+
+      dish.content.ingredients
+        = dish.content.ingredients.join(', ');
+      dish.content.allergyInfo.allergens
+        = dish.content.allergyInfo.allergens.join(', ');
+
+      res.render('staff/editDish', { css, dish, typeOptions });
+    })
+    .catch(err => console.log(err));
 };

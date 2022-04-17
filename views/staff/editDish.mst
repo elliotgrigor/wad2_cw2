@@ -9,63 +9,75 @@
     <div class="formcontainer">
       <h1 class="formcontainer__heading">Edit Dish</h1>
 
-      <form class="formcontainer__form" action="/staff/dishes/add" method="POST">
+      <form class="formcontainer__form" action="/staff/dishes/{{ dish._id }}/update" method="POST">
         <div class="formcontainer__formgroup">
           <label for="name">Name</label>
-          <input type="text" name="name" />
+          <input type="text" name="name" value="{{ dish.name }}" />
         </div>
 
         <div class="formcontainer__formgroup">
           <label for="desc">Description</label>
-          <textarea name="desc"></textarea>
+          <textarea name="desc">{{ dish.description }}</textarea>
         </div>
 
         <div class="formcontainer__formgroup">
           <label for="dish_type">Dish Type</label>
           <select name="dish_type">
-            <option value="allday">All Day</option>
-            <option value="lunch">Lunch</option>
-            <option value="dinner">Dinner</option>
+            {{ #typeOptions }}
+              <option value="{{ value }}"
+                {{ #selected }}
+                  selected
+                {{ /selected }}>{{ text }}</option>
+            {{ /typeOptions }}
           </select>
         </div>
 
         <div class="formcontainer__formgroup">
-          <label for="price">Price:</label>
-          £<input type="text" name="price" />
+          <label for="price">Price (£)</label>
+          <input type="text" name="price" value="{{ dish.price }}" />
         </div>
 
         <div>
           <label for="is_special">Chef Special</label>
-          <input type="checkbox" name="is_special" />
+          <input type="checkbox" name="is_special"
+            {{ #dish.chefSpecial }}
+              checked
+            {{ /dish.chefSpecial }} />
         </div>
 
         <hr class="formcontainer__separator" />
 
         <div class="formcontainer__formgroup">
           <label for="ingredients">Ingredients (comma separated)</label>
-          <textarea name="ingredients"></textarea>
+          <textarea name="ingredients">{{ dish.content.ingredients }}</textarea>
         </div>
 
         <div class="formcontainer__formgroup">
           <label for="allergens">Allergens (comma separated)</label>
-          <textarea name="allergens"></textarea>
+          <textarea name="allergens">{{ dish.content.allergyInfo.allergens }}</textarea>
         </div>
 
         <div class="formcontainer__formgroup">
           <label for="allergy_advice">Allergy Advice</label>
-          <textarea name="allergy_advice"></textarea>
+          <textarea name="allergy_advice">{{ dish.content.allergyInfo.advice }}</textarea>
         </div>
 
         <div>
           <label for="is_vegetarian">Vegetarian</label>
-          <input type="checkbox" name="is_vegetarian" />
+          <input type="checkbox" name="is_vegetarian"
+            {{ #dish.vegetarian }}
+              checked
+            {{ /dish.vegetarian }} />
           
           <label for="is_vegan">Vegan</label>
-          <input type="checkbox" name="is_vegan" />
+          <input type="checkbox" name="is_vegan"
+            {{ #dish.vegan }}
+              checked
+            {{ /dish.vegan }} />
         </div>
 
         <div class="formcontainer__submitwrapper">
-          <input class="formcontainer__submitbtn" type="submit" value="Save">
+          <input class="formcontainer__submitbtn" type="submit" value="Update">
         </div>
       </form>
     </div> <!-- end .formcontainer -->
