@@ -30,7 +30,7 @@
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
                   <a href="#edit">Edit</a>
-                  <a href="#remove">Remove</a>
+                  <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
             {{ /menus.allday.specials }}
@@ -49,7 +49,7 @@
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
                   <a href="#edit">Edit</a>
-                  <a href="#remove">Remove</a>
+                  <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
             {{ /menus.allday.dishes }}
@@ -72,7 +72,7 @@
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
                   <a href="#edit">Edit</a>
-                  <a href="#remove">Remove</a>
+                  <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
             {{ /menus.lunch.specials }}
@@ -91,7 +91,7 @@
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
                   <a href="#edit">Edit</a>
-                  <a href="#remove">Remove</a>
+                  <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
             {{ /menus.lunch.dishes }}
@@ -114,7 +114,7 @@
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
                   <a href="#edit">Edit</a>
-                  <a href="#remove">Remove</a>
+                  <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
             {{ /menus.dinner.specials }}
@@ -133,7 +133,7 @@
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
                   <a href="#edit">Edit</a>
-                  <a href="#remove">Remove</a>
+                  <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
             {{ /menus.dinner.dishes }}
