@@ -7,21 +7,10 @@ class Dish extends Model {
     }
   }
 
-  static seed() {
-    this.insert({
-      name: 'Test Dish',
-      description: 'This is a test description',
-      content: {
-        ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
-        allergyInfo: {
-          allergens: ['allergen1', 'allergen2'],
-          advice: 'This is some allergy advice',
-        },
-      },
-      chefSpecial: true,
-      dishType: 'allday',
-      price: 8.45,
-    });
+  static seed(dish) {
+    this.insert(dish)
+      .then(doc => console.log('Inserted:', doc))
+      .catch(err => console.log(err));
   }
 }
 
