@@ -22,7 +22,13 @@ app.set('view engine', 'mst');
 
 app.use('/', pageRouter);
 app.use('/', authRouter);
-app.use('/staff', passport.authenticate('jwt', { session: false }), staffRouter);
+app.use('/staff',
+  passport.authenticate('jwt', {
+    session: false,
+    failureRedirect: '/login',
+  }),
+  staffRouter,
+);
 app.get('*', error.notFound);
 
 app.listen(process.env.PORT, process.env.HOST, () => {
