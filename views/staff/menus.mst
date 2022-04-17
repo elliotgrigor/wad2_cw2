@@ -10,7 +10,9 @@
 
       <div class="menucontainer__header">
         <h1 class="menucontainer__title">Menus</h1>
-        <a class="menucontainer__addbtn" href="/staff/dishes/add">Add</a>
+        <a class="menucontainer__addbtn" href="/staff/dishes/add">
+          <img class="menucontainer__addbtnimage" src="/svg/plus.svg" alt="Plus icon">
+        </a>
       </div>
 
       <div class="menucontainer__scroll">

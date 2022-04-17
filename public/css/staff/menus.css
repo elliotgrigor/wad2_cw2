@@ -31,8 +31,22 @@
   text-align: center;
 }
 .menucontainer__addbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   flex: 1; /* 1% width */
-  padding: 0 1rem;
+  margin: 0 1rem;
+  padding: 0.2rem 0.33rem;
+  border-radius: 99px;
+  transition: all 0.3s;
+}
+.menucontainer__addbtn:hover {
+  background: #d6efff;
+}
+.menucontainer__addbtnimage {
+  width: 1.5rem;
+  height: auto;
 }
 .menucontainer__scroll {
   overflow-y: auto;
@@ -58,10 +72,10 @@
   align-items: center;
 }
 .menucontainer__sectioncategorydishtitle {
-  margin-right: 3rem;
+  width: 8vw;
 }
 .menucontainer__sectioncategorydishprice {
-  margin-right: 3rem;
+  width: 4vw;
 }
 .menucontainer__sectioncategorydishdescription {
   /*  */
