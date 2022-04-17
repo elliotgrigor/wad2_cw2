@@ -158,9 +158,18 @@ exports.editDishPOST = (req, res) => {
     } },
     {}, // options
   )
-  .then(doc => {
-    console.log('Updated:', doc);
+  .then(numUpdated => {
+    console.log('Updated:', numUpdated);
     res.redirect('/staff/dishes');
   })
   .catch(err => console.log(err));
+};
+
+exports.deleteDish = (req, res) => {
+  Dish.remove({ _id: req.params.id }, { /* options */ })
+    .then(numRemoved => {
+      console.log('Removed:', numRemoved);
+      res.redirect('/staff/dishes');
+    })
+    .catch(err => console.log(err));
 };
