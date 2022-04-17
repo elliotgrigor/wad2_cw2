@@ -122,3 +122,45 @@ exports.editDish = (req, res) => {
     })
     .catch(err => console.log(err));
 };
+
+exports.editDishPOST = (req, res) => {
+  let {
+    name, desc, dish_type, price, is_special,
+    ingredients, allergens, allergy_advice,
+    is_vegetarian, is_vegan,
+  } = req.body;
+
+  const ingredientList = ingredients.replace(/\s/g, '').split(',');
+  const allergenList = allergens.replace(/\s/g, '').split(',');
+
+  // link vegan suitable to vegetarian
+  if (is_vegan === 'on') {
+    is_vegetarian = 'on';
+  }
+
+  Dish.update(
+    { _id: req.params.id },
+    { $set: {
+      name,
+      description: desc,
+      content: {
+        ingredients: ingredientList,
+        allergyInfo: {
+          allergens: allergenList,
+          advice: allergy_advice,
+        },
+      },
+      chefSpecial: is_special === 'on' ? true : false,
+      vegetarian: is_vegetarian === 'on' ? true : false,
+      vegan: is_vegan === 'on' ? true : false,
+      dishType: dish_type,
+      price,
+    } },
+    {}, // options
+  )
+  .then(doc => {
+    console.log('Updated:', doc);
+    res.redirect('/staff/dishes');
+  })
+  .catch(err => console.log(err));
+};

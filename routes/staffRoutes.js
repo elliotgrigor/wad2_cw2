@@ -9,6 +9,7 @@ router.get('/dishes/add', staff.addDish);
 router.get('/dishes/:id', staff.editDish);
 
 router.post('/dishes/add', staff.addDishPOST);
+router.post('/dishes/:id/update', staff.editDishPOST);
 
 router.get('*', (_, res) => res.redirect('/staff/dashboard'));
 
