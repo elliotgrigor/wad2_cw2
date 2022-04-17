@@ -89,7 +89,7 @@ exports.addDishPOST = (req, res) => {
   })
   .then(doc => {
     console.log('Inserted:', doc);
-    res.redirect('/staff'); 
+    res.redirect('/staff/dishes');
   })
   .catch(err => console.log(err));
 };
