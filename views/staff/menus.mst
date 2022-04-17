@@ -29,7 +29,7 @@
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
-                  <a href="/staff/dishes/{{ _id }}/update">Edit</a>
+                  <a href="/staff/dishes/{{ _id }}">Edit</a>
                   <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
@@ -48,7 +48,7 @@
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
-                  <a href="/staff/dishes/{{ _id }}/update">Edit</a>
+                  <a href="/staff/dishes/{{ _id }}">Edit</a>
                   <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
@@ -71,7 +71,7 @@
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
-                  <a href="/staff/dishes/{{ _id }}/update">Edit</a>
+                  <a href="/staff/dishes/{{ _id }}">Edit</a>
                   <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
@@ -90,7 +90,7 @@
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
-                  <a href="/staff/dishes/{{ _id }}/update">Edit</a>
+                  <a href="/staff/dishes/{{ _id }}">Edit</a>
                   <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
@@ -113,7 +113,7 @@
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
-                  <a href="/staff/dishes/{{ _id }}/update">Edit</a>
+                  <a href="/staff/dishes/{{ _id }}">Edit</a>
                   <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
@@ -132,7 +132,7 @@
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
-                  <a href="/staff/dishes/{{ _id }}/update">Edit</a>
+                  <a href="/staff/dishes/{{ _id }}">Edit</a>
                   <a href="/staff/dishes/{{ _id }}/delete">Remove</a>
                 </div>
               </div>
