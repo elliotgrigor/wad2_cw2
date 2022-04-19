@@ -33,3 +33,8 @@ npm run seed
 ```bash
 npm start
 ```
+
+6. Visit the website in the browser
+```
+http://<ip_address>:<port_number>
+```
