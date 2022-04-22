@@ -173,3 +173,7 @@ exports.deleteDish = (req, res) => {
     })
     .catch(err => console.log(err));
 };
+
+exports.registerUser = (req, res) => {
+  res.render('staff/register', {});
+};

@@ -8,6 +8,7 @@ router.get('/dishes', staff.dishes);
 router.get('/dishes/add', staff.addDish);
 router.get('/dishes/:id', staff.editDish);
 router.get('/dishes/:id/delete', staff.deleteDish);
+router.get('/register', staff.registerUser);
 
 router.post('/dishes/add', staff.addDishPOST);
 router.post('/dishes/:id/update', staff.editDishPOST);

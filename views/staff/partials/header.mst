@@ -8,6 +8,10 @@
       </li>
 
       <li class="staffheader__listitem">
+        <a class="staffheader__link" href="/staff/register">
+          <span class="staffheader__linktext">Register</span>
+        </a>
+
         <a class="staffheader__link" href="/logout">
           <span class="staffheader__linktext">Log out</span>
         </a>
