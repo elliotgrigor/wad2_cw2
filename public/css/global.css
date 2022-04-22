@@ -38,6 +38,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+}
+.nav__link:hover {
+  color:  var(--primary);
+  text-decoration: underline;
 }
 .nav__linktext {
   font-size: 1.5rem;
