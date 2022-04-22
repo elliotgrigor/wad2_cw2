@@ -16,6 +16,10 @@ exports.aboutUs = (req, res) => {
 };
 
 exports.login = (req, res) => {
+  if (req.cookies['jwt']) {
+    return res.redirect('/staff/dashboard');
+  }
+  
   const css = [
     { url: '/css/login.css' },
   ];
