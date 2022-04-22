@@ -1,4 +1,5 @@
 :root {
+  --primary: #ffdd55;
   --headerHeight: 5rem;
   --headerBg: #333;
 
@@ -54,6 +55,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+}
+.staffheader__link:hover {
+  color: var(--primary);
+  text-decoration: underline;
 }
 .staffheader__linktext {
   font-size: 1.5rem;
@@ -89,7 +95,8 @@
   transition: all 0.3s;
 }
 .staffsidebar__link:hover {
-  color: cornflowerblue;
+  color: var(--primary);
+  text-decoration: underline;
 }
 .staffsidebar__linkimg {
   width: 2.5rem;
