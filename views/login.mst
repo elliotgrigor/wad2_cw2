@@ -4,7 +4,10 @@
     <a class="viewport__backbtn" href="/">Back to site</a>
 
     <div class="login">
-      <img class="login__img" src="" alt="Logo" />
+      <object class="login__logo" type="image/svg+xml"
+        data="/svg/temp-logo-black.svg" width="100" height="100">
+          <img src="/img/temp-logo.png" alt="Logo" />
+      </object>
 
       <form class="login__form" action="/login" method="post">
         <div class="login__formgroup">
