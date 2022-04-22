@@ -5,13 +5,12 @@
   padding: 0.7rem 1rem;
 }
 .title-color {
-  background: #445e93;
-  color: #fff;
+  background: #444;
+  color: var(--primary);
 }
 .category-color {
-  background: #d6efff;
+  background: #ddd;
 }
-
 
 .menucontainer {
   display: flex;
@@ -42,7 +41,7 @@
   transition: all 0.3s;
 }
 .menucontainer__addbtn:hover {
-  background: #d6efff;
+  background: var(--primary);
 }
 .menucontainer__addbtnimage {
   width: 1.5rem;
