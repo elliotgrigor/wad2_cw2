@@ -1,8 +1,9 @@
 require('dotenv').config();
 
 const Dish = require('./models/DishModel');
+const Staff = require('./models/StaffModel');
 
-const data = [
+const dishData = [
   {
     name: 'AllDay Special',
     description: 'This is a test description',
@@ -101,6 +102,20 @@ const data = [
   },
 ];
 
-data.forEach(doc => {
+const staffData = [
+  {
+    staffId: 'A001',
+    firstName: 'John',
+    lastName: 'Smith',
+    password: 'admin',
+    email: 'jsmith@restaurant.co.uk',
+  },
+];
+
+dishData.forEach(doc => {
   Dish.seed(doc);
+});
+
+staffData.forEach(doc => {
+  Staff.seed(doc, doc.password);
 });

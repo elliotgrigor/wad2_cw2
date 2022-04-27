@@ -18,16 +18,12 @@ class Staff extends Model {
     });
   }
 
-  static seed() {
+  static seed(user, password) {
     bcrypt.genSalt(10, (err, salt) => {
-      bcrypt.hash('verysecurepassword', salt, (err, hash) => {
-        this.insert({
-          staffId: 'A001',
-          firstName: 'John',
-          lastName: 'Smith',
-          password: hash,
-          email: 'john@restaurant.co.uk',
-        });
+      bcrypt.hash(password, salt, (err, hash) => {
+        this.insert({ ...user, password: hash })
+          .then(doc => console.log('Inserted:', doc))
+          .catch(err => console.log(err));
       });
     });
   }
