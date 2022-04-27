@@ -6,11 +6,11 @@ const Staff = require('../models/StaffModel');
 exports.login = (req, res) => {
   Staff.findOne({ staffId: req.body.id }, { 'staffId': 1, 'password': 1 })
     .then(user => {
-      if (!user) return console.log("Couldn't find user");
+      if (!user) return res.redirect('/login');
 
       bcrypt.compare(req.body.password, user.password, (err, result) => {
-        if (err) return console.log(err);
-        if (!result) return console.log("Passwords don't match!");
+        if (err) return res.redirect('/login');
+        if (!result) return res.redirect('/login');
 
         const token = jwt.sign({ id: user.staffId }, process.env.SECRET, {
           expiresIn: '1800s', // 30 minutes
