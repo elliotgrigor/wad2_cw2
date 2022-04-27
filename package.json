@@ -9,7 +9,12 @@
     "seed": "node seed.js",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "Express",
+    "Mustache",
+    "NeDB",
+    "Passport"
+  ],
   "author": "Elliot Grigor",
   "license": "MIT",
   "dependencies": {
