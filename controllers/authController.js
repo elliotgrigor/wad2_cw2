@@ -9,8 +9,7 @@ exports.login = (req, res) => {
       if (!user) return res.redirect('/login');
 
       bcrypt.compare(req.body.password, user.password, (err, result) => {
-        if (err) return res.redirect('/login');
-        if (!result) return res.redirect('/login');
+        if (err || !result) return res.redirect('/login');
 
         const token = jwt.sign({ id: user.staffId }, process.env.SECRET, {
           expiresIn: '1800s', // 30 minutes
