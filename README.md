@@ -1,5 +1,5 @@
 # WAD2 Coursework 2, Part 2
-Restaurant web application created using Express, Mustache, and NeDB
+Restaurant web application created using Express, Mustache, Passport and NeDB
 
 ## Installation
 1. First, clone this repository
