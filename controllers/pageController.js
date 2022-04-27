@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 
 exports.home = (req, res) => {
   res.render('home', {});
@@ -16,13 +17,17 @@ exports.aboutUs = (req, res) => {
 };
 
 exports.login = (req, res) => {
-  if (req.cookies['jwt']) {
-    return res.redirect('/staff/dashboard');
-  }
-  
+  const accessToken = req.cookies['jwt'];
   const css = [
     { url: '/css/login.css' },
   ];
 
-  res.render('login', { css });
+  if (accessToken) {
+    jwt.verify(accessToken, process.env.SECRET, (err, _) => {
+      if (err) {
+        return res.render('login', { css });
+      }
+      return res.redirect('/staff/dashboard');
+    });
+  }
 };
