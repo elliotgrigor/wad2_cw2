@@ -122,7 +122,7 @@ exports.addDishPOST = async (req, res) => {
     is_vegetarian = 'on';
   }
 
-  let doc = {
+  const doc = {
     name,
     description: desc,
     content: {
