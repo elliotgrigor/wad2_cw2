@@ -7,7 +7,7 @@ exports.dashboard = (req, res) => {
   res.render('staff/dashboard', {});
 };
 
-exports.dishes = (req, res) => {
+exports.dishes = async (req, res) => {
   const css = [
     { url: '/css/staff/menus.css' },
   ];
@@ -16,39 +16,42 @@ exports.dishes = (req, res) => {
     { url: '/js/setHeightScrollContainer.js' },
   ];
 
-  Dish.find({})
-    .then(dishes => {
-      const menus = {
-        allday: { specials: [], dishes: [] },
-        lunch: { specials: [], dishes: [] },
-        dinner: { specials: [], dishes: [] },
-      };
+  const menus = {
+    allday: { specials: [], dishes: [] },
+    lunch: { specials: [], dishes: [] },
+    dinner: { specials: [], dishes: [] },
+  };
 
-      dishes.forEach(dish => {
-        // sort dish types into their own arrays
-        if (dish.dishType === 'allday') {
-          if (dish.chefSpecial) {
-            return menus.allday.specials.push(dish);
-          }
-          menus.allday.dishes.push(dish);
-        }
-        else if (dish.dishType === 'lunch') {
-          if (dish.chefSpecial) {
-            return menus.lunch.specials.push(dish);
-          }
-          menus.lunch.dishes.push(dish);
-        }
-        else if (dish.dishType === 'dinner') {
-          if (dish.chefSpecial) {
-            return menus.dinner.specials.push(dish);
-          }
-          menus.dinner.dishes.push(dish);
-        }
-      });
+  try {
+    const dishes = await Dish.find({});
 
-      res.render('staff/menus', { css, js, menus });
-    })
-    .catch(err => console.log(err));
+    dishes.forEach(dish => {
+      // sort dish types into their own arrays
+      if (dish.dishType === 'allday') {
+        if (dish.chefSpecial) {
+          return menus.allday.specials.push(dish);
+        }
+        menus.allday.dishes.push(dish);
+      }
+      else if (dish.dishType === 'lunch') {
+        if (dish.chefSpecial) {
+          return menus.lunch.specials.push(dish);
+        }
+        menus.lunch.dishes.push(dish);
+      }
+      else if (dish.dishType === 'dinner') {
+        if (dish.chefSpecial) {
+          return menus.dinner.specials.push(dish);
+        }
+        menus.dinner.dishes.push(dish);
+      }
+    });
+
+    res.render('staff/menus', { css, js, menus });
+  }
+  catch (err) {
+    console.log(err);
+  }
 };
 
 exports.addDish = (req, res) => {
@@ -73,7 +76,7 @@ exports.editDish = async (req, res) => {
 
   try {
     const dish = await Dish.findOne({ _id: req.params.id });
-    
+
     typeOptions.forEach(option => {
       if (dish.dishType === option.value) {
         option.selected = true;
