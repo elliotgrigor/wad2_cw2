@@ -35,7 +35,7 @@ exports.editDish = async (req, res) => {
     { url: '/css/staff/dishForm.css' },
   ];
 
-  typeOptions = [
+  const typeOptions = [
     { value: 'allday', text: 'All Day' },
     { value: 'lunch', text: 'Lunch' },
     { value: 'dinner', text: 'Dinner' },
