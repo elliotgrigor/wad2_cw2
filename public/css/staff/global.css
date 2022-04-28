@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400;700&display=swap');
+
 :root {
   --primary: #ffdd55;
   --headerHeight: 5rem;
@@ -8,6 +11,7 @@
 }
 
 * { margin: 0; padding: 0; }
+body { font-family: 'Bellota Text', sans-serif; }
 
 .viewport {
   width: 100vw;
@@ -62,6 +66,7 @@
   text-decoration: underline;
 }
 .staffheader__linktext {
+  font-family: 'Lily Script One', serif;
   font-size: 1.5rem;
 }
 
