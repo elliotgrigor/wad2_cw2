@@ -12,6 +12,7 @@ router.get('/register', staff.registerUser);
 
 router.post('/dishes/add', staff.addDishPOST);
 router.post('/dishes/:id/update', staff.editDishPOST);
+router.post('/register', staff.registerUserPOST);
 
 router.get('*', (_, res) => res.redirect('/staff/dashboard'));
 

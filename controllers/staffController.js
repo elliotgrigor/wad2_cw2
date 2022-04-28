@@ -56,6 +56,54 @@ exports.addDish = (req, res) => {
   res.render('staff/addDish', { css });
 };
 
+exports.editDish = (req, res) => {
+  const css = [
+    { url: '/css/staff/form.css' },
+    { url: '/css/staff/dishForm.css' },
+  ];
+
+  Dish.findOne({ _id: req.params.id })
+    .then(dish => {
+      typeOptions = [
+        { value: 'allday', text: 'All Day' },
+        { value: 'lunch', text: 'Lunch' },
+        { value: 'dinner', text: 'Dinner' },
+      ];
+
+      typeOptions.forEach(option => {
+        if (dish.dishType === option.value) {
+          option.selected = true;
+        }
+      });
+
+      dish.content.ingredients
+        = dish.content.ingredients.join(', ');
+      dish.content.allergyInfo.allergens
+        = dish.content.allergyInfo.allergens.join(', ');
+
+      res.render('staff/editDish', { css, dish, typeOptions });
+    })
+    .catch(err => console.log(err));
+};
+
+exports.deleteDish = (req, res) => {
+  Dish.remove({ _id: req.params.id }, { /* options */ })
+    .then(numRemoved => {
+      console.log('Removed:', numRemoved);
+      res.redirect('/staff/dishes');
+    })
+    .catch(err => console.log(err));
+};
+
+exports.registerUser = (req, res) => {
+  const css = [
+    { url: '/css/staff/form.css' },
+    { url: '/css/staff/registerForm.css' },
+  ];
+
+  res.render('staff/register', { css });
+};
+
 exports.addDishPOST = (req, res) => {
   let {
     name, desc, dish_type, price, is_special,
@@ -92,36 +140,6 @@ exports.addDishPOST = (req, res) => {
     res.redirect('/staff/dishes');
   })
   .catch(err => console.log(err));
-};
-
-exports.editDish = (req, res) => {
-  const css = [
-    { url: '/css/staff/form.css' },
-    { url: '/css/staff/dishForm.css' },
-  ];
-
-  Dish.findOne({ _id: req.params.id })
-    .then(dish => {
-      typeOptions = [
-        { value: 'allday', text: 'All Day' },
-        { value: 'lunch', text: 'Lunch' },
-        { value: 'dinner', text: 'Dinner' },
-      ];
-
-      typeOptions.forEach(option => {
-        if (dish.dishType === option.value) {
-          option.selected = true;
-        }
-      });
-
-      dish.content.ingredients
-        = dish.content.ingredients.join(', ');
-      dish.content.allergyInfo.allergens
-        = dish.content.allergyInfo.allergens.join(', ');
-
-      res.render('staff/editDish', { css, dish, typeOptions });
-    })
-    .catch(err => console.log(err));
 };
 
 exports.editDishPOST = (req, res) => {
@@ -166,20 +184,6 @@ exports.editDishPOST = (req, res) => {
   .catch(err => console.log(err));
 };
 
-exports.deleteDish = (req, res) => {
-  Dish.remove({ _id: req.params.id }, { /* options */ })
-    .then(numRemoved => {
-      console.log('Removed:', numRemoved);
-      res.redirect('/staff/dishes');
-    })
-    .catch(err => console.log(err));
-};
-
-exports.registerUser = (req, res) => {
-  const css = [
-    { url: '/css/staff/form.css' },
-    { url: '/css/staff/registerForm.css' },
-  ];
-
-  res.render('staff/register', { css });
+exports.registerUserPOST = (req, res) => {
+  //
 };
