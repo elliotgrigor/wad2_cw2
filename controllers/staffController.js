@@ -16,42 +16,9 @@ exports.dishes = async (req, res) => {
     { url: '/js/setHeightScrollContainer.js' },
   ];
 
-  const menus = {
-    allday: { specials: [], dishes: [] },
-    lunch: { specials: [], dishes: [] },
-    dinner: { specials: [], dishes: [] },
-  };
+  const menus = await Dish.getSortedMenu();
 
-  try {
-    const dishes = await Dish.find({});
-
-    dishes.forEach(dish => {
-      // sort dish types into their own arrays
-      if (dish.dishType === 'allday') {
-        if (dish.chefSpecial) {
-          return menus.allday.specials.push(dish);
-        }
-        menus.allday.dishes.push(dish);
-      }
-      else if (dish.dishType === 'lunch') {
-        if (dish.chefSpecial) {
-          return menus.lunch.specials.push(dish);
-        }
-        menus.lunch.dishes.push(dish);
-      }
-      else if (dish.dishType === 'dinner') {
-        if (dish.chefSpecial) {
-          return menus.dinner.specials.push(dish);
-        }
-        menus.dinner.dishes.push(dish);
-      }
-    });
-
-    res.render('staff/menus', { css, js, menus });
-  }
-  catch (err) {
-    console.log(err);
-  }
+  res.render('staff/menus', { css, js, menus });
 };
 
 exports.addDish = (req, res) => {
