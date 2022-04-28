@@ -22,12 +22,14 @@ exports.login = (req, res) => {
     { url: '/css/login.css' },
   ];
 
-  if (accessToken) {
-    jwt.verify(accessToken, process.env.SECRET, (err, _) => {
-      if (err) {
-        return res.render('login', { css });
-      }
-      return res.redirect('/staff/dashboard');
-    });
+  if (!accessToken) {
+    return res.render('login', { css });
   }
+
+  jwt.verify(accessToken, process.env.SECRET, (err, _) => {
+    if (err) {
+      return res.render('login', { css });
+    }
+    return res.redirect('/staff/dashboard');
+  });
 };
