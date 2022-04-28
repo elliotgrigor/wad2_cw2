@@ -89,13 +89,16 @@ exports.editDish = (req, res) => {
     .catch(err => console.log(err));
 };
 
-exports.deleteDish = (req, res) => {
-  Dish.remove({ _id: req.params.id }, { /* options */ })
-    .then(numRemoved => {
-      console.log('Removed:', numRemoved);
-      res.redirect('/staff/dishes');
-    })
-    .catch(err => console.log(err));
+exports.deleteDish = async (req, res) => {
+  try {
+    await Dish.remove({ _id: req.params.id }, { /* options */ });
+
+    console.log('Removed dish with ID:', req.params.id);
+    res.redirect('/staff/dishes');
+  }
+  catch (err) {
+    console.log(err);
+  }
 };
 
 exports.registerUser = (req, res) => {
