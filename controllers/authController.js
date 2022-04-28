@@ -7,7 +7,7 @@ exports.login = async (req, res) => {
   try {
     const user = await Staff.findOne(
       { staffId: req.body.id },
-      { 'staffId': 1, 'password': 1 }
+      { 'staffId': 1, 'password': 1 },
     );
 
     if (!user) return res.redirect('/login');
