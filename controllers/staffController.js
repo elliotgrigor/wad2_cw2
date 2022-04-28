@@ -107,7 +107,7 @@ exports.registerUser = (req, res) => {
   res.render('staff/register', { css });
 };
 
-exports.addDishPOST = (req, res) => {
+exports.addDishPOST = async (req, res) => {
   let {
     name, desc, dish_type, price, is_special,
     ingredients, allergens, allergy_advice,
@@ -122,7 +122,7 @@ exports.addDishPOST = (req, res) => {
     is_vegetarian = 'on';
   }
 
-  Dish.insert({
+  let doc = {
     name,
     description: desc,
     content: {
@@ -137,12 +137,17 @@ exports.addDishPOST = (req, res) => {
     vegan: is_vegan === 'on' ? true : false,
     dishType: dish_type,
     price,
-  })
-  .then(doc => {
+  };
+
+  try {
+    await Dish.insert(doc);
+
     console.log('Inserted:', doc);
     res.redirect('/staff/dishes');
-  })
-  .catch(err => console.log(err));
+  }
+  catch (err) {
+    console.log(err);
+  }
 };
 
 exports.editDishPOST = async (req, res) => {
