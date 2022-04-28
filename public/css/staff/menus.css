@@ -79,3 +79,32 @@
 .menucontainer__sectioncategorydishdescription {
   /*  */
 }
+.menucontainer__sectioncategorydishcommands {
+  display: flex;
+}
+.menucontainer__sectioncategorydishedit,
+.menucontainer__sectioncategorydishdelete {
+  margin-left: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #333;
+  border-radius: 0.1rem;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  transition: all 0.3s;
+}
+.menucontainer__sectioncategorydishedit {
+  padding: 0.2rem 1rem;
+}
+.menucontainer__sectioncategorydishdelete {
+  background: #ff5050;
+  font-weight: bold;
+}
+.menucontainer__sectioncategorydishedit:hover {
+  background: var(--primary);
+}
+.menucontainer__sectioncategorydishdelete:hover {
+  cursor: pointer;
+  background: #d44343;
+  color: #fff;
+}
