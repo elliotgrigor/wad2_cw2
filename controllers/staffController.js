@@ -145,7 +145,7 @@ exports.addDishPOST = (req, res) => {
   .catch(err => console.log(err));
 };
 
-exports.editDishPOST = (req, res) => {
+exports.editDishPOST = async (req, res) => {
   let {
     name, desc, dish_type, price, is_special,
     ingredients, allergens, allergy_advice,
@@ -160,31 +160,34 @@ exports.editDishPOST = (req, res) => {
     is_vegetarian = 'on';
   }
 
-  Dish.update(
-    { _id: req.params.id },
-    { $set: {
-      name,
-      description: desc,
-      content: {
-        ingredients: ingredientList,
-        allergyInfo: {
-          allergens: allergenList,
-          advice: allergy_advice,
+  try {
+    await Dish.update(
+      { _id: req.params.id },
+      { $set: {
+        name,
+        description: desc,
+        content: {
+          ingredients: ingredientList,
+          allergyInfo: {
+            allergens: allergenList,
+            advice: allergy_advice,
+          },
         },
-      },
-      chefSpecial: is_special === 'on' ? true : false,
-      vegetarian: is_vegetarian === 'on' ? true : false,
-      vegan: is_vegan === 'on' ? true : false,
-      dishType: dish_type,
-      price,
-    } },
-    {}, // options
-  )
-  .then(numUpdated => {
-    console.log('Updated:', numUpdated);
+        chefSpecial: is_special === 'on' ? true : false,
+        vegetarian: is_vegetarian === 'on' ? true : false,
+        vegan: is_vegan === 'on' ? true : false,
+        dishType: dish_type,
+        price,
+      } },
+      {}, // options
+    );
+
+    console.log('Updated dish with ID:', req.params.id);
     res.redirect('/staff/dishes');
-  })
-  .catch(err => console.log(err));
+  }
+  catch (err) {
+    console.log(err);
+  }
 };
 
 exports.registerUserPOST = (req, res) => {
