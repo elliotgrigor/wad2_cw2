@@ -1,34 +1,5 @@
-.formcontainer {
-  display: flex;
-  flex-direction: column;
-
-  width: 65%;
-  height: 95%;
-}
-.formcontainer__heading {}
-.formcontainer__form {}
-.formcontainer__formgroup {
-  display: flex;
-  flex-direction: column;
-}
-
 .formcontainer__separator {
   margin: 1rem 0;
   border: 1.5px solid grey;
   border-radius: 5px;
-}
-
-.formcontainer__submitwrapper {
-  display: flex;
-  justify-content: center;
-}
-.formcontainer__submitbtn {
-  border: 2px solid #000;
-  border-radius: 50px;
-  padding: 0.5rem 2rem;
-  background: #fff;
-}
-.formcontainer__submitbtn:hover {
-  cursor: pointer;
-  background: #ccc;
 }

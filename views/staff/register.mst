@@ -4,7 +4,34 @@
 <div class="contentwrapper">
   {{ >staff/partials/sidebar }}
 
-  <h1>Create a New Administrator</h1>
+  <div class="workspace">
+
+    <div class="formcontainer">
+      <h1 class="formcontainer__heading">Create a New Administrator</h1>
+
+      <form class="formcontainer__form" action="/staff/register" method="POST">
+        <div class="formcontainer__formgroup">
+          <label for="id">Staff ID</label>
+          <input type="text" name="id" />
+        </div>
+
+        <div class="formcontainer__formgroup">
+          <label for="password">Password</label>
+          <input type="password" name="password" />
+        </div>
+
+        <div class="formcontainer__formgroup">
+          <label for="passwordConfirm">Confirm Password</label>
+          <input type="password" name="passwordConfirm" />
+        </div>
+
+        <div class="formcontainer__submitwrapper">
+          <input class="formcontainer__submitbtn" type="submit" value="Save">
+        </div>
+      </form>
+    </div>
+
+  </div>
 </div>
 
 {{ >partials/nofooter }}
