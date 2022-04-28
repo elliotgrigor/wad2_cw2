@@ -5,7 +5,10 @@ const Staff = require('../models/StaffModel');
 
 exports.login = async (req, res) => {
   try {
-    const user = await Staff.findOne({ staffId: req.body.id }, { 'staffId': 1, 'password': 1 })
+    const user = await Staff.findOne(
+      { staffId: req.body.id },
+      { 'staffId': 1, 'password': 1 }
+    );
 
     if (!user) return res.redirect('/login');
 
