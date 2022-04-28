@@ -59,34 +59,37 @@ exports.addDish = (req, res) => {
   res.render('staff/addDish', { css });
 };
 
-exports.editDish = (req, res) => {
+exports.editDish = async (req, res) => {
   const css = [
     { url: '/css/staff/form.css' },
     { url: '/css/staff/dishForm.css' },
   ];
 
-  Dish.findOne({ _id: req.params.id })
-    .then(dish => {
-      typeOptions = [
-        { value: 'allday', text: 'All Day' },
-        { value: 'lunch', text: 'Lunch' },
-        { value: 'dinner', text: 'Dinner' },
-      ];
+  typeOptions = [
+    { value: 'allday', text: 'All Day' },
+    { value: 'lunch', text: 'Lunch' },
+    { value: 'dinner', text: 'Dinner' },
+  ];
 
-      typeOptions.forEach(option => {
-        if (dish.dishType === option.value) {
-          option.selected = true;
-        }
-      });
+  try {
+    const dish = await Dish.findOne({ _id: req.params.id });
+    
+    typeOptions.forEach(option => {
+      if (dish.dishType === option.value) {
+        option.selected = true;
+      }
+    });
 
-      dish.content.ingredients
-        = dish.content.ingredients.join(', ');
-      dish.content.allergyInfo.allergens
-        = dish.content.allergyInfo.allergens.join(', ');
+    dish.content.ingredients
+      = dish.content.ingredients.join(', ');
+    dish.content.allergyInfo.allergens
+      = dish.content.allergyInfo.allergens.join(', ');
 
-      res.render('staff/editDish', { css, dish, typeOptions });
-    })
-    .catch(err => console.log(err));
+    res.render('staff/editDish', { css, dish, typeOptions });
+  }
+  catch (err) {
+    console.log(err);
+  }
 };
 
 exports.deleteDish = async (req, res) => {
