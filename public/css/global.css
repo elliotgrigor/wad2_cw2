@@ -93,13 +93,17 @@ body { font-family: 'Bellota Text', sans-serif; }
 .footer__link {
   display: inline-block;
   width: 100%;
-  text-align: right;
-
+  text-align: center;
   text-decoration: none;
-  color: #fff;
+  padding: 0.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 0.2rem;
+  color: var(--primary);
+  background: #333;
   transition: all 0.3s;
 }
 .footer__link:hover {
   text-decoration: underline;
-  color: var(--primary);
+  color: #333;
+  background: var(--primary);
 }
