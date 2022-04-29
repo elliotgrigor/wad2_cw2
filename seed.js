@@ -108,7 +108,7 @@ const staffData = [
     firstName: 'John',
     lastName: 'Smith',
     password: 'admin',
-    email: 'jsmith@restaurant.co.uk',
+    email: 'j.smith@pinguseafood.co.uk',
   },
 ];
 

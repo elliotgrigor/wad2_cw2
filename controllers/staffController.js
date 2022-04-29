@@ -185,7 +185,7 @@ exports.registerUserPOST = (req, res) => {
         firstName: 'Test',
         lastName: 'User',
         password: hash,
-        email: 't.user@restaurant.co.uk',
+        email: 't.user@pinguseafood.co.uk',
       };
 
       try {
