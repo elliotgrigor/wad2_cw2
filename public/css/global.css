@@ -17,6 +17,8 @@ body { font-family: 'Bellota Text', sans-serif; }
   background: var(--headerBg);
   color: #fff;
   height: var(--headerHeight);
+  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 0 1rem #000;
   position: sticky;
   top: 0;
   z-index: 1;
