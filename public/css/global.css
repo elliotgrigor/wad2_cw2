@@ -17,6 +17,9 @@ body { font-family: 'Bellota Text', sans-serif; }
   background: var(--headerBg);
   color: #fff;
   height: var(--headerHeight);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .nav__list {
   list-style-type: none;
