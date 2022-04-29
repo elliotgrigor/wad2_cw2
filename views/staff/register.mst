@@ -12,17 +12,17 @@
       <form class="formcontainer__form" action="/staff/register" method="POST">
         <div class="formcontainer__formgroup">
           <label for="id">Staff ID</label>
-          <input type="text" name="id" />
+          <input type="text" name="id" required />
         </div>
 
         <div class="formcontainer__formgroup">
           <label for="password">Password</label>
-          <input type="password" name="password" />
+          <input type="password" name="password" required />
         </div>
 
         <div class="formcontainer__formgroup">
           <label for="passwordConfirm">Confirm Password</label>
-          <input type="password" name="passwordConfirm" />
+          <input type="password" name="passwordConfirm" required />
         </div>
 
         <div class="formcontainer__submitwrapper">

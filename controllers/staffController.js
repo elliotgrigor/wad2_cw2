@@ -174,6 +174,10 @@ exports.editDishPOST = async (req, res) => {
 exports.registerUserPOST = (req, res) => {
   const { id, password, passwordConfirm } = req.body;
 
+  if (!id || !password || !passwordConfirm) {
+    return res.redirect('/staff/register');
+  }
+
   if (password !== passwordConfirm) {
     return res.redirect('/staff/register');
   }
