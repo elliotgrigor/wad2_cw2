@@ -30,8 +30,8 @@
         </div>
 
         <div class="formcontainer__formgroup">
-          <label for="price">Price:</label>
-          £<input type="text" name="price" />
+          <label for="price">Price (£)</label>
+          <input type="text" name="price" />
         </div>
 
         <div>
