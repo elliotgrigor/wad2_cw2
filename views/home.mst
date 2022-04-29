@@ -1,6 +1,15 @@
 {{ >partials/head }}
 {{ >partials/nav }}
 
-  <h1>Restaurant homepage</h1>
+  <div class="hero">
+    <div class="hero__textcontainer">
+      <h2 class="hero__heading">Pingu's Seafood Shack</h2>
+      <p class="hero__subheading">We sell dead fish for your gob!</p>
+      <a class="hero__cta"href="/menu">View our menu</a>
+    </div>
+  </div>
+
+  <div class="contentwrapper">
+  </div>
 
 {{ >partials/footer }}

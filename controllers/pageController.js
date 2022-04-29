@@ -1,7 +1,11 @@
 const jwt = require('jsonwebtoken');
 
 exports.home = (req, res) => {
-  res.render('home', { pageTitle: 'Home' });
+  const css = [
+    { url: '/css/home.css' },
+  ];
+
+  res.render('home', { pageTitle: 'Home', css });
 };
 
 exports.menu = (req, res) => {
