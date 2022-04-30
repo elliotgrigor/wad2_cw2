@@ -177,11 +177,9 @@ body { font-family: 'Bellota Text', sans-serif; }
   .footer__logo {
     display: none;
   }
-
   .footer__copyright {
     flex: 4;
   }
-
   .footer__contentwrapper {
     width: 70%;
   }
@@ -195,7 +193,6 @@ body { font-family: 'Bellota Text', sans-serif; }
   .footer__contentwrapper {
     flex-direction: column;
   }
-
   .footer__copyright {
     margin-bottom: 1rem;
   }
@@ -213,7 +210,6 @@ body { font-family: 'Bellota Text', sans-serif; }
   .footer__copyright {
     display: none;
   }
-
   .footer__linkcontainer {
     justify-content: center;
   }
