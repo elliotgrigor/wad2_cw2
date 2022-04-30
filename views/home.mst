@@ -1,15 +1,40 @@
 {{ >partials/head }}
 {{ >partials/nav }}
 
-  <div class="hero">
+  <section class="hero">
     <div class="hero__textcontainer">
       <h2 class="hero__heading">Pingu's Seafood Shack</h2>
       <p class="hero__subheading">We sell dead fish for your gob!</p>
       <a class="hero__cta"href="/menu">View our menu</a>
     </div>
-  </div>
+  </section>
 
-  <div class="contentwrapper">
-  </div>
+  <section class="contentwrapper">
+    <div class="aboutcontainer">
+      <div class="aboutcontainer__section">
+        <img class="aboutcontainer__sectionimg" src="" alt="">
+        <p class="aboutcontainer__sectiontext">
+          <span class="aboutcontainer__sectiontitle">Locally Sourced</span>
+          <br />
+          Using locally grown and sustainable ingredients, we use fresh produce
+          every day to create our delicious dishes.
+          <br />
+          If you  want to catch up with your friends, discuss your work, or just
+          relax, we offer a casual and friendly - yet exquisite - dining
+          experience.
+        </p>
+      </div>
+      <div class="aboutcontainer__section--reverse">
+        <img class="aboutcontainer__sectionimg" src="" alt="">
+        <p class="aboutcontainer__sectiontext">
+          <span class="aboutcontainer__sectiontitle">Stunning Location</span>
+          <br />
+          Pingu's is located just behind the golf club next to the beach, and
+          offers stunning panoramic views of the bay. There is nowhere better to
+          enjoy our top quality seafood.
+        </p>
+      </div>
+    </div>
+  </section>
 
 {{ >partials/footer }}

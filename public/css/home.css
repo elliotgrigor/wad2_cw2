@@ -51,9 +51,27 @@
 }
 
 .contentwrapper {
-  height: 100vh;
+  width: 100%;
 
   background: #fff;
+}
+.aboutcontainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+  margin: 3rem auto;
+}
+.aboutcontainer__section {
+  display: flex;
+}
+.aboutcontainer__section--reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.aboutcontainer__sectionimg,
+.aboutcontainer__sectiontext {
+  flex: 1;
 }
 
 @media screen and (max-width: 720px) {
