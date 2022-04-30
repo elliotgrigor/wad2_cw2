@@ -171,7 +171,7 @@ exports.editDishPOST = async (req, res) => {
   }
 };
 
-exports.registerUserPOST = (req, res) => {
+exports.registerUserPOST = async (req, res) => {
   const { id, password, passwordConfirm } = req.body;
 
   if (!id || !password || !passwordConfirm) {
@@ -182,25 +182,44 @@ exports.registerUserPOST = (req, res) => {
     return res.redirect('/staff/register');
   }
 
-  bcrypt.genSalt(10, (err, salt) => {
-    bcrypt.hash(password, salt, async (err, hash) => {
-      const doc = {
-        staffId: id,
-        firstName: 'Test',
-        lastName: 'User',
-        password: hash,
-        email: 't.user@pinguseafood.co.uk',
-      };
+  try {
+    const salt = await bcrypt.genSalt(10);
+    const hash = await bcrypt.hash(password, salt);
 
-      try {
-        await Staff.insert(doc);
+    const newUser = {
+      staffId: id,
+      firstName: 'Test',
+      lastName: 'User',
+      password: hash,
+      email: 't.user@pinguseafood.co.uk',
+    };
 
-        console.log('Inserted:', doc);
-        res.redirect('/staff/dashboard');
-      }
-      catch (err) {
-        console.log(err);
-      }
-    });
-  });
+    const doc = await Staff.insert(newUser);
+
+    console.log('Inserted:', doc);
+    res.redirect('/staff/dashboard');
+  }
+  catch (err) {
+    console.log(err);
+  }
+
+  // bcrypt.hash(password, salt, async (err, hash) => {
+  //   const doc = {
+  //     staffId: id,
+  //     firstName: 'Test',
+  //     lastName: 'User',
+  //     password: hash,
+  //     email: 't.user@pinguseafood.co.uk',
+  //   };
+  //
+  //   try {
+  //     await Staff.insert(doc);
+  //
+  //     console.log('Inserted:', doc);
+  //     res.redirect('/staff/dashboard');
+  //   }
+  //   catch (err) {
+  //     console.log(err);
+  //   }
+  // });
 };
