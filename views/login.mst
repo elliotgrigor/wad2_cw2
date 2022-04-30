@@ -3,6 +3,24 @@
   <div class="viewport">
     <a class="viewport__backbtn" href="/">Back to site</a>
 
+    <div class="instructionmenu">
+      <h3 class="instructionmenu__title">Default Credentials</h3>
+      <table class="instructionmenu__table">
+        <thead>
+          <tr>
+            <th>Staff ID</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A001</td>
+            <td>admin</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="login">
       <object class="login__logo" type="image/svg+xml"
         data="/svg/temp-logo-black.svg" width="100" height="100">
@@ -23,7 +41,7 @@
         <input class="login__button" type="submit" value="Log in">
       </form>
     </div>
-    
+
   </div>
 
 {{ >partials/nofooter }}
