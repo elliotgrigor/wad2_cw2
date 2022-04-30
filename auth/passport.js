@@ -16,12 +16,14 @@ const opts = {
   secretOrKey: process.env.SECRET,
 };
 
-passport.use(new JwtStrategy(opts, (jwt_payload, done) => {
-  Staff.findOne({ staffId: jwt_payload.id })
-    .then(user => {
-      if (user) return done(null, user);
-      return done(null, false);
-    })
-    .catch(err => done(err, false));
-  })
-);
+passport.use(new JwtStrategy(opts, async (jwt_payload, done) => {
+  try {
+    const user = await Staff.findOne({ staffId: jwt_payload.id });
+
+    if (user) return done(null, user);
+    return done(null, false);
+  }
+  catch (err) {
+    return done(err, false);
+  }
+}));
