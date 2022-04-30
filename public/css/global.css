@@ -73,7 +73,7 @@ body { font-family: 'Bellota Text', sans-serif; }
   z-index: 1;
 }
 .navmobile__logo {
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 .navmobile__list {
   position: absolute;
