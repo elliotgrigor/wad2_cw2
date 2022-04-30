@@ -10,6 +10,7 @@
   </section>
 
   <section class="contentwrapper">
+
     <div class="aboutcontainer">
       <div class="aboutcontainer__section">
         <img class="aboutcontainer__sectionimg" src="" alt="">
@@ -24,6 +25,7 @@
           experience.
         </p>
       </div>
+      
       <div class="aboutcontainer__section--reverse">
         <img class="aboutcontainer__sectionimg" src="" alt="">
         <p class="aboutcontainer__sectiontext">
@@ -35,6 +37,7 @@
         </p>
       </div>
     </div>
+
   </section>
 
 {{ >partials/footer }}

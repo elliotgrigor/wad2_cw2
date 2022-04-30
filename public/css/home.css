@@ -55,12 +55,13 @@
 
   background: #fff;
 }
+
 .aboutcontainer {
   display: flex;
   flex-direction: column;
 
   width: 60%;
-  margin: 3rem auto;
+  margin: 5rem auto;
 }
 .aboutcontainer__section {
   display: flex;
@@ -68,10 +69,24 @@
 .aboutcontainer__section--reverse {
   display: flex;
   flex-direction: row-reverse;
+
+  text-align: right;
 }
 .aboutcontainer__sectionimg,
 .aboutcontainer__sectiontext {
   flex: 1;
+
+  margin: 2rem;
+}
+.aboutcontainer__sectiontext {
+  font-size: 1.25rem;
+  line-height: 2;
+}
+.aboutcontainer__sectiontitle {
+  font-family: 'Lily Script One', serif;
+  font-size: 2.33rem;
+
+  color: #555;
 }
 
 @media screen and (max-width: 720px) {
