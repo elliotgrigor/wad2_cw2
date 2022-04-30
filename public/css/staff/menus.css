@@ -80,6 +80,7 @@
 }
 .menucontainer__sectioncategorydishprice {
   width: 4vw;
+  margin-left: 2rem;
 }
 .menucontainer__sectioncategorydishdescription {
   /*  */
