@@ -46,10 +46,14 @@ class Dish extends Model {
     }
   }
 
-  static seed(dish) {
-    this.insert(dish)
-      .then(doc => console.log('Inserted:', doc))
-      .catch(err => console.log(err));
+  static async seed(dish) {
+    try {
+      const doc = await this.insert(dish);
+      console.log('Inserted:', doc);
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 }
 
