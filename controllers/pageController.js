@@ -20,7 +20,7 @@ exports.aboutUs = (req, res) => {
   res.render('about', { pageTitle: 'About us' });
 };
 
-exports.login = (req, res) => {
+exports.login = async (req, res) => {
   const accessToken = req.cookies['jwt'];
   const css = [
     { url: '/css/login.css' },
@@ -30,10 +30,11 @@ exports.login = (req, res) => {
     return res.render('login', { pageTitle: 'Login', css });
   }
 
-  jwt.verify(accessToken, process.env.SECRET, (err, _) => {
-    if (err) {
-      return res.render('login', { pageTitle: 'Login', css });
-    }
+  try {
+    await jwt.verify(accessToken, process.env.SECRET);
     return res.redirect('/staff/dashboard');
-  });
+  }
+  catch (err) {
+    return res.render('login', { pageTitle: 'Login', css });
+  }
 };
