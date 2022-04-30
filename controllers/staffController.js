@@ -202,24 +202,4 @@ exports.registerUserPOST = async (req, res) => {
   catch (err) {
     console.log(err);
   }
-
-  // bcrypt.hash(password, salt, async (err, hash) => {
-  //   const doc = {
-  //     staffId: id,
-  //     firstName: 'Test',
-  //     lastName: 'User',
-  //     password: hash,
-  //     email: 't.user@pinguseafood.co.uk',
-  //   };
-  //
-  //   try {
-  //     await Staff.insert(doc);
-  //
-  //     console.log('Inserted:', doc);
-  //     res.redirect('/staff/dashboard');
-  //   }
-  //   catch (err) {
-  //     console.log(err);
-  //   }
-  // });
 };
