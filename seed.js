@@ -5,13 +5,13 @@ const Staff = require('./models/StaffModel');
 
 const dishData = [
   {
-    name: 'AllDay Special',
-    description: 'This is a test description',
+    name: 'Crab & Saffron Risotto',
+    description: 'A seasoned crab risotto garnished with finely chopped dill',
     content: {
-      ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
+      ingredients: ['Crab', 'Rice', 'Butter', 'Garlic', 'Cheese', 'Onion', 'Wine'],
       allergyInfo: {
-        allergens: ['allergen1', 'allergen2'],
-        advice: 'This is some allergy advice',
+        allergens: ['Butter', 'Cheese', 'Wine'],
+        advice: 'Contains: dairy produce, alcohol',
       },
     },
     chefSpecial: true,
@@ -21,13 +21,13 @@ const dishData = [
     price: 8.45,
   },
   {
-    name: 'AllDay Regular',
-    description: 'This is a test description',
+    name: 'Prawn Tikka Masala',
+    description: 'A low calorie prawn tikka masala served with naan bread.',
     content: {
-      ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
+      ingredients: ['Prawns', 'Rice', 'Tomato', 'Almonds', 'Cream', 'Garlic', 'Onion'],
       allergyInfo: {
-        allergens: ['allergen1', 'allergen2'],
-        advice: 'This is some allergy advice',
+        allergens: ['Almonds', 'Cream'],
+        advice: 'Contains: dairy produce, nuts',
       },
     },
     chefSpecial: false,
@@ -37,13 +37,13 @@ const dishData = [
     price: 8.45,
   },
   {
-    name: 'Lunch Special',
-    description: 'This is a test description',
+    name: 'Seafood Spaghetti',
+    description: 'A bowl of mixed seafood pasta bursting with nutrients.',
     content: {
-      ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
+      ingredients: ['Prawns', 'Mussels', 'Squid', 'Tomato', 'Garlic', 'Spaghetti', 'Onion'],
       allergyInfo: {
-        allergens: ['allergen1', 'allergen2'],
-        advice: 'This is some allergy advice',
+        allergens: [],
+        advice: 'n/a',
       },
     },
     chefSpecial: true,
@@ -53,52 +53,52 @@ const dishData = [
     price: 8.45,
   },
   {
-    name: 'Lunch Regular',
-    description: 'This is a test description',
+    name: 'Mixed Fish Chowder',
+    description: 'A creamy soup with salmon, smoked haddock, mixed shellfish and potatoes.',
     content: {
-      ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
+      ingredients: ['Salmon', 'Haddock', 'Prawns', 'Crab', 'Oyster', 'Potato', 'Cream'],
       allergyInfo: {
-        allergens: ['allergen1', 'allergen2'],
-        advice: 'This is some allergy advice',
+        allergens: ['Cream'],
+        advice: 'Contains: dairy produce',
       },
     },
     chefSpecial: false,
     vegetarian: false,
     vegan: false,
     dishType: 'lunch',
-    price: 8.45,
+    price: 6.95,
   },
   {
-    name: 'Dinner Special',
-    description: 'This is a test description',
+    name: 'Paella Mixta',
+    description: 'A combination of meat and seafood with king prawns, mussels, chorizo and chicken.',
     content: {
-      ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
+      ingredients: ['Prawns', 'Mussels', 'Chicken', 'Rice', 'Peas', 'Chorizo'],
       allergyInfo: {
-        allergens: ['allergen1', 'allergen2'],
-        advice: 'This is some allergy advice',
+        allergens: [],
+        advice: 'n/a',
       },
     },
     chefSpecial: true,
     vegetarian: false,
     vegan: false,
     dishType: 'dinner',
-    price: 8.45,
+    price: 9.15,
   },
   {
-    name: 'Dinner Regular',
-    description: 'This is a test description',
+    name: 'Crab & Asparagus Pappardelle',
+    description: 'Ribbons of pasta mixed with seasoned white & brown crab meat.',
     content: {
-      ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
+      ingredients: ['Crab', 'Asparagus', 'Hazelnuts', 'Tomato', 'Parsley', 'Lemon'],
       allergyInfo: {
-        allergens: ['allergen1', 'allergen2'],
-        advice: 'This is some allergy advice',
+        allergens: ['Hazelnuts'],
+        advice: 'Contains: nuts',
       },
     },
     chefSpecial: false,
     vegetarian: false,
     vegan: false,
     dishType: 'dinner',
-    price: 8.45,
+    price: 7.75,
   },
 ];
 
