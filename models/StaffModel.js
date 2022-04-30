@@ -8,16 +8,6 @@ class Staff extends Model {
     }
   }
 
-  static getStaffMember(staffId) {
-    return new Promise((resolve, reject) => {
-      this.findOne({ staffId })
-        .then(user => {
-          resolve(user);
-        })
-        .catch(err => reject(err));
-    });
-  }
-
   static async seed(user, password) {
     try {
       const salt = await bcrypt.genSalt(10);
