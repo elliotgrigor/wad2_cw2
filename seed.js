@@ -18,7 +18,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'allday',
-    price: 8.45,
+    price: 8.35,
   },
   {
     name: 'Prawn Tikka Masala',
@@ -34,7 +34,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'allday',
-    price: 8.45,
+    price: 7.40,
   },
   {
     name: 'Seafood Spaghetti',
@@ -50,7 +50,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'lunch',
-    price: 8.45,
+    price: 7.70,
   },
   {
     name: 'Mixed Fish Chowder',
