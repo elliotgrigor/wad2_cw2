@@ -27,7 +27,7 @@
               <div class="menucontainer__sectioncategorydish dish-padding">
                 <div class="menucontainer__sectioncategorydishdetails">
                   <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
-                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">£{{ price }}</p>
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
@@ -48,7 +48,7 @@
               <div class="menucontainer__sectioncategorydish dish-padding">
                 <div class="menucontainer__sectioncategorydishdetails">
                   <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
-                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">£{{ price }}</p>
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
@@ -73,7 +73,7 @@
               <div class="menucontainer__sectioncategorydish dish-padding">
                 <div class="menucontainer__sectioncategorydishdetails">
                   <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
-                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">£{{ price }}</p>
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
@@ -94,7 +94,7 @@
               <div class="menucontainer__sectioncategorydish dish-padding">
                 <div class="menucontainer__sectioncategorydishdetails">
                   <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
-                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">£{{ price }}</p>
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
@@ -119,7 +119,7 @@
               <div class="menucontainer__sectioncategorydish dish-padding">
                 <div class="menucontainer__sectioncategorydishdetails">
                   <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
-                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">£{{ price }}</p>
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
@@ -140,7 +140,7 @@
               <div class="menucontainer__sectioncategorydish dish-padding">
                 <div class="menucontainer__sectioncategorydishdetails">
                   <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
-                  <p class="menucontainer__sectioncategorydishprice">{{ price }}</p>
+                  <p class="menucontainer__sectioncategorydishprice">£{{ price }}</p>
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
                 </div>
                 <div class="menucontainer__sectioncategorydishcommands">
