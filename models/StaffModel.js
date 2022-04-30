@@ -18,14 +18,17 @@ class Staff extends Model {
     });
   }
 
-  static seed(user, password) {
-    bcrypt.genSalt(10, (err, salt) => {
-      bcrypt.hash(password, salt, (err, hash) => {
-        this.insert({ ...user, password: hash })
-          .then(doc => console.log('Inserted:', doc))
-          .catch(err => console.log(err));
-      });
-    });
+  static async seed(user, password) {
+    try {
+      const salt = await bcrypt.genSalt(10);
+      const hash = await bcrypt.hash(password, salt);
+
+      const doc = await this.insert({ ...user, password: hash });
+      console.log('Inserted:', doc);
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 }
 
