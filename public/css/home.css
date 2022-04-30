@@ -15,6 +15,7 @@
   color: #fff;
 }
 .hero__heading {
+  width: 70vw;
   font-family: 'Lily Script One', serif;
   font-size: 6rem;
   margin: 1rem 0;
@@ -45,4 +46,26 @@
 .contentwrapper {
   background: #fff;
   height: 100vh;
+}
+
+@media screen and (max-width: 1280px) {
+  .hero {
+    height: calc(100vh - var(--headerHeightMobile));
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .hero__heading {
+    width: 80vw;
+    font-size: 4rem;
+  }
+  .hero__subheading {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .hero__subheading {
+    font-size: 1.2rem;
+  }
 }
