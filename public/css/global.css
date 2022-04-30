@@ -16,44 +16,50 @@
 body { font-family: 'Bellota Text', sans-serif; }
 
 .nav {
-  background: var(--headerBg);
-  color: #fff;
-  height: var(--headerHeight);
-  border-bottom: 2px solid var(--primary);
-  box-shadow: 0 0 1rem #000;
   position: sticky;
-  top: 0;
   z-index: 1;
+  top: 0;
+
+  height: var(--headerHeight);
+
+  color: #fff;
+  border-bottom: 2px solid var(--primary);
+  background: var(--headerBg);
+  box-shadow: 0 0 1rem #000;
 }
 .nav__list {
-  list-style-type: none;
-  width: 50%;
-  margin: 0 auto;
-  height: inherit;
-
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+
+  width: 50%;
+  height: inherit;
+  margin: 0 auto;
+
+  list-style-type: none;
 }
 .nav__listitem {
-  height: inherit;
-
   display: flex;
   align-items: center;
+
+  height: inherit;
 }
 .nav__link {
-  text-decoration: none;
-  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 5vw;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.3s;
+  text-decoration: none;
+
+  color: inherit;
 }
 .nav__link:hover {
-  color:  var(--primary);
   text-decoration: underline;
+
+  color:  var(--primary);
 }
 .nav__linktext {
   font-family: 'Lily Script One', serif;
@@ -61,43 +67,52 @@ body { font-family: 'Bellota Text', sans-serif; }
 }
 
 .navmobile {
-  display: none;
   position: sticky;
-  top: 0;
-  justify-content: space-between;
-  align-items: center;
-  height: var(--headerHeightMobile);
-  background: var(--headerBg);
-  border-bottom: 2px solid var(--primary);
-  box-shadow: 0 0 1rem #000;
   z-index: 1;
+  top: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+
+  height: var(--headerHeightMobile);
+
+  border-bottom: 2px solid var(--primary);
+  background: var(--headerBg);
+  box-shadow: 0 0 1rem #000;
 }
 .navmobile__logo {
   margin: 0 1rem;
 }
 .navmobile__list {
   position: absolute;
-  display: none;
-  flex-direction: column;
-  align-items: center;
   top: calc(var(--headerHeightMobile) + 2px); /* plus border-bottom */
-  background: var(--headerBg);
+
+  display: none;
+  align-items: center;
+  flex-direction: column;
+
   width: 100%;
+
+  background: var(--headerBg);
 }
 .navmobile__listitem {
-  list-style: none;
   margin: 1rem 0;
+
+  list-style: none;
 }
 .navmobile__listitem:last-child {
   margin-bottom: 1.33rem;
 }
 .navmobile__link {
-  text-decoration: none;
-  color: #fff;
   transition: all 0.1s;
+  text-decoration: none;
+
+  color: #fff;
 }
 .navmobile__link:hover {
   text-decoration: underline;
+
   color: var(--primary);
 }
 .navmobile__linktext {
@@ -106,8 +121,9 @@ body { font-family: 'Bellota Text', sans-serif; }
 }
 .navmobile__hamburger {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   margin: 0 1rem;
 }
 
@@ -117,15 +133,16 @@ body { font-family: 'Bellota Text', sans-serif; }
 
   width: 100%;
   height: var(--footerHeight);
+
   background: var(--footerBg);
 }
 .footer__contentwrapper {
-  width: 50%;
-  margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  width: 50%;
+  margin: 0 auto;
 }
 .footer__copyright,
 .footer__logo,
@@ -135,11 +152,13 @@ body { font-family: 'Bellota Text', sans-serif; }
 .footer__copyright {
   flex: 2;
   justify-content: flex-start;
+
   color: #fff;
 }
 .footer__logo {
   flex: 1;
   justify-content: center;
+
   color: #fff;
 }
 .footer__linkcontainer {
@@ -149,22 +168,27 @@ body { font-family: 'Bellota Text', sans-serif; }
 .footer__list {}
 .footer__listitem {
   display: flex;
+
   list-style: none;
 }
 .footer__link {
   display: inline-block;
+
   width: 100%;
+  padding: 0.5rem 1rem;
+
+  transition: all 0.3s;
   text-align: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+
+  color: var(--primary);
   border: 2px solid var(--primary);
   border-radius: 0.2rem;
-  color: var(--primary);
   background: #333;
-  transition: all 0.3s;
 }
 .footer__link:hover {
   text-decoration: underline;
+  
   color: #333;
   background: var(--primary);
 }

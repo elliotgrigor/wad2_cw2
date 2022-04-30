@@ -1,5 +1,6 @@
 .formcontainer__separator {
   margin: 1rem 0;
+  
   border: 1.5px solid grey;
   border-radius: 5px;
 }

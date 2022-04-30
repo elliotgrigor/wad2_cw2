@@ -24,46 +24,50 @@ body { font-family: 'Bellota Text', sans-serif; }
 }
 
 .workspace {
-  flex: 1; /* fill remaining space after sidebar */
-  
   display: flex;
-  justify-content: center;
+  flex: 1; /* fill remaining space after sidebar */
   align-items: center;
+  justify-content: center;
 }
 
 .staffheader {
-  background: var(--headerBg);
-  color: #fff;
   height: var(--headerHeight);
+
+  color: #fff;
+  background: var(--headerBg);
 }
 .staffheader__list {
-  list-style-type: none;
-  width: 100vw;
-  margin: 0 auto;
-  height: inherit;
-
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: inherit;
+  margin: 0 auto;
+
+  list-style-type: none;
 }
 .staffheader__listitem {
-  height: inherit;
-
   display: flex;
+
+  height: inherit;
 }
 .staffheader__link {
-  text-decoration: none;
-  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 0 1rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.3s;
+  text-decoration: none;
+
+  color: inherit;
 }
 .staffheader__link:hover {
-  color: var(--primary);
   text-decoration: underline;
+
+  color: var(--primary);
 }
 .staffheader__linktext {
   font-family: 'Lily Script One', serif;
@@ -73,13 +77,14 @@ body { font-family: 'Bellota Text', sans-serif; }
 .staffsidebar {
   width: var(--sidebarWidth);
   height: calc(100vh - var(--headerHeight));
+
   background: var(--sidebarBg);
 }
 .staffsidebar__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   height: calc(100vh - var(--headerHeight) - 1rem);
 }
@@ -92,21 +97,22 @@ body { font-family: 'Bellota Text', sans-serif; }
 }
 .staffsidebar__link {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+
+  transition: all 0.3s;
+  text-decoration: none;
 
   color: #fff;
-  text-decoration: none;
-  transition: all 0.3s;
 }
 .staffsidebar__link:hover {
-  color: var(--primary);
   text-decoration: underline;
+  
+  color: var(--primary);
 }
 .staffsidebar__linkimg {
   width: 2.5rem;
   height: 2.5rem;
-
   margin-bottom: 0.3rem;
 }
 .staffsidebar__linktext {
