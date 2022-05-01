@@ -4,7 +4,7 @@ const Dish = require('../models/DishModel');
 const Staff = require('../models/StaffModel');
 
 exports.dashboard = (req, res) => {
-  res.render('staff/dashboard', {});
+  res.render('staff/dashboard', { pageTitle: 'Dashboard' });
 };
 
 exports.dishes = async (req, res) => {
@@ -18,7 +18,7 @@ exports.dishes = async (req, res) => {
 
   const menus = await Dish.getSortedMenu(true); // withHidden: true
 
-  res.render('staff/menus', { css, js, menus });
+  res.render('staff/menus', { pageTitle: 'Menus', css, js, menus });
 };
 
 exports.addDish = (req, res) => {
@@ -26,7 +26,7 @@ exports.addDish = (req, res) => {
     { url: '/css/staff/form.css' },
   ];
 
-  res.render('staff/addDish', { css });
+  res.render('staff/addDish', { pageTitle: 'Add Dish', css });
 };
 
 exports.editDish = async (req, res) => {
@@ -55,7 +55,7 @@ exports.editDish = async (req, res) => {
     dish.content.allergyInfo.allergens
       = dish.content.allergyInfo.allergens.join(', ');
 
-    res.render('staff/editDish', { css, dish, typeOptions });
+    res.render('staff/editDish', { pageTitle: 'Edit Dish', css, dish, typeOptions });
   }
   catch (err) {
     console.log(err);
@@ -80,7 +80,7 @@ exports.registerUser = (req, res) => {
     { url: '/css/staff/registerForm.css' },
   ];
 
-  res.render('staff/register', { css });
+  res.render('staff/register', { pageTitle: 'Register', css });
 };
 
 exports.addDishPOST = async (req, res) => {
