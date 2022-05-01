@@ -6,7 +6,7 @@ const Staff = require('./models/StaffModel');
 const dishData = [
   {
     name: 'Crab & Saffron Risotto',
-    description: 'A seasoned crab risotto garnished with finely chopped dill',
+    description: 'A seasoned crab risotto garnished with finely chopped dill.',
     content: {
       ingredients: ['Crab', 'Rice', 'Butter', 'Garlic', 'Cheese', 'Onion', 'Wine'],
       allergyInfo: {
@@ -18,7 +18,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'allday',
-    price: 8.35,
+    price: '8.35',
   },
   {
     name: 'Prawn Tikka Masala',
@@ -34,7 +34,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'allday',
-    price: 7.40,
+    price: '7.40',
   },
   {
     name: 'Seafood Spaghetti',
@@ -50,7 +50,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'lunch',
-    price: 7.70,
+    price: '7.70',
   },
   {
     name: 'Mixed Fish Chowder',
@@ -66,7 +66,23 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'lunch',
-    price: 6.95,
+    price: '6.95',
+  },
+  {
+    name: 'Shrimp Scampi with Pasta',
+    description: 'The ultimate seafood pasta dish.',
+    content: {
+      ingredients: ['Shrimp', 'Pasta', 'Butter', 'Shallots', 'Garlic', 'Wine', 'Parsley'],
+      allergyInfo: {
+        allergens: ['Butter'],
+        advice: 'Contains: dairy produce, alcohol'
+      },
+    },
+    chefSpecial: false,
+    vegetarian: false,
+    vegan: false,
+    dishType: 'lunch',
+    price: '6.40'
   },
   {
     name: 'Paella Mixta',
@@ -82,7 +98,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'dinner',
-    price: 9.15,
+    price: '9.15',
   },
   {
     name: 'Crab & Asparagus Pappardelle',
@@ -98,7 +114,7 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'dinner',
-    price: 7.75,
+    price: '7.75',
   },
 ];
 
