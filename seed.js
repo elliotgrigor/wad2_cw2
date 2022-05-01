@@ -53,6 +53,22 @@ const dishData = [
     price: '7.70',
   },
   {
+    name: 'Crabless Cakes',
+    description: 'Vegan crab cakes made with artichoke hearts, shallots, and celery. Served with tartar sauce.',
+    content: {
+      ingredients: ['Artichoke', 'Shallots', 'Celery', 'Flour'],
+      allergyInfo: {
+        allergens: ['Flour'],
+        advice: 'Contains: gluten',
+      },
+    },
+    chefSpecial: true,
+    vegetarian: true,
+    vegan: true,
+    dishType: 'lunch',
+    price: '5.85',
+  },
+  {
     name: 'Mixed Fish Chowder',
     description: 'A creamy soup with salmon, smoked haddock, mixed shellfish and potatoes.',
     content: {
@@ -115,6 +131,22 @@ const dishData = [
     vegan: false,
     dishType: 'dinner',
     price: '7.75',
+  },
+  {
+    name: 'Broiled Haddock',
+    description: 'A seasoned light and flaky fish served with mixed peas, broccoli, and asparagus',
+    content: {
+      ingredients: ['Haddock', 'Asparagus', 'Peas', 'Brocolli', 'Butter', 'Garlic'],
+      allergyInfo: {
+        allergens: ['Butter'],
+        advice: 'Contains: dairy produce',
+      },
+    },
+    chefSpecial: false,
+    vegetarian: false,
+    vegan: false,
+    dishType: 'dinner',
+    price: '7.10',
   },
 ];
 
