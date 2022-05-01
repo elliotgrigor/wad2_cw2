@@ -32,6 +32,11 @@
                   </div>
                 </div>
               {{ /specials }}
+
+              {{ ^specials }}
+                <p>Currently no specials</p>
+              {{ /specials }}
+
             </div>
           </div>
 
@@ -57,6 +62,7 @@
                   </div>
                 </div>
               {{ /dishes }}
+
             </div>
           </div>
         </div>
@@ -88,6 +94,11 @@
                   </div>
                 </div>
               {{ /specials }}
+
+              {{ ^specials }}
+                <p>Currently no specials</p>
+              {{ /specials }}
+
             </div>
           </div>
 
@@ -113,6 +124,7 @@
                   </div>
                 </div>
               {{ /dishes }}
+
             </div>
           </div>
         </div>
@@ -144,6 +156,11 @@
                   </div>
                 </div>
               {{ /specials }}
+
+              {{ ^specials }}
+                <p>Currently no specials</p>
+              {{ /specials }}
+
             </div>
           </div>
 
@@ -169,6 +186,7 @@
                   </div>
                 </div>
               {{ /dishes }}
+
             </div>
           </div>
         </div>
