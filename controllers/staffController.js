@@ -87,7 +87,7 @@ exports.addDishPOST = async (req, res) => {
   let {
     name, desc, dish_type, price, is_special,
     ingredients, allergens, allergy_advice,
-    is_vegetarian, is_vegan,
+    is_vegetarian, is_vegan, is_hidden,
   } = req.body;
 
   const ingredientList = ingredients.replace(/\s/g, '').split(',');
@@ -113,6 +113,7 @@ exports.addDishPOST = async (req, res) => {
     vegan: is_vegan === 'on' ? true : false,
     dishType: dish_type,
     price,
+    hidden: is_hidden === 'on' ? true : false,
   };
 
   try {
@@ -130,7 +131,7 @@ exports.editDishPOST = async (req, res) => {
   let {
     name, desc, dish_type, price, is_special,
     ingredients, allergens, allergy_advice,
-    is_vegetarian, is_vegan,
+    is_vegetarian, is_vegan, is_hidden,
   } = req.body;
 
   const ingredientList = ingredients.replace(/\s/g, '').split(',');
@@ -159,6 +160,7 @@ exports.editDishPOST = async (req, res) => {
         vegan: is_vegan === 'on' ? true : false,
         dishType: dish_type,
         price,
+        hidden: is_hidden === 'on' ? true : false,
       } },
       {}, // options
     );

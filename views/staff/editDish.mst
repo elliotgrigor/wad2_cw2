@@ -68,12 +68,20 @@
             {{ #dish.vegetarian }}
               checked
             {{ /dish.vegetarian }} />
-          
+
           <label for="is_vegan">Vegan</label>
           <input type="checkbox" name="is_vegan"
             {{ #dish.vegan }}
               checked
             {{ /dish.vegan }} />
+        </div>
+
+        <div>
+          <label for="is_hidden">Hidden</label>
+          <input type="checkbox" name="is_hidden"
+            {{ #dish.hidden }}
+              checked
+            {{ /dish.hidden }} />
         </div>
 
         <div class="formcontainer__submitwrapper">
