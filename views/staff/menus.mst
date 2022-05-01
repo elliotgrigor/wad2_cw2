@@ -30,12 +30,7 @@
                     <p class="menucontainer__sectioncategorydishtitle--hidden">{{ name }}</p>
                   {{ /hidden }}
                   {{ ^hidden }}
-                  {{ #hidden }}
-                    <p class="menucontainer__sectioncategorydishtitle--hidden">{{ name }}</p>
-                  {{ /hidden }}
-                  {{ ^hidden }}
                     <p class="menucontainer__sectioncategorydishtitle">{{ name }}</p>
-                  {{ /hidden }}
                   {{ /hidden }}
                   <p class="menucontainer__sectioncategorydishprice">£{{ price }}</p>
                   <p class="menucontainer__sectioncategorydishdescription">{{ description }}</p>
