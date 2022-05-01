@@ -83,7 +83,8 @@
   margin-left: 2rem;
 }
 .menucontainer__sectioncategorydishdescription {
-  /*  */
+  max-width: 60%;
+  margin-left: 1rem;
 }
 .menucontainer__sectioncategorydishcommands {
   display: flex;
@@ -114,7 +115,7 @@
 }
 .menucontainer__sectioncategorydishdelete:hover {
   cursor: pointer;
-  
+
   color: #fff;
   background: #d44343;
 }
