@@ -19,6 +19,7 @@ const dishData = [
     vegan: false,
     dishType: 'allday',
     price: '8.35',
+    hidden: false,
   },
   {
     name: 'Prawn Tikka Masala',
@@ -35,6 +36,7 @@ const dishData = [
     vegan: false,
     dishType: 'allday',
     price: '7.40',
+    hidden: false,
   },
   {
     name: 'Seafood Spaghetti',
@@ -51,6 +53,7 @@ const dishData = [
     vegan: false,
     dishType: 'lunch',
     price: '7.70',
+    hidden: false,
   },
   {
     name: 'Crabless Cakes',
@@ -67,6 +70,7 @@ const dishData = [
     vegan: true,
     dishType: 'lunch',
     price: '5.85',
+    hidden: false,
   },
   {
     name: 'Mixed Fish Chowder',
@@ -83,6 +87,7 @@ const dishData = [
     vegan: false,
     dishType: 'lunch',
     price: '6.95',
+    hidden: false,
   },
   {
     name: 'Shrimp Scampi with Pasta',
@@ -98,7 +103,8 @@ const dishData = [
     vegetarian: false,
     vegan: false,
     dishType: 'lunch',
-    price: '6.40'
+    price: '6.40',
+    hidden: false,
   },
   {
     name: 'Paella Mixta',
@@ -115,6 +121,7 @@ const dishData = [
     vegan: false,
     dishType: 'dinner',
     price: '9.15',
+    hidden: false,
   },
   {
     name: 'Crab & Asparagus Pappardelle',
@@ -131,6 +138,7 @@ const dishData = [
     vegan: false,
     dishType: 'dinner',
     price: '7.75',
+    hidden: false,
   },
   {
     name: 'Broiled Haddock',
@@ -147,6 +155,7 @@ const dishData = [
     vegan: false,
     dishType: 'dinner',
     price: '7.10',
+    hidden: false,
   },
 ];
 
