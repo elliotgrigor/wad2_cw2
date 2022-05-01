@@ -1,7 +1,7 @@
 {{ >partials/head }}
 {{ >partials/nav }}
 
-  <h1>Menus</h1>
+  <h1 class="title">Menus</h1>
 
   <div class="menuwrapper">
 

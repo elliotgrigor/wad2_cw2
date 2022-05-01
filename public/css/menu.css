@@ -1,3 +1,12 @@
+.title {
+  font-family: 'Lily Script One', serif;
+  font-size: 3rem;
+
+  text-align: center;
+
+  color: #333;
+}
+
 .menuwrapper {
   width: 100%;
   margin-bottom: 5rem;
