@@ -76,9 +76,11 @@
   align-items: center;
 }
 .menucontainer__sectioncategorydishtitle {
-  width: 8vw;
   font-weight: bold;
   font-style: italic;
+
+  width: 8vw;
+
   text-decoration: underline;
 }
 .menucontainer__sectioncategorydishprice {
