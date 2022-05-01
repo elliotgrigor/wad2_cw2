@@ -16,7 +16,7 @@ exports.dishes = async (req, res) => {
     { url: '/js/setHeightScrollContainer.js' },
   ];
 
-  const menus = await Dish.getSortedMenu();
+  const menus = await Dish.getSortedMenu(true); // withHidden: true
 
   res.render('staff/menus', { css, js, menus });
 };

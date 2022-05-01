@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 
+const Dish = require('../models/DishModel');
+
 exports.home = (req, res) => {
   const css = [
     { url: '/css/home.css' },
@@ -8,7 +10,9 @@ exports.home = (req, res) => {
   res.render('home', { pageTitle: 'Home', css });
 };
 
-exports.menu = (req, res) => {
+exports.menu = async (req, res) => {
+  const menus = await Dish.getSortedMenu(false); // withHidden: false
+
   res.render('menu', { pageTitle: 'Menu' });
 };
 

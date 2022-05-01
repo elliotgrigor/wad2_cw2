@@ -7,7 +7,7 @@ class Dish extends Model {
     }
   }
 
-  static async getSortedMenu() {
+  static async getSortedMenu(withHidden) {
     const menus = {
       allday: { specials: [], dishes: [] },
       lunch: { specials: [], dishes: [] },
@@ -18,6 +18,9 @@ class Dish extends Model {
       const dishes = await this.find({});
 
       dishes.forEach(dish => {
+        // skip hidden dishes, if specified
+        if (dish.hidden && !withHidden) return;
+
         // sort dish types into their own arrays
         if (dish.dishType === 'allday') {
           if (dish.chefSpecial) {
