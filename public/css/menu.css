@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.legend {
+.overlay {
   position: fixed;
   top: 0;
 
@@ -11,7 +11,8 @@
 
   text-align: center;
 }
-.legend__table {
+
+.legendtable {
   position: absolute;
   top: calc(var(--headerHeight) + 2rem);
   right: 2rem;
