@@ -1,0 +1,66 @@
+.menuwrapper {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  margin: 0 auto;
+}
+.menu__section {}
+.menu__sectiontitle {
+  font-family: 'Lily Script One', serif;
+
+  margin: 1.2rem 0;
+
+  color: #333;
+}
+.menu__specials {}
+.menu__separator {
+  margin: 0.7rem 0;
+}
+.menu__dishes {}
+.menu__specialstitle {
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+.menu__dishlist {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem 1rem; /* row col */
+
+  padding: 1rem 0;
+}
+.menu__dishlist--specials {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dishcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 1rem;
+
+  border: 1px solid grey;
+}
+.dishcard__img {
+  margin-bottom: 0.6rem;
+}
+.dishcard__top {}
+.dishcard__title {
+  text-decoration: underline;
+}
+.dishcard__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-top: 0.6rem;
+}
+.dishcard__info {
+  display: flex;
+}

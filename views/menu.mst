@@ -3,4 +3,178 @@
 
   <h1>Menus</h1>
 
+  <div class="menuwrapper">
+
+    <div class="menu">
+      {{ #menus.allday }}
+        <div class="menu__section">
+          <h2 class="menu__sectiontitle">All Day Dishes</h2>
+
+          <div class="menu__specials">
+            <h3 class="menu__specialstitle">Chef Specials</h3>
+
+            <div class="menu__dishlist menu__dishlist--specials">
+
+              {{ #specials }}
+                <div class="dishcard">
+                  <img class="dishcard__img" src="" alt="" height="120">
+
+                  <div class="dishcard__top">
+                    <h4 class="dishcard__title">{{ name }}</h4>
+                  </div>
+
+                  <div class="dishcard__bottom">
+                    <div class="dishcard__info">
+                      <p>V, </p>
+                      <p>V2</p>
+                    </div>
+                    <p>£{{ price }}</p>
+                  </div>
+                </div>
+              {{ /specials }}
+            </div>
+          </div>
+
+          <hr class="menu__separator" />
+
+          <div class="menu__dishes">
+            <div class="menu__dishlist">
+
+              {{ #dishes }}
+                <div class="dishcard">
+                  <img class="dishcard__img" src="" alt="" height="120">
+
+                  <div class="dishcard__top">
+                    <h4 class="dishcard__title">{{ name }}</h4>
+                  </div>
+
+                  <div class="dishcard__bottom">
+                    <div class="dishcard__info">
+                      <p>V, </p>
+                      <p>V2</p>
+                    </div>
+                    <p>£{{ price }}</p>
+                  </div>
+                </div>
+              {{ /dishes }}
+            </div>
+          </div>
+        </div>
+      {{ /menus.allday }}
+
+      {{ #menus.lunch }}
+        <div class="menu__section">
+          <h2 class="menu__sectiontitle">Lunch Dishes</h2>
+
+          <div class="menu__specials">
+            <h3 class="menu__specialstitle">Chef Specials</h3>
+
+            <div class="menu__dishlist menu__dishlist--specials">
+
+              {{ #specials }}
+                <div class="dishcard">
+                  <img class="dishcard__img" src="" alt="" height="120">
+
+                  <div class="dishcard__top">
+                    <h4 class="dishcard__title">{{ name }}</h4>
+                  </div>
+
+                  <div class="dishcard__bottom">
+                    <div class="dishcard__info">
+                      <p>V, </p>
+                      <p>V2</p>
+                    </div>
+                    <p>£{{ price }}</p>
+                  </div>
+                </div>
+              {{ /specials }}
+            </div>
+          </div>
+
+          <hr class="menu__separator" />
+
+          <div class="menu__dishes">
+            <div class="menu__dishlist">
+
+              {{ #dishes }}
+                <div class="dishcard">
+                  <img class="dishcard__img" src="" alt="" height="120">
+
+                  <div class="dishcard__top">
+                    <h4 class="dishcard__title">{{ name }}</h4>
+                  </div>
+
+                  <div class="dishcard__bottom">
+                    <div class="dishcard__info">
+                      <p>V, </p>
+                      <p>V2</p>
+                    </div>
+                    <p>£{{ price }}</p>
+                  </div>
+                </div>
+              {{ /dishes }}
+            </div>
+          </div>
+        </div>
+      {{ /menus.lunch }}
+
+      {{ #menus.dinner }}
+        <div class="menu__section">
+          <h2 class="menu__sectiontitle">Dinner Dishes</h2>
+
+          <div class="menu__specials">
+            <h3 class="menu__specialstitle">Chef Specials</h3>
+
+            <div class="menu__dishlist menu__dishlist--specials">
+
+              {{ #specials }}
+                <div class="dishcard">
+                  <img class="dishcard__img" src="" alt="" height="120">
+
+                  <div class="dishcard__top">
+                    <h4 class="dishcard__title">{{ name }}</h4>
+                  </div>
+
+                  <div class="dishcard__bottom">
+                    <div class="dishcard__info">
+                      <p>V, </p>
+                      <p>V2</p>
+                    </div>
+                    <p>£{{ price }}</p>
+                  </div>
+                </div>
+              {{ /specials }}
+            </div>
+          </div>
+
+          <hr class="menu__separator" />
+
+          <div class="menu__dishes">
+            <div class="menu__dishlist">
+
+              {{ #dishes }}
+                <div class="dishcard">
+                  <img class="dishcard__img" src="" alt="" height="120">
+
+                  <div class="dishcard__top">
+                    <h4 class="dishcard__title">{{ name }}</h4>
+                  </div>
+
+                  <div class="dishcard__bottom">
+                    <div class="dishcard__info">
+                      <p>V, </p>
+                      <p>V2</p>
+                    </div>
+                    <p>£{{ price }}</p>
+                  </div>
+                </div>
+              {{ /dishes }}
+            </div>
+          </div>
+        </div>
+      {{ /menus.dinner }}
+    </div>
+
+  </div>
+
 {{ >partials/footer }}

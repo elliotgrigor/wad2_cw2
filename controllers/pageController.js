@@ -11,9 +11,13 @@ exports.home = (req, res) => {
 };
 
 exports.menu = async (req, res) => {
+  const css = [
+    { url: '/css/menu.css' },
+  ];
+
   const menus = await Dish.getSortedMenu(false); // withHidden: false
 
-  res.render('menu', { pageTitle: 'Menu' });
+  res.render('menu', { pageTitle: 'Menu', css, menus });
 };
 
 exports.contact = (req, res) => {
