@@ -83,6 +83,15 @@
 
   text-decoration: underline;
 }
+.menucontainer__sectioncategorydishtitle--hidden {
+  font-style: italic;
+
+  width: 8vw;
+
+  text-decoration: line-through;
+
+  color: #aaa;
+}
 .menucontainer__sectioncategorydishprice {
   width: 4vw;
   margin-left: 2rem;
