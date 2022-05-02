@@ -132,6 +132,7 @@ exports.editDishPOST = async (req, res) => {
     name, desc, dish_type, price, is_special,
     ingredients, allergens, allergy_advice,
     is_vegetarian, is_vegan, is_hidden,
+    slug,
   } = req.body;
 
   const ingredientList = ingredients.replace(/\s/g, '').split(',');
@@ -161,6 +162,7 @@ exports.editDishPOST = async (req, res) => {
         dishType: dish_type,
         price,
         hidden: is_hidden === 'on' ? true : false,
+        slug,
       } },
       {}, // options
     );

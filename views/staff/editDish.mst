@@ -62,6 +62,11 @@
           <textarea name="allergy_advice">{{ dish.content.allergyInfo.advice }}</textarea>
         </div>
 
+        <div class="formcontainer__formgroup">
+          <label for="slug">URL Slug (must be unique)</label>
+          <input type="text" name="slug" value="{{ dish.slug }}" />
+        </div>
+
         <div>
           <label for="is_vegetarian">Vegetarian</label>
           <input type="checkbox" name="is_vegetarian"
