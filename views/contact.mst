@@ -52,8 +52,8 @@
           </div>
 
           <div class="contactform__group">
-            <label for="subject">Subject</label>
-            <textarea name="subject"></textarea>
+            <label for="message">Message</label>
+            <textarea name="message"></textarea>
           </div>
         </form>
 
