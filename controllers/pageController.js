@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const Dish = require('../models/DishModel');
+const FAQ = require('../models/FAQModel');
 
 exports.home = (req, res) => {
   const css = [
@@ -26,12 +27,14 @@ exports.viewDish = async (req, res) => {
   res.render('viewDish', { pageTitle: `Menu - ${dish.name}`, dish });
 };
 
-exports.contact = (req, res) => {
+exports.contact = async (req, res) => {
   const css = [
     { url: '/css/contact.css' },
   ];
 
-  res.render('contact', { pageTitle: 'Contact', css });
+  const faqs = await FAQ.find({ pinned: true }).limit(3);
+
+  res.render('contact', { pageTitle: 'Contact', css, faqs });
 };
 
 exports.aboutUs = (req, res) => {
