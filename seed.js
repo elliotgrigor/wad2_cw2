@@ -20,6 +20,7 @@ const dishData = [
     dishType: 'allday',
     price: '8.35',
     hidden: false,
+    slug: 'crab-saffron-risotto',
   },
   {
     name: 'Prawn Tikka Masala',
@@ -37,6 +38,7 @@ const dishData = [
     dishType: 'allday',
     price: '7.40',
     hidden: false,
+    slug: 'prawn-tikka-masala',
   },
   {
     name: 'Seafood Spaghetti',
@@ -54,6 +56,7 @@ const dishData = [
     dishType: 'lunch',
     price: '7.70',
     hidden: false,
+    slug: 'seafood-spaghetti',
   },
   {
     name: 'Crabless Cakes',
@@ -71,6 +74,7 @@ const dishData = [
     dishType: 'lunch',
     price: '5.85',
     hidden: false,
+    slug: 'crabless-cakes',
   },
   {
     name: 'Mixed Fish Chowder',
@@ -88,6 +92,7 @@ const dishData = [
     dishType: 'lunch',
     price: '6.95',
     hidden: false,
+    slug: 'mixed-fish-chowder',
   },
   {
     name: 'Shrimp Scampi with Pasta',
@@ -105,6 +110,7 @@ const dishData = [
     dishType: 'lunch',
     price: '6.40',
     hidden: false,
+    slug: 'shrimp-scampi-pasta',
   },
   {
     name: 'Paella Mixta',
@@ -122,6 +128,7 @@ const dishData = [
     dishType: 'dinner',
     price: '9.15',
     hidden: false,
+    slug: 'paella-mixta',
   },
   {
     name: 'Crab & Asparagus Pappardelle',
@@ -139,6 +146,7 @@ const dishData = [
     dishType: 'dinner',
     price: '7.75',
     hidden: false,
+    slug: 'crab-asparagus-pappardelle',
   },
   {
     name: 'Broiled Haddock',
@@ -156,6 +164,7 @@ const dishData = [
     dishType: 'dinner',
     price: '7.10',
     hidden: false,
+    slug: 'broiled-haddock',
   },
 ];
 
