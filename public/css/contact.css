@@ -1,5 +1,113 @@
 .title {
   font-family: 'Lily Script One', serif;
+  font-size: 3rem;
 
   text-align: center;
+
+  color: #333;
+}
+
+.faqwrapper {
+  width: 33%;
+  margin: 0 auto;
+}
+
+.faqsection {
+  margin-bottom: 2rem;
+}
+.faqsection__title {
+  font-family: 'Lily Script One', serif;
+  font-size: 1.5rem;
+
+  margin-bottom: 1.33rem;
+
+  text-align: center;
+
+  color: #333;
+}
+.faq {
+  font-size: 1.33rem;
+}
+.faq__question {
+  font-weight: bold;
+  font-style: italic;
+
+  margin-bottom: 0.33rem;
+
+  text-decoration: underline;
+}
+.faq__answer {
+  margin-bottom: 1.33rem;
+}
+.faqsection__link {
+  transition: all 0.3s;
+
+  color: #000;
+}
+.faqsection__link:hover {
+  background-color: var(--primary);
+}
+
+.contactwrapper {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+.rule {
+  height: 2px;
+
+  border: 1px solid #888;
+  background: var(--primary);
+}
+
+.contactsection {
+  margin-top: 2rem;
+}
+.contactsection__title {
+  font-family: 'Lily Script One', serif;
+  font-size: 1.5rem;
+
+  margin-bottom: 1.33rem;
+
+  text-align: center;
+
+  color: #333;
+}
+.contactsection__container {
+  display: flex;
+
+  padding: 1.5rem;
+
+  border: 1px solid lightgrey;
+
+  gap: 3rem;
+}
+.contactform {
+  flex: 2;
+}
+.contactform__top {
+  display: flex;
+}
+.contactform__group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.contactinfo__row {
+  display: flex;
+
+  margin: 0.5rem 0;
+}
+.contactinfo__rowfield {
+  font-weight: bold;
+}
+.contactinfo__rowvalue {
+  padding-left: 0.5rem;
 }
