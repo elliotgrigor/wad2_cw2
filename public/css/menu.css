@@ -98,7 +98,16 @@
 
   padding: 1rem;
 
+  transition: all 0.3s;
+  text-decoration: none;
+
+  color: #333;
   border: 1px solid grey;
+}
+.dishcard:hover {
+  transform: translateY(-0.33rem);
+
+  box-shadow: 0 0.25rem 1rem #ccc;
 }
 .dishcard__img {
   margin-bottom: 0.6rem;

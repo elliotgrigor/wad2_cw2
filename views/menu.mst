@@ -37,7 +37,7 @@
             <div class="menu__dishlist menu__dishlist--specials">
 
               {{ #specials }}
-                <div class="dishcard">
+                <a href="/menu/{{ slug }}" class="dishcard">
                   <img class="dishcard__img" src="" alt="" height="120">
 
                   <div class="dishcard__top">
@@ -62,7 +62,7 @@
 
                     </div>
                   </div>
-                </div>
+                </a>
               {{ /specials }}
 
               {{ ^specials }}
@@ -78,7 +78,7 @@
             <div class="menu__dishlist">
 
               {{ #dishes }}
-                <div class="dishcard">
+                <a href="/menu.{{ slug }}" class="dishcard">
                   <img class="dishcard__img" src="" alt="" height="120">
 
                   <div class="dishcard__top">
@@ -103,7 +103,7 @@
 
                     </div>
                   </div>
-                </div>
+                </a>
               {{ /dishes }}
 
             </div>
@@ -121,7 +121,7 @@
             <div class="menu__dishlist menu__dishlist--specials">
 
               {{ #specials }}
-                <div class="dishcard">
+                <a href="/menu/{{ slug }}" class="dishcard">
                   <img class="dishcard__img" src="" alt="" height="120">
 
                   <div class="dishcard__top">
@@ -146,7 +146,7 @@
 
                     </div>
                   </div>
-                </div>
+                </a>
               {{ /specials }}
 
               {{ ^specials }}
@@ -162,7 +162,7 @@
             <div class="menu__dishlist">
 
               {{ #dishes }}
-                <div class="dishcard">
+                <a href="/menu/{{ slug }}" class="dishcard">
                   <img class="dishcard__img" src="" alt="" height="120">
 
                   <div class="dishcard__top">
@@ -187,7 +187,7 @@
 
                     </div>
                   </div>
-                </div>
+                </a>
               {{ /dishes }}
 
             </div>
@@ -205,7 +205,7 @@
             <div class="menu__dishlist menu__dishlist--specials">
 
               {{ #specials }}
-                <div class="dishcard">
+                <a href="/menu/{{ slug }}" class="dishcard">
                   <img class="dishcard__img" src="" alt="" height="120">
 
                   <div class="dishcard__top">
@@ -230,7 +230,7 @@
 
                     </div>
                   </div>
-                </div>
+                </a>
               {{ /specials }}
 
               {{ ^specials }}
@@ -246,7 +246,7 @@
             <div class="menu__dishlist">
 
               {{ #dishes }}
-                <div class="dishcard">
+                <a href="/menu/{{ slug }}" class="dishcard">
                   <img class="dishcard__img" src="" alt="" height="120">
 
                   <div class="dishcard__top">
@@ -271,7 +271,7 @@
 
                     </div>
                   </div>
-                </div>
+                </a>
               {{ /dishes }}
 
             </div>
