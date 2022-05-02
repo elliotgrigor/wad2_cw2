@@ -78,7 +78,7 @@
             <div class="menu__dishlist">
 
               {{ #dishes }}
-                <a href="/menu.{{ slug }}" class="dishcard">
+                <a href="/menu/{{ slug }}" class="dishcard">
                   <img class="dishcard__img" src="" alt="" height="120">
 
                   <div class="dishcard__top">
