@@ -183,18 +183,22 @@ const faqData = [
   {
     question: 'What is your address?',
     answer: '123 Sesame Street.',
+    pinned: true,
   },
   {
     question: 'How do I make a reservation?',
     answer: 'Call us on 0812 345 6789.',
+    pinned: true,
   },
   {
     question: 'Where can I make a complaint?',
     answer: 'Use our contact form to inform us of your experience.',
+    pinned: true,
   },
   {
     question: 'Can I leave a review?',
     answer: "We'd appreciate it if you could leave us a positive review on Google.",
+    pinned: false,
   },
 ];
 
