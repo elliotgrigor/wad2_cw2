@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const Dish = require('./models/DishModel');
 const Staff = require('./models/StaffModel');
+const FAQ = require('./models/FAQModel');
 
 const dishData = [
   {
@@ -178,10 +179,33 @@ const staffData = [
   },
 ];
 
+const faqData = [
+  {
+    question: 'What is your address?',
+    answer: '123 Sesame Street.',
+  },
+  {
+    question: 'How do I make a reservation?',
+    answer: 'Call us on 0812 345 6789.',
+  },
+  {
+    question: 'Where can I make a complaint?',
+    answer: 'Use our contact form to inform us of your experience.',
+  },
+  {
+    question: 'Can I leave a review?',
+    answer: "We'd appreciate it if you could leave us a positive review on Google.",
+  },
+];
+
 dishData.forEach(doc => {
   Dish.seed(doc);
 });
 
 staffData.forEach(doc => {
   Staff.seed(doc, doc.password);
+});
+
+faqData.forEach(doc => {
+  FAQ.seed(doc);
 });
