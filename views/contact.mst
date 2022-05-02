@@ -53,8 +53,10 @@
 
           <div class="contactform__group">
             <label for="message">Message</label>
-            <textarea name="message"></textarea>
+            <textarea name="message" rows="10"></textarea>
           </div>
+
+          <input class="contactform__submitbtn" type="submit" value="Send">
         </form>
 
         <div class="contactinfo">
