@@ -1,0 +1,6 @@
+{{ >partials/head }}
+{{ >partials/nav }}
+
+  <h1>View Dish</h1>
+
+{{ >partials/footer }}

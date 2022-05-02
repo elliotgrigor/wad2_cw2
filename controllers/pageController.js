@@ -20,6 +20,12 @@ exports.menu = async (req, res) => {
   res.render('menu', { pageTitle: 'Menu', css, menus });
 };
 
+exports.viewDish = async (req, res) => {
+  const dish = await Dish.findOne({ slug: req.params.slug });
+
+  res.render('viewDish', { pageTitle: `Menu - ${dish.name}`, dish });
+};
+
 exports.contact = (req, res) => {
   res.render('contact', { pageTitle: 'Contact' });
 };
