@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const Dish = require('../models/DishModel');
+const Message = require('../models/MessageModel');
 const FAQ = require('../models/FAQModel');
 
 exports.home = (req, res) => {
@@ -57,5 +58,32 @@ exports.login = async (req, res) => {
   }
   catch (err) {
     return res.render('login', { pageTitle: 'Login', css });
+  }
+};
+
+exports.contactPOST = async (req, res) => {
+  const { name, email, subject, message } = req.body;
+
+  if (!email || !message) {
+    return res.redirect('/contact');
+  }
+
+  const newMessage = {
+    name,
+    email,
+    subject,
+    body: message,
+    sentAt: new Date().toISOString(),
+    unread: true,
+  };
+
+  try {
+    const doc = await Message.insert(newMessage);
+    console.log('Inserted:', doc);
+
+    return res.redirect('/contact');
+  }
+  catch (err) {
+    console.log(err);
   }
 };

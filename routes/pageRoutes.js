@@ -11,4 +11,6 @@ router.get('/aboutus', pages.aboutUs);
 
 router.get('/login', pages.login);
 
+router.post('/contact', pages.contactPOST);
+
 module.exports = router;
