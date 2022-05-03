@@ -28,6 +28,15 @@ class FAQ extends Model {
     }
   }
 
+  static async getById(id) {
+    try {
+      return await this.find({ _id: id });
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
   static async seed(faq) {
     try {
       const doc = await this.insert(faq);
