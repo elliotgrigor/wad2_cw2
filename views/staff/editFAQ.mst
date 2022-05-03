@@ -1,0 +1,42 @@
+{{ >staff/partials/head }}
+{{ >staff/partials/header }}
+
+<div class="contentwrapper">
+  {{ >staff/partials/sidebar }}
+
+  <div class="workspace">
+
+    <div class="formcontainer">
+      <h1 class="formcontainer__heading">Add FAQ</h1>
+
+      <form class="formcontainer__form" action="/staff/faqs/{{ faq._id }}/update" method="POST">
+
+        <div class="formcontainer__formgroup">
+          <label for="question">Question</label>
+          <textarea name="question" rows="3">{{ faq.question }}</textarea>
+        </div>
+
+        <div class="formcontainer__formgroup">
+          <label for="answer">Answer</label>
+          <textarea name="answer" rows="10"> {{ faq.answer }}</textarea>
+        </div>
+
+        <div>
+          <label for="is_pinned">Pin FAQ?</label>
+          <input type="checkbox" name="is_pinned"
+            {{ #faq.pinned }}
+              checked
+            {{ /faq.pinned }} />
+        </div>
+
+        <div class="formcontainer__submitwrapper">
+          <input class="formcontainer__submitbtn" type="submit" value="Save">
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+{{ >partials/nofooter }}
