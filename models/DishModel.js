@@ -49,6 +49,15 @@ class Dish extends Model {
     }
   }
 
+  static async getBySlug(slug) {
+    try {
+      return await this.findOne({ slug });
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
   static async seed(dish) {
     try {
       const doc = await this.insert(dish);

@@ -23,7 +23,7 @@ exports.menu = async (req, res) => {
 };
 
 exports.viewDish = async (req, res) => {
-  const dish = await Dish.findOne({ slug: req.params.slug });
+  const dish = await Dish.getBySlug(req.params.slug);
 
   res.render('viewDish', { pageTitle: `Menu - ${dish.name}`, dish });
 };
