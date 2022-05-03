@@ -18,7 +18,7 @@
 
         <div class="formcontainer__formgroup">
           <label for="answer">Answer</label>
-          <textarea name="answer" rows="10"> {{ faq.answer }}</textarea>
+          <textarea name="answer" rows="10">{{ faq.answer }}</textarea>
         </div>
 
         <div>
