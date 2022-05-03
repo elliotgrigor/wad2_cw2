@@ -59,7 +59,7 @@
     </li>
 
     <li class="navmobile__listitem">
-      <a href="/aboutus" class="navmobile__link">
+      <a href="/about-us" class="navmobile__link">
         <span class="navmobile__linktext">About</span>
       </a>
     </li>
