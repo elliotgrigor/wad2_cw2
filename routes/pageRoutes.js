@@ -8,7 +8,7 @@ router.get('/menu', pages.menu);
 router.get('/menu/:slug', pages.viewDish);
 router.get('/contact', pages.contact);
 router.get('/faqs', pages.faqs);
-router.get('/aboutus', pages.aboutUs);
+router.get('/about-us', pages.aboutUs);
 
 router.get('/login', pages.login);
 
