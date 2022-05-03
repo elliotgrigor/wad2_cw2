@@ -93,6 +93,14 @@ exports.editFAQ = async (req, res) => {
   res.render('staff/editFAQ', { pageTitle: 'Edit FAQ', css, faq });
 };
 
+exports.messages = (req, res) => {
+  const css = [
+    { url: '/css/staff/messages.css' },
+  ];
+
+  res.render('staff/messages', { pageTitle: 'Messages', css });
+};
+
 exports.registerUser = (req, res) => {
   const css = [
     { url: '/css/staff/form.css' },
