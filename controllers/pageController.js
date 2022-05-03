@@ -49,7 +49,11 @@ exports.faqs = async (req, res) => {
 };
 
 exports.aboutUs = (req, res) => {
-  res.render('about', { pageTitle: 'About us' });
+  const css = [
+    { url: '/css/about.css' },
+  ];
+
+  res.render('about', { pageTitle: 'About us', css });
 };
 
 exports.login = async (req, res) => {
