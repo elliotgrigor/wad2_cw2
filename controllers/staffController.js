@@ -197,6 +197,30 @@ exports.deleteDish = async (req, res) => {
   }
 };
 
+exports.addFAQPOST = async (req, res) => {
+  const { question, answer, is_pinned } = req.body;
+
+  if (!question || !answer) {
+    return res.redirect('/staff/faqs/add');
+  }
+
+  const newFAQ = {
+    question,
+    answer,
+    pinned: is_pinned === 'on' ? true : false,
+  };
+
+  try {
+    const doc = await FAQ.insert(newFAQ);
+
+    console.log('Inserted:', doc);
+    res.redirect('/staff/faqs');
+  }
+  catch (err) {
+    console.log(err);
+  }
+};
+
 exports.deleteFAQ = async (req, res) => {
   try {
     await FAQ.remove({ _id: req.params.id }, { /* options */ });
