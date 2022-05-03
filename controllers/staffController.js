@@ -188,6 +188,18 @@ exports.deleteDish = async (req, res) => {
   }
 };
 
+exports.deleteFAQ = async (req, res) => {
+  try {
+    await FAQ.remove({ _id: req.params.id }, { /* options */ });
+
+    console.log('Removed FAQ with ID:', req.params.id);
+    res.redirect('/staff/faqs');
+  }
+  catch (err) {
+    console.log(err);
+  }
+};
+
 exports.registerUserPOST = async (req, res) => {
   const { id, password, passwordConfirm } = req.body;
 
