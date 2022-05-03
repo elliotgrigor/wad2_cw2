@@ -70,7 +70,7 @@ exports.faqs = async (req, res) => {
 
   const faqs = await FAQ.getAll(true); // sortByPinned: true
 
-  res.render('staff/faqs.mst', { pageTitle: 'FAQs', css, faqs });
+  res.render('staff/faqs', { pageTitle: 'FAQs', css, faqs });
 };
 
 exports.addFAQ = (req, res) => {
@@ -79,7 +79,7 @@ exports.addFAQ = (req, res) => {
     { url: '/css/staff/faqForm.css' },
   ];
 
-  res.render('staff/faqs.mst', { pageTitle: 'Add FAQ', css });
+  res.render('staff/addFAQ', { pageTitle: 'Add FAQ', css });
 };
 
 exports.registerUser = (req, res) => {
