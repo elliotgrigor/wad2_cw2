@@ -1,6 +1,59 @@
 {{ >partials/head }}
 {{ >partials/nav }}
 
-  <h1>About</h1>
+  <h1 class="title">About</h1>
+
+  <div class="contentwrapper">
+
+    <div class="philosophy">
+      <h2 class="philosophy__title">Philosophy</h2>
+      <p class="philosophy__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+
+    <hr class="rule" />
+
+    <div class="foodsources">
+      <h2 class="foodsources__title">Food Sources</h2>
+
+      <div class="foodsources__content">
+        <div class="foodsources__contentrow">
+          <img class="foodsources__img" src="" alt="">
+
+          <p class="foodsources__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+          </p>
+        </div>
+
+        <div class="foodsources__contentrow--reverse">
+          <img class="foodsources__img" src="" alt="">
+
+          <p class="foodsources__text--reverse">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 {{ >partials/footer }}

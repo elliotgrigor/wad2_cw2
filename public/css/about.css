@@ -1,0 +1,83 @@
+.title {
+  font-family: 'Lily Script One', serif;
+  font-size: 3rem;
+
+  text-align: center;
+
+  color: #333;
+}
+
+.contentwrapper {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.philosophy {
+  line-height: 1.5;
+
+  margin-bottom: 2rem;
+}
+.philosophy__title {
+  font-family: 'Lily Script One', serif;
+  font-size: 1.5rem;
+
+  margin-bottom: 1rem;
+
+  text-align: center;
+
+  color: #333;
+}
+.philosophy__text {}
+
+.rule {
+  height: 2px;
+
+  border: 1px solid #888;
+  background: var(--primary);
+}
+
+.foodsources {
+  line-height: 1.5;
+
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.foodsources__title {
+  font-family: 'Lily Script One', serif;
+  font-size: 1.5rem;
+
+  margin-bottom: 1rem;
+
+  text-align: center;
+
+  color: #333;
+}
+.foodsources__content {
+  display: flex;
+  flex-direction: column;
+}
+.foodsources__contentrow,
+.foodsources__contentrow--reverse {
+  display: flex;
+}
+.foodsources__contentrow {
+  margin-bottom: 3rem;
+}
+.foodsources__contentrow--reverse {
+  flex-direction: row-reverse;
+}
+.foodsources__img {
+  flex: 2;
+}
+.foodsources__text {
+  flex: 3;
+
+  padding: 2rem;
+}
+.foodsources__text--reverse {
+  flex: 3;
+
+  padding: 2rem;
+
+  text-align: right;
+}
