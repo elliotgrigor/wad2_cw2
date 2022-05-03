@@ -33,9 +33,19 @@ exports.contact = async (req, res) => {
     { url: '/css/contact.css' },
   ];
 
-  const faqs = await FAQ.find({ pinned: true }).limit(3);
+  const pinnedFAQs = await FAQ.find({ pinned: true }).limit(3);
 
-  res.render('contact', { pageTitle: 'Contact', css, faqs });
+  res.render('contact', { pageTitle: 'Contact', css, pinnedFAQs });
+};
+
+exports.faqs = async (req, res) => {
+  const css = [
+    { url: '/css/faqs.css' },
+  ];
+
+  const faqs = await FAQ.find({});
+
+  res.render('faqs', { pageTitle: 'FAQs', css, faqs });
 };
 
 exports.aboutUs = (req, res) => {
