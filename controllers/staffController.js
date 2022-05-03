@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 
 const Dish = require('../models/DishModel');
 const Staff = require('../models/StaffModel');
+const FAQ = require('../models/FAQModel');
 
 exports.dashboard = (req, res) => {
   res.render('staff/dashboard', { pageTitle: 'Dashboard' });
@@ -62,16 +63,14 @@ exports.editDish = async (req, res) => {
   }
 };
 
-exports.deleteDish = async (req, res) => {
-  try {
-    await Dish.remove({ _id: req.params.id }, { /* options */ });
+exports.faqs = async (req, res) => {
+  const css = [
+    { url: '/css/staff/faqs.css' },
+  ];
 
-    console.log('Removed dish with ID:', req.params.id);
-    res.redirect('/staff/dishes');
-  }
-  catch (err) {
-    console.log(err);
-  }
+  const faqs = await FAQ.getAll(true); // sortByPinned: true
+
+  res.render('staff/faqs.mst', { pageTitle: 'FAQs', css, faqs });
 };
 
 exports.registerUser = (req, res) => {
@@ -170,6 +169,18 @@ exports.editDishPOST = async (req, res) => {
     );
 
     console.log('Updated dish with ID:', req.params.id);
+    res.redirect('/staff/dishes');
+  }
+  catch (err) {
+    console.log(err);
+  }
+};
+
+exports.deleteDish = async (req, res) => {
+  try {
+    await Dish.remove({ _id: req.params.id }, { /* options */ });
+
+    console.log('Removed dish with ID:', req.params.id);
     res.redirect('/staff/dishes');
   }
   catch (err) {
