@@ -81,3 +81,46 @@
 
   text-align: right;
 }
+
+@media screen and (max-width: 1540px) {
+  .contentwrapper {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .contentwrapper {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .contentwrapper {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .contentwrapper {
+    width: 85%;
+  }
+
+  .foodsources__contentrow,
+  .foodsources__title {
+    margin-bottom: 0;
+  }
+  .foodsources__img {
+    display: none;
+  }
+  .philosophy__text,
+  .foodsources__text,
+  .foodsources__text--reverse {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .contentwrapper {
+    width: 90%;
+  }
+}
