@@ -73,6 +73,15 @@ exports.faqs = async (req, res) => {
   res.render('staff/faqs.mst', { pageTitle: 'FAQs', css, faqs });
 };
 
+exports.addFAQ = (req, res) => {
+  const css = [
+    { url: '/css/staff/form.css' },
+    { url: '/css/staff/faqForm.css' },
+  ];
+
+  res.render('staff/faqs.mst', { pageTitle: 'Add FAQ', css });
+};
+
 exports.registerUser = (req, res) => {
   const css = [
     { url: '/css/staff/form.css' },
