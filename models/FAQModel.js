@@ -16,6 +16,15 @@ class FAQ extends Model {
     }
   }
 
+  static async getAll() {
+    try {
+      return await this.find({});
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
   static async seed(faq) {
     try {
       const doc = await this.insert(faq);

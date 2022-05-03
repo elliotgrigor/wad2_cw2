@@ -43,7 +43,7 @@ exports.faqs = async (req, res) => {
     { url: '/css/faqs.css' },
   ];
 
-  const faqs = await FAQ.find({});
+  const faqs = await FAQ.getAll();
 
   res.render('faqs', { pageTitle: 'FAQs', css, faqs });
 };
