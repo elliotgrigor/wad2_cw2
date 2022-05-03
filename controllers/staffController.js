@@ -232,6 +232,32 @@ exports.addFAQPOST = async (req, res) => {
   }
 };
 
+exports.editFAQPOST = async (req, res) => {
+  const { question, answer, is_pinned } = req.body;
+
+  if (!question || !answer) {
+    return res.redirect(`/staff/faqs/${req.params.id}`);
+  }
+
+  try {
+    await FAQ.update(
+      { _id: req.params.id },
+      { $set: {
+        question,
+        answer,
+        pinned: is_pinned === 'on' ? true : false,
+      } },
+      { /* options */ },
+    );
+
+    console.log('Updated FAQ with ID:', req.params.id);
+    res.redirect('/staff/faqs');
+  }
+  catch (err) {
+    console.log(err);
+  }
+};
+
 exports.deleteFAQ = async (req, res) => {
   try {
     await FAQ.remove({ _id: req.params.id }, { /* options */ });
