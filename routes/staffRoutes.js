@@ -7,6 +7,7 @@ router.get('/dashboard', staff.dashboard);
 router.get('/dishes', staff.dishes);
 router.get('/dishes/add', staff.addDish);
 router.get('/dishes/:id', staff.editDish);
+router.get('/faqs', staff.faqs);
 router.get('/register', staff.registerUser);
 
 router.post('/dishes/add', staff.addDishPOST);
