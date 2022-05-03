@@ -82,6 +82,17 @@ exports.addFAQ = (req, res) => {
   res.render('staff/addFAQ', { pageTitle: 'Add FAQ', css });
 };
 
+exports.editFAQ = async (req, res) => {
+  const css = [
+    { url: '/css/staff/form.css' },
+    { url: '/css/staff/faqForm.css' },
+  ];
+
+  const faq = await FAQ.getById(req.params.id);
+
+  res.render('staff/editFAQ', { pageTitle: 'Edit FAQ', css, faq });
+};
+
 exports.registerUser = (req, res) => {
   const css = [
     { url: '/css/staff/form.css' },
