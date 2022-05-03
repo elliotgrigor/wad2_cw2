@@ -3,4 +3,28 @@
 
   <h1 class="title">FAQs</h1>
 
+  <div class="faqswrapper">
+
+    <div class="faqslist">
+
+      {{ #faqs }}
+        <div class="faq">
+
+          <div class="faq__question">
+            <p class="faq__letter">Q</p>
+            <p class="faq__text faq__text--underline">{{ question }}</p>
+          </div>
+
+          <div class="faq__answer">
+            <p class="faq__letter">A</p>
+            <p class="faq__text">{{ answer }}</p>
+          </div>
+
+        </div>
+      {{ /faqs }}
+
+    </div>
+
+  </div>
+
 {{ >partials/footer }}
