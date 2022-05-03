@@ -16,8 +16,11 @@ class FAQ extends Model {
     }
   }
 
-  static async getAll() {
+  static async getAll(sortByPinned) {
     try {
+      if (sortByPinned) {
+        return await this.find({}).sort({ pinned: -1 });
+      }
       return await this.find({});
     }
     catch (err) {
