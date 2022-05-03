@@ -30,7 +30,7 @@ class FAQ extends Model {
 
   static async getById(id) {
     try {
-      return await this.find({ _id: id });
+      return await this.findOne({ _id: id });
     }
     catch (err) {
       console.log(err);
