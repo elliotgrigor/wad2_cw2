@@ -7,6 +7,15 @@ class FAQ extends Model {
     }
   }
 
+  static async getPinnedFAQs() {
+    try {
+      return await this.find({ pinned: true }).limit(3);
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
   static async seed(faq) {
     try {
       const doc = await this.insert(faq);

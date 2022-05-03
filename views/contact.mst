@@ -10,12 +10,12 @@
 
       <div class="faqscontainer">
 
-        {{ #faqs }}
+        {{ #pinnedFAQs }}
           <div class="faq">
             <p class="faq__question">{{ question }}</p>
             <p class="faq__answer">{{ answer }}</p>
           </div>
-        {{ /faqs }}
+        {{ /pinnedFAQs }}
 
       </div>
 

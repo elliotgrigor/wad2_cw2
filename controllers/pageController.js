@@ -33,7 +33,7 @@ exports.contact = async (req, res) => {
     { url: '/css/contact.css' },
   ];
 
-  const pinnedFAQs = await FAQ.find({ pinned: true }).limit(3);
+  const pinnedFAQs = await FAQ.getPinnedFAQs();
 
   res.render('contact', { pageTitle: 'Contact', css, pinnedFAQs });
 };
