@@ -1,0 +1,47 @@
+{{ >staff/partials/head }}
+{{ >staff/partials/header }}
+
+<div class="contentwrapper">
+  {{ >staff/partials/sidebar }}
+
+  <div class="workspace">
+
+    <div class="faqscontainer">
+
+      <div class="faqscontainer__header">
+        <h1 class="faqscontainer__title">FAQs</h1>
+        <a class="faqscontainer__addbtn" href="/staff/faqs/add">
+          <img class="faqscontainer__addbtnimage" src="/svg/plus.svg" alt="Plus icon">
+        </a>
+      </div>
+
+      <div class="faqscontainer__scroll">
+
+        {{ #faqs }}
+          <div class="faqcontainer faq-padding">
+            <div class="faqcontainer__details">
+              {{ #pinned }}
+                <p class="faqcontainer__question--pinned">{{ question }}</p>
+              {{ /pinned }}
+              {{ ^pinned }}
+                <p class="faqcontainer__question">{{ question }}</p>
+              {{ /pinned }}
+              <p class="faqcontainer__answer">{{ answer }}</p>
+            </div>
+            <div class="faqcommands">
+              <a class="faqcommands__edit" href="/staff/faqs/{{ _id }}">Edit</a>
+              <form action="/staff/faqs/{{ _id }}/delete" method="POST">
+                <input class="faqcommands__delete" type="submit" value="Remove">
+              </form>
+            </div>
+          </div>
+        {{ /faqs }}
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{{ >partials/nofooter }}
