@@ -43,7 +43,7 @@ exports.faqs = async (req, res) => {
     { url: '/css/faqs.css' },
   ];
 
-  const faqs = await FAQ.getAll();
+  const faqs = await FAQ.getAll(true); // sortByPinned: true
 
   res.render('faqs', { pageTitle: 'FAQs', css, faqs });
 };
