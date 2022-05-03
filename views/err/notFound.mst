@@ -1,5 +1,8 @@
 {{ >partials/head }}
 
-  <h1>Error: Not found (404)</h1>
+  <div class="viewport">
+    <h1 class="error">This page doesn't exist.</h1>
+    <a class="back" href="javascript:void(0);" onclick="history.back(-1)">Go back</a>
+  </div>
 
 {{ >partials/nofooter }}

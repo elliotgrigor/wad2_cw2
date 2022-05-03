@@ -1,4 +1,8 @@
 
 exports.notFound = (req, res) => {
-  res.render('err/notFound', {});
+  const css = [
+    { url: '/css/error/404.css' },
+  ];
+
+  res.render('err/notFound', { pageTitle: 'Not Found', css });
 };
