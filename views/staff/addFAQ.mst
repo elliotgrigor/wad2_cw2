@@ -21,6 +21,11 @@
           <textarea name="answer" rows="10"></textarea>
         </div>
 
+        <div>
+          <label for="is_pinned">Pin FAQ?</label>
+          <input type="checkbox" name="is_pinned" />
+        </div>
+
         <div class="formcontainer__submitwrapper">
           <input class="formcontainer__submitbtn" type="submit" value="Save">
         </div>
