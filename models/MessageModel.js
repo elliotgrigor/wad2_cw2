@@ -41,6 +41,16 @@ class Message extends Model {
       console.log(err);
     }
   }
+
+  static async seed(message) {
+    try {
+      const doc = await this.insert(message);
+      console.log('Inserted:', doc);
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
 }
 
 module.exports = Message;
