@@ -15,6 +15,32 @@ class Message extends Model {
       console.log(err);
     }
   }
+
+  static async getById(id) {
+    try {
+      return await this.findOne({ _id: id });
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
+  static async markAsRead(id) {
+    try {
+      await this.update(
+        { _id: id },
+        { $set: {
+          unread: false,
+        } },
+        { /* options */ },
+      );
+
+      console.log('Marked message', id, 'as read');
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
 }
 
 module.exports = Message;
