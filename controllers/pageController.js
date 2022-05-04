@@ -87,7 +87,7 @@ exports.contactPOST = async (req, res) => {
     email,
     subject,
     body: message,
-    sentAt: new Date().toISOString(),
+    sentAt: new Date(),
     unread: true,
   };
 
