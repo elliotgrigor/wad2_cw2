@@ -115,6 +115,30 @@ exports.messages = async (req, res) => {
   res.render('staff/messages', { pageTitle: 'Messages', css, messages });
 };
 
+exports.viewMessage = async (req, res) => {
+  const css = [
+    { url: '/css/staff/viewMessage.css' },
+  ];
+
+  let message = await Message.getById(req.params.id);
+  const sentAt = new Date(message.sentAt);
+
+  if (message.unread) {
+    await Message.markAsRead(req.params.id);
+  }
+
+  message = {
+    ...message,
+    date: sentAt.toDateString(),
+    time: `${sentAt.getHours()}:${sentAt.getMinutes()}:${sentAt.getSeconds()}`,
+  };
+
+  res.render('staff/viewMessage', {
+    pageTitle: `Message from ${message.name}`,
+    css, message,
+  });
+};
+
 exports.registerUser = (req, res) => {
   const css = [
     { url: '/css/staff/form.css' },
