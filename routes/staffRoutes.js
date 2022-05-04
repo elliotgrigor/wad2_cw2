@@ -28,6 +28,6 @@ router.post('/faqs/:id/delete', staff.deleteFAQ);
 
 router.post('/register', staff.registerUserPOST);
 
-router.get('*', (_, res) => res.redirect('/staff/dashboard'));
+router.get('*', (_, res) => res.redirect('/staff/dishes'));
 
 module.exports = router;

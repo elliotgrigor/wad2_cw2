@@ -346,7 +346,7 @@ exports.registerUserPOST = async (req, res) => {
     const doc = await Staff.insert(newUser);
 
     console.log('Inserted:', doc);
-    res.redirect('/staff/dashboard');
+    res.redirect('/staff/dishes');
   }
   catch (err) {
     console.log(err);

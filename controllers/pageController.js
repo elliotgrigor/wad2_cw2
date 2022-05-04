@@ -72,7 +72,7 @@ exports.login = async (req, res) => {
 
   try {
     await jwt.verify(accessToken, process.env.SECRET);
-    return res.redirect('/staff/dashboard');
+    return res.redirect('/staff/dishes');
   }
   catch (err) {
     return res.render('login', { pageTitle: 'Login', css });

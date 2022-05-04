@@ -18,7 +18,7 @@ exports.login = async (req, res) => {
       const token = jwt.sign({ id: user.staffId }, process.env.SECRET, {
         expiresIn: '1800s', // 30 minutes
       });
-      res.cookie('jwt', token).redirect('/staff');
+      res.cookie('jwt', token).redirect('/staff/dishes');
     });
   }
   catch (err) {
