@@ -5,10 +5,6 @@ const Staff = require('../models/StaffModel');
 const Message = require('../models/MessageModel');
 const FAQ = require('../models/FAQModel');
 
-exports.dashboard = (req, res) => {
-  res.render('staff/dashboard', { pageTitle: 'Dashboard' });
-};
-
 exports.dishes = async (req, res) => {
   const css = [
     { url: '/css/staff/menus.css' },

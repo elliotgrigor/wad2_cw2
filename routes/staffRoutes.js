@@ -4,8 +4,6 @@ const router = express.Router();
 const staff = require('../controllers/staffController');
 
 // GET
-router.get('/dashboard', staff.dashboard);
-
 router.get('/dishes', staff.dishes);
 router.get('/dishes/add', staff.addDish);
 router.get('/dishes/:id', staff.editDish);
