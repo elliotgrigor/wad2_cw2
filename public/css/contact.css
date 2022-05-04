@@ -155,25 +155,55 @@
   }
 }
 
+@media screen and (max-width: 1540px) {
+  .faqwrapper {
+    width: 40%;
+  }
+}
+
 @media screen and (max-width: 1280px) {
+  .faqwrapper {
+    width: 60%;
+
+    text-align: center;
+  }
+
   .contactwrapper {
     width: 60%;
   }
 }
 
 @media screen and (max-width: 890px) {
+  .faqwrapper {
+    width: 70%;
+
+    text-align: center;
+  }
+
   .contactwrapper {
     width: 70%;
   }
 }
 
 @media screen and (max-width: 720px) {
+  .faqwrapper {
+    width: 80%;
+
+    text-align: center;
+  }
+
   .contactwrapper {
     width: 80%;
   }
 }
 
 @media screen and (max-width: 540px) {
+  .faqwrapper {
+    width: 90%;
+
+    text-align: center;
+  }
+
   .contactwrapper {
     width: 90%;
   }
