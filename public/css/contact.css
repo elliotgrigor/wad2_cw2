@@ -176,8 +176,6 @@
 @media screen and (max-width: 890px) {
   .faqwrapper {
     width: 70%;
-
-    text-align: center;
   }
 
   .contactwrapper {
@@ -188,8 +186,6 @@
 @media screen and (max-width: 720px) {
   .faqwrapper {
     width: 80%;
-
-    text-align: center;
   }
 
   .contactwrapper {
@@ -200,8 +196,6 @@
 @media screen and (max-width: 540px) {
   .faqwrapper {
     width: 90%;
-
-    text-align: center;
   }
 
   .contactwrapper {
