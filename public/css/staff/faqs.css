@@ -72,7 +72,7 @@
 .faqcontainer__answer {
   font-style: italic;
 
-  max-width: 80%;
+  max-width: 33vw;
   margin-left: 2rem;
 }
 .faqcommands {
@@ -107,4 +107,10 @@
 
   color: #fff;
   background: #d44343;
+}
+
+@media screen and (max-width: 1620px) {
+  .faqscontainer {
+    width: 80%;
+  }
 }

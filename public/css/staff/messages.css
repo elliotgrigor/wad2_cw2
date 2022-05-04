@@ -144,3 +144,15 @@
 
   background: none;
 }
+
+@media screen and (max-width: 1440px) {
+  .msgscontainer {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .msgscontainer {
+    width: 80%;
+  }
+}

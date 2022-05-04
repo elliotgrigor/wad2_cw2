@@ -75,3 +75,10 @@
 
   background: var(--primary);
 }
+
+@media screen and (max-width: 1280px) {
+  .messagecontainer {
+    width: 80%;
+    height: 90%;
+  }
+}

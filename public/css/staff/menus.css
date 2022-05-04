@@ -133,3 +133,9 @@
   color: #fff;
   background: #d44343;
 }
+
+@media screen and (max-width: 1280px) {
+  .menucontainer {
+    width: 80%;
+  }
+}
