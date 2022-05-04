@@ -41,7 +41,45 @@ http://<ip_address>:<port_number>
 
 ## Features
 
-WIP.
+A live version of the site can be found [here](https://pingu-seafood-shack.herokuapp.com/)
+
+---
+
+### Main Site
+
+- **Global**
+	- Navigation bar
+	- Footer with link to staff login
+- **Home**
+	- ***The landing page of the website***
+	- Hero section
+	- Call to action (menu)
+	- Info section
+- **Menu**
+	- Dish names & prices
+	- Dishes separated by type and special status
+	- Denotations for vegetarian/vegan suitable meals
+	- **View Dish** *(nested)*
+		- Displays dish's full details;
+			- Name,
+			- Price,
+			- Description,
+			- Ingredients,
+			- Allergens
+- **Contact**
+	- Shows 3 pinned FAQs *(+ link to FAQs page)*
+	- **FAQs** *(nested)*
+		- Lists all frequently asked questions
+	- Contact form to make enquiries
+	- Contact details;
+		- Address,
+		- Phone,
+		- Email
+- **About**
+	- Describes restaurant's philosophy
+	- Lists information about where food is sourced
+
+---
 
 ## Changes
 
