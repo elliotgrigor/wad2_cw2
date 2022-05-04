@@ -99,7 +99,17 @@ exports.messages = async (req, res) => {
     { url: '/css/staff/messages.css' },
   ];
 
-  const messages = await Message.getAll();
+  let messages = await Message.getAll();
+
+  messages = messages.map(msg => {
+    const sentAt = new Date(msg.sentAt);
+
+    return {
+      ...msg,
+      date: sentAt.toDateString(),
+      time: `${sentAt.getHours()}:${sentAt.getMinutes()}:${sentAt.getSeconds()}`,
+    };
+  });
 
   res.render('staff/messages', { pageTitle: 'Messages', css, messages });
 };
