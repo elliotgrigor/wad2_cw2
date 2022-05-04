@@ -106,6 +106,7 @@ exports.messages = async (req, res) => {
 
     return {
       ...msg,
+      body: msg.body.slice(0, 140) + '...',
       date: sentAt.toDateString(),
       time: `${sentAt.getHours()}:${sentAt.getMinutes()}:${sentAt.getSeconds()}`,
     };
