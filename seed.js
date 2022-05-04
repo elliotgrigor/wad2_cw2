@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const Dish = require('./models/DishModel');
 const Staff = require('./models/StaffModel');
+const Message = require('./models/MessageModel');
 const FAQ = require('./models/FAQModel');
 
 const dishData = [
@@ -179,6 +180,33 @@ const staffData = [
   },
 ];
 
+const messageData = [
+  {
+    name: 'John',
+    email: 'john@example.org',
+    subject: 'A read message example',
+    body: 'The quick brown fox jumps over the lazy dog.',
+    sentAt: new Date('March 29, 2022 13:41:12'),
+    unread: false,
+  },
+  {
+    name: 'Jane',
+    email: 'jane@example.com',
+    subject: 'Another read message example',
+    body: 'These messages are ordered from newest to oldest.',
+    sentAt: new Date('April 13, 2022 10:20:57'),
+    unread: false,
+  },
+  {
+    name: 'Jane',
+    email: 'jane@example.com',
+    subject: 'An unread message example',
+    body: 'All new messages are displayed like this. Viewing the message marks it as unread.',
+    sentAt: new Date('April 20, 2022 15:34:36'),
+    unread: true,
+  },
+];
+
 const faqData = [
   {
     question: 'What is your address?',
@@ -208,6 +236,10 @@ dishData.forEach(doc => {
 
 staffData.forEach(doc => {
   Staff.seed(doc, doc.password);
+});
+
+messageData.forEach(doc => {
+  Message.seed(doc);
 });
 
 faqData.forEach(doc => {
