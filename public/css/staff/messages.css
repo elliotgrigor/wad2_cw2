@@ -1,0 +1,146 @@
+.msg-padding {
+  padding: 0.7rem 1rem;
+}
+
+.msgscontainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  height: 95%;
+
+  border: 1px solid grey;
+}
+.msgscontainer__header {
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid grey;
+}
+.msgscontainer__title {
+  flex: 99; /* 99% width */
+
+  text-align: center;
+}
+.msgscontainer__addbtn {
+  display: flex;
+  flex: 1; /* 1% width */
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 1rem;
+  padding: 0.2rem 0.33rem;
+
+  transition: all 0.3s;
+
+  border-radius: 99px;
+}
+.msgscontainer__addbtn:hover {
+  background: var(--primary);
+}
+.msgscontainer__addbtnimage {
+  width: 1.5rem;
+  height: auto;
+}
+.msgscontainer__scroll {
+  overflow-y: auto;
+}
+
+.msgcontainer {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid lightgrey;
+}
+.dot {
+  position: absolute;
+  top: 1rem;
+
+  width: 0.66rem;
+  height: 0.66rem;
+
+  border: 2px solid #333;
+  border-radius: 3rem;
+  background: var(--primary);
+}
+.msgcontainer__details {
+  display: flex;
+  flex-direction: column;
+  flex: 99;
+}
+.msgcontainer__top {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom:0.5rem;
+}
+.msgcontainer__name {
+  font-size: 1.25rem;
+
+  color: #000;
+}
+.msgcontainer__name--unread {
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  padding-left: 1.2rem;
+
+  color: #000;
+}
+.msgcontainer__date {
+  font-size: 1rem;
+  font-style: italic;
+
+  display: flex;
+  align-items: center;
+}
+.msgcontainer__bottom {
+  display: flex;
+  flex-direction: column;
+}
+.msgcontainer__subject,
+.msgcontainer__body {
+  width: 66%;
+}
+.msgcontainer__subject {
+  font-weight: bold;
+  font-style: italic;
+
+  margin-bottom: 0.33rem;
+
+  text-decoration: underline;
+}
+.msgcontainer__body {}
+.msgcontainer__answer {
+  font-style: italic;
+
+  max-width: 80%;
+  margin-left: 2rem;
+}
+.msgcommands {
+  display: flex;
+  flex: 1;
+}
+.msgcommands__view {
+  font-weight: bold;
+
+  margin-right: 1rem;
+  margin-left: 2rem;
+  padding: 0.2rem 0.5rem;
+
+  transition: all 0.3s;
+  text-decoration: none;
+
+  color: #000;
+  border: 1px solid #333;
+  border-radius: 0.1rem;
+  background: var(--primary);
+}
+.msgcommands__view:hover {
+  cursor: pointer;
+
+  background: none;
+}

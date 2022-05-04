@@ -1,0 +1,60 @@
+{{ >staff/partials/head }}
+{{ >staff/partials/header }}
+
+<div class="contentwrapper">
+  {{ >staff/partials/sidebar }}
+
+  <div class="workspace">
+
+    <div class="msgscontainer">
+
+      <div class="msgscontainer__header">
+        <h1 class="msgscontainer__title">Messages</h1>
+      </div>
+
+      <div class="msgscontainer__scroll">
+
+        {{ #messages }}
+          <div class="msgcontainer msg-padding">
+            <div class="msgcontainer__details">
+
+              <div class="msgcontainer__top">
+                {{ #unread }}
+                  <div class="dot"></div>
+                  <div class="msgcontainer__name--unread">{{ name }}</div>
+                {{ /unread }}
+                {{ ^unread }}
+                  <div class="msgcontainer__name">{{ name }}</div>
+                {{ /unread }}
+
+                <div class="msgcontainer__date">
+                  <p>{{ date }}, {{ time }} (UTC)</p>
+                </div>
+              </div>
+
+              <div class="msgcontainer__bottom">
+                <div class="msgcontainer__subject">{{ subject }}</div>
+                <div class="msgcontainer__body">{{ body }}</div>
+              </div>
+
+            </div>
+
+            <div class="msgcommands">
+              <a class="msgcommands__view" href="/staff/messages/{{ _id }}">View</a>
+            </div>
+
+          </div>
+        {{ /messages }}
+
+        {{ ^messages }}
+          <p>No messages.</p>
+        {{ /messages }}
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{{ >partials/nofooter }}
