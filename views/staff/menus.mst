@@ -8,14 +8,14 @@
 
     <div class="menucontainer">
 
-      <div class="menucontainer__header">
+      <div class="menucontainer__header" id="container-header">
         <h1 class="menucontainer__title">Menus</h1>
         <a class="menucontainer__addbtn" href="/staff/dishes/add">
           <img class="menucontainer__addbtnimage" src="/svg/plus.svg" alt="Plus icon">
         </a>
       </div>
 
-      <div class="menucontainer__scroll">
+      <div class="menucontainer__scroll" id="container-scroll">
 
         <div class="menucontainer__section">
           <h2 class="menucontainer__sectiontitle title-padding title-color">All Day</h2>

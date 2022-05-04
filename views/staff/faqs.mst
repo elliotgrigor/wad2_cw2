@@ -8,14 +8,14 @@
 
     <div class="faqscontainer">
 
-      <div class="faqscontainer__header">
+      <div class="faqscontainer__header" id="container-header">
         <h1 class="faqscontainer__title">FAQs</h1>
         <a class="faqscontainer__addbtn" href="/staff/faqs/add">
           <img class="faqscontainer__addbtnimage" src="/svg/plus.svg" alt="Plus icon">
         </a>
       </div>
 
-      <div class="faqscontainer__scroll">
+      <div class="faqscontainer__scroll" id="container-scroll">
 
         {{ #faqs }}
           <div class="faqcontainer faq-padding">

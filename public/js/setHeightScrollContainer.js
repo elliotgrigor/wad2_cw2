@@ -1,14 +1,14 @@
 function resizeScrollContainer(event) {
-  const menuContainerHeader = document.querySelector('.menucontainer__header');
-  const menuContainerScroll = document.querySelector('.menucontainer__scroll');
+  const header = document.querySelector('#container-header');
+  const scroll = document.querySelector('#container-scroll');
 
   const workspaceHeight = window.innerHeight - 80;
-  const menuContainerHeight = workspaceHeight * 0.95;
+  const containerHeight = workspaceHeight * 0.95;
 
-  const menuContainerHeaderHeight = menuContainerHeader.offsetHeight;
-  const menuContainerScrollHeight = menuContainerHeight - menuContainerHeaderHeight;
+  const headerHeight = header.offsetHeight;
+  const scrollHeight = containerHeight - headerHeight;
 
-  menuContainerScroll.style.height = `${menuContainerScrollHeight}px`;
+  scroll.style.height = `${scrollHeight}px`;
 };
 
 window.addEventListener('load', resizeScrollContainer, true);

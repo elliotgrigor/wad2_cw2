@@ -69,9 +69,13 @@ exports.faqs = async (req, res) => {
     { url: '/css/staff/faqs.css' },
   ];
 
+  const js = [
+    { url: '/js/setHeightScrollContainer.js' },
+  ];
+
   const faqs = await FAQ.getAll(true); // sortByPinned: true
 
-  res.render('staff/faqs', { pageTitle: 'FAQs', css, faqs });
+  res.render('staff/faqs', { pageTitle: 'FAQs', css, js, faqs });
 };
 
 exports.addFAQ = (req, res) => {
@@ -99,6 +103,10 @@ exports.messages = async (req, res) => {
     { url: '/css/staff/messages.css' },
   ];
 
+  const js = [
+    { url: '/js/setHeightScrollContainer.js' },
+  ];
+
   let messages = await Message.getAll();
 
   messages = messages.map(msg => {
@@ -112,7 +120,7 @@ exports.messages = async (req, res) => {
     };
   });
 
-  res.render('staff/messages', { pageTitle: 'Messages', css, messages });
+  res.render('staff/messages', { pageTitle: 'Messages', css, js, messages });
 };
 
 exports.viewMessage = async (req, res) => {

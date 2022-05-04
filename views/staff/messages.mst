@@ -8,11 +8,11 @@
 
     <div class="msgscontainer">
 
-      <div class="msgscontainer__header">
+      <div class="msgscontainer__header" id="container-header">
         <h1 class="msgscontainer__title">Messages</h1>
       </div>
 
-      <div class="msgscontainer__scroll">
+      <div class="msgscontainer__scroll" id="container-scroll">
 
         {{ #messages }}
           <div class="msgcontainer msg-padding">
