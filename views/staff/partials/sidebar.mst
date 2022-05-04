@@ -4,13 +4,6 @@
     <div class="staffsidebar__listgroup">
 
       <li class="staffsidebar__listitem">
-        <a class="staffsidebar__link" href="/staff/dashboard">
-          <img class="staffsidebar__linkimg" src="/svg/office.svg" alt="Dashboard icon">
-          <p class="staffsidebar__linktext">Dashboard</p>
-        </a>
-      </li>
-
-      <li class="staffsidebar__listitem">
         <a class="staffsidebar__link" href="/staff/dishes">
           <img class="staffsidebar__linkimg" src="/svg/list.svg" alt="Menus icon">
           <p class="staffsidebar__linktext">Menus</p>

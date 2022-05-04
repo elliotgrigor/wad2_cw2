@@ -2,8 +2,8 @@
   <header class="staffheader">
     <ul class="staffheader__list">
       <li class="staffheader__listitem">
-        <a class="staffheader__link" href="/staff/dashboard">
-          <span class="staffheader__linktext">Administration Dashboard</span>
+        <a class="staffheader__link" href="/staff/dishes">
+          <span class="staffheader__linktext">Administration Interface</span>
         </a>
       </li>
 
