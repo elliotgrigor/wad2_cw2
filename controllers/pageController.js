@@ -23,9 +23,13 @@ exports.menu = async (req, res) => {
 };
 
 exports.viewDish = async (req, res) => {
+  const css = [
+    { url: '/css/dish.css' },
+  ];
+
   const dish = await Dish.getBySlug(req.params.slug);
 
-  res.render('viewDish', { pageTitle: `Menu - ${dish.name}`, dish });
+  res.render('viewDish', { pageTitle: `Menu - ${dish.name}`, css, dish });
 };
 
 exports.contact = async (req, res) => {
