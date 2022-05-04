@@ -12,11 +12,20 @@
   flex-direction: column;
 }
 .formcontainer__submitwrapper {
+  margin-top: 1rem;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
+.formcontainer__cancelbtn {
+  color: #000;
+  margin-right: 0.5rem;
+}
+.formcontainer__cancelbtn:hover {
+  background: lightgrey;
+}
 .formcontainer__submitbtn {
-  margin-top: 1rem;
+  margin-left: 0.5rem;
   padding: 0.5rem 2rem;
 
   transition: all 0.3s;
@@ -27,6 +36,6 @@
 }
 .formcontainer__submitbtn:hover {
   cursor: pointer;
-  
+
   background: var(--primary);
 }

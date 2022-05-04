@@ -30,6 +30,7 @@
         </div>
 
         <div class="formcontainer__submitwrapper">
+          <a class="formcontainer__cancelbtn" href="/staff/faqs">Cancel</a>
           <input class="formcontainer__submitbtn" type="submit" value="Save">
         </div>
 

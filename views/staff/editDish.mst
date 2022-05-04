@@ -90,6 +90,7 @@
         </div>
 
         <div class="formcontainer__submitwrapper">
+          <a class="formcontainer__cancelbtn" href="/staff/dishes">Cancel</a>
           <input class="formcontainer__submitbtn" type="submit" value="Update">
         </div>
       </form>
