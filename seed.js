@@ -201,7 +201,7 @@ const messageData = [
     name: 'Jane',
     email: 'jane@example.com',
     subject: 'An unread message example',
-    body: 'All new messages are displayed like this. Viewing the message marks it as unread.',
+    body: 'All new messages are displayed like this. Viewing the message marks it as read.',
     sentAt: new Date('April 20, 2022 15:34:36'),
     unread: true,
   },
