@@ -1,0 +1,49 @@
+{{ >staff/partials/head }}
+{{ >staff/partials/header }}
+
+<div class="contentwrapper">
+  {{ >staff/partials/sidebar }}
+
+  <div class="workspace">
+
+    <div class="messagecontainer">
+
+      <div class="message">
+
+        <div class="message__head">
+          <div class="message__from">Message from <span class="message__name">{{ message.name }}</span></div>
+          <div class="message__date">@ {{ message.date }}, {{ message.time}} (UTC)</div>
+        </div>
+
+        <div class="message__content">
+
+          <div class="message__email">
+            <div class="message__field">Email: </div>
+            <div class="message__text">{{ message.email }}</div>
+          </div>
+
+          <div class="message__subject">
+            <div class="message__field">Subject: </div>
+            <div class="message__text">{{ message.subject }}</div>
+          </div>
+
+          <div class="message__body">
+            <div class="message__field">Message: </div>
+            <div class="message__text">{{ message.body }}</div>
+          </div>
+
+          <div class="message__backbtnwrapper">
+            <a class="message__backbtn" href="/staff/messages">Back</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{{ >partials/nofooter }}

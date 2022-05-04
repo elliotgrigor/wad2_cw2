@@ -1,0 +1,77 @@
+.messagecontainer {
+  width: 65%;
+  min-height: 75%;
+  max-height: 95%;
+
+  border: 1px solid grey;
+}
+
+.message {
+  margin: 5rem;
+}
+.message__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+
+  border-bottom: 2px solid #333;
+}
+.message__from {
+  font-size: 2rem;
+}
+.message__name {
+  font-family: 'Lily Script One', serif;
+
+  color: #555;
+}
+.message__date {
+  font-style: italic;
+}
+.message__content {
+  display: flex;
+  flex-direction: column;
+}
+.message__email,
+.message__subject,
+.message__body {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 2rem;
+}
+.message__field {
+  font-weight: bold;
+
+  flex: 1;
+}
+.message__text {
+  flex: 9;
+
+  padding:0.5rem;
+
+  border: 1px solid grey;
+}
+.message__backbtnwrapper {
+  display: flex;
+  justify-content: center;
+}
+.message__backbtn {
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+
+  transition: all 0.3s;
+  text-decoration: none;
+
+  color: #333;
+  border: 2px solid #000;
+  border-radius: 50px;
+  background: #fff;
+}
+.message__backbtn:hover {
+  cursor: pointer;
+
+  background: var(--primary);
+}
