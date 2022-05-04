@@ -15,6 +15,7 @@ router.get('/faqs/add', staff.addFAQ);
 router.get('/faqs/:id', staff.editFAQ);
 
 router.get('/messages', staff.messages);
+router.get('/messages/:id', staff.viewMessage);
 
 router.get('/register', staff.registerUser);
 
