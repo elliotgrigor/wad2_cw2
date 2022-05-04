@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 
 const Dish = require('../models/DishModel');
 const Staff = require('../models/StaffModel');
+const Message = require('../models/MessageModel');
 const FAQ = require('../models/FAQModel');
 
 exports.dashboard = (req, res) => {
@@ -93,12 +94,14 @@ exports.editFAQ = async (req, res) => {
   res.render('staff/editFAQ', { pageTitle: 'Edit FAQ', css, faq });
 };
 
-exports.messages = (req, res) => {
+exports.messages = async (req, res) => {
   const css = [
     { url: '/css/staff/messages.css' },
   ];
 
-  res.render('staff/messages', { pageTitle: 'Messages', css });
+  const messages = await Message.getAll();
+
+  res.render('staff/messages', { pageTitle: 'Messages', css, messages });
 };
 
 exports.registerUser = (req, res) => {
