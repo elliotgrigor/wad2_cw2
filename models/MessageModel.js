@@ -6,6 +6,15 @@ class Message extends Model {
       filename: process.env.MSG_DB,
     }
   }
+
+  static async getAll() {
+    try {
+      return await this.find({}).sort({ sentAt: -1 });
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
 }
 
 module.exports = Message;
