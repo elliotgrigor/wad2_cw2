@@ -1,0 +1,122 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 40%;
+  margin: 0 auto;
+}
+.head__title {
+  font-family: 'Lily Script One', serif;
+  font-size: 3rem;
+
+  color: #333;
+}
+.head__price {
+  margin-left: 3rem;
+}
+
+.dishcontainer {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.dish_title {
+  font-weight: bold;
+
+  margin-bottom: 0.33rem;
+
+  text-decoration: underline;
+}
+.dish__subtitle {
+  font-weight: bold;
+
+  margin-right: 0.33rem;
+  margin-bottom: 0.33rem;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+}
+.dish__img {
+  margin-bottom: 2rem;
+}
+.dish__descriptionwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
+}
+.dish_description {}
+.dish__veginfo {
+  display: flex;
+}
+.dish__icon {
+  margin-left: 0.75rem;
+}
+
+.dish__ingredients {
+  margin-bottom: 1rem;
+}
+.dish__ingredient {
+  margin-right: 0.2rem;
+}
+
+.dish__allergy {}
+.dish__allergens {
+  display: flex;
+
+  margin-bottom: 1rem;
+}
+.dish__allergen {
+  margin-right: 0.5rem;
+}
+.dish__allergyadvice {
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1540px) {
+  .head,
+  .dishcontainer {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .head,
+  .dishcontainer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .head,
+  .dishcontainer {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .head {
+    flex-direction: column;
+
+    margin-bottom: 2rem;
+  }
+  .head__title {
+    font-size: 2.5rem;
+  }
+  .head__price {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .head,
+  .dishcontainer {
+    width: 80%;
+  }
+}

@@ -1,6 +1,58 @@
 {{ >partials/head }}
 {{ >partials/nav }}
 
-  <h1>View Dish</h1>
+  <div class="head">
+    <h1 class="head__title">{{ dish.name }}</h1>
+    <h2 class="head__price">£{{ dish.price }}</h2>
+  </div>
+
+  <div class="dishcontainer">
+
+    <div class="dish">
+      <img class="dish__img" src="" alt="" height="400">
+
+      <div class="dish__descriptionwrapper">
+
+        <div class="dish_description">
+          <h3 class="dish_title">Description</h3>
+          <p>{{ dish.description }}</p>
+        </div>
+
+        <div class="dish__veginfo">
+          {{ #dish.vegetarian }}
+            <svg class="dish__icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="#5F9C56" d="M381.5 76.33l-160 384C216.6 472.2 204.9 480 192 480s-24.56-7.757-29.53-19.68l-160-384c-6.797-16.31 .9062-35.05 17.22-41.84c16.38-6.859 35.08 .9219 41.84 17.22L192 364.8l130.5-313.1c6.766-16.3 25.47-24.09 41.84-17.22C380.6 41.28 388.3 60.01 381.5 76.33z"/></svg>
+          {{ /dish.vegetarian }}
+
+          {{ #dish.vegan }}
+            <svg class="dish__icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="#396A31" d="M64 95.1H0c0 123.8 100.3 224 224 224v128C224 465.6 238.4 480 255.1 480S288 465.6 288 448V320C288 196.3 187.7 95.1 64 95.1zM448 32c-84.25 0-157.4 46.5-195.8 115.3c27.75 30.12 48.25 66.88 59 107.5C424 243.1 512 147.9 512 32H448z"/></svg>
+          {{ /dish.vegan }}
+        </div>
+
+      </div>
+
+      <div class="dish__ingredients">
+        <h3 class="dish_title">Ingredients</h3>
+
+        {{ #dish.content.ingredients }}
+          <span class="dish__ingredient">{{ . }}</span> {{! unnamed element }}
+        {{ /dish.content.ingredients }}
+      </div>
+
+      <div class="dish__allergy">
+        <h3 class="dish_title">Allergy Info</h3>
+
+        <div class="dish__allergens">
+          <h4 class="dish__subtitle">Allergens:</h4>
+
+          {{ #dish.content.allergyInfo.allergens }}
+            <span class="dish__allergen">{{ . }}</span> {{! unnamed element }}
+          {{ /dish.content.allergyInfo.allergens }}
+        </div>
+
+        <p class="dish__allergyadvice">{{ dish.content.allergyInfo.advice }}</p>
+      </div>
+    </div>
+
+  </div>
 
 {{ >partials/footer }}
