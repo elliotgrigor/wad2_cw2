@@ -170,3 +170,29 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 	"pinned": Boolean // Added
 }
 ```
+
+### Main Site
+
+- **Home**
+	- Centred hero section text on desktop
+	- Centred info section text on mobile
+- **Menu**
+	- Removed allergens from dish cards
+	- Added chef special sections for each dish type
+	- Added vegetarian/vegan icons to dish cards
+	- **View Dish**
+		- Changed from pop-up to separate view
+			- *Done to prevent bloated HTML on menu page*
+		- Added ingredients section
+		- Moved price beside dish name
+		- Kept all dishes on single page on mobile view
+- **Contact**
+	- Changed title to "Contact" from "Enquiries"
+	- Moved FAQ page link to left side
+	- **FAQs**
+		- *No changes*
+	- Removed headings from contact form section
+	- Centred form submit button
+	- Kept contact details displayed in mobile view
+- **About**
+	- *No changes*
