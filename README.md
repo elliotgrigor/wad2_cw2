@@ -39,6 +39,12 @@ npm start
 http://<ip_address>:<port_number>
 ```
 
+7. To log in, click "Staff Login" in the footer and use the following credentials:
+
+| Username | Password |
+|----------|----------|
+| A001     | admin    |
+
 ## Features
 
 A live version of the site can be found [here](https://pingu-seafood-shack.herokuapp.com/)
