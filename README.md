@@ -204,3 +204,9 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 ---
 
 ### Admin Interface
+
+
+## Credits
+
+Hero section image --- Julia Khalimova on [Pexels](https://www.pexels.com/photo/cooked-shrimp-and-seashell-dish-3649208/)
+All icons from [FontAwesome](https://fontawesome.com/search?m=free)
