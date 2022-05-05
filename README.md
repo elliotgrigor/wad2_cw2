@@ -101,7 +101,7 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 	- Once viewed, unread messages are marked as read
 - **FAQs**
 	- Scrollable container listing all FAQs, sorted by pinned first
-	- Pinned messages are displayed bold
+	- Pinned FAQs are displayed bold
 	- **Edit FAQ** *(nested)*
 		- Form for updating the information for a specific FAQ
 		- FAQ pinning can be toggled here
