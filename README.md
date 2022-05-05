@@ -81,6 +81,31 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 
 ---
 
+### Admin Interface
+
+- **Global**
+	- Header with register & log out
+	- Navigation sidebar for menu, messages, and FAQs
+- **Register**
+	- Form for adding new administrator users
+- **Menu**
+	- Scrollable container listing all dishes, separated by type and special status
+	- Hidden dishes are greyed and score out
+	- **Edit Dish** *(nested)*
+		- Form for updating the information for a specific dish
+		- Dish hiding can be toggled here
+	- Button for deleting a dish
+- **Messages**
+	- Scrollable container listing all contact form messages
+	- Unread messages are displayed differently *(bold name + dot highlight)*
+	- Once viewed, unread messages are marked as read
+- **FAQs**
+	- Scrollable container listing all FAQs, sorted by pinned first
+	- **Edit FAQ** *(nested)*
+		- Form for updating the information for a specific FAQ
+		- FAQ pinning can be toggled here
+	- Button for deleting a FAQ
+
 ## Changes
 
 WIP.
