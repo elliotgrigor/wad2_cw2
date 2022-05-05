@@ -108,9 +108,13 @@
   }
   .head__title {
     font-size: 2.5rem;
+
+    text-align: center;
   }
   .head__price {
     font-size: 2rem;
+
+    margin-left: 0;
   }
 }
 
