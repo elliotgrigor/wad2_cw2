@@ -236,4 +236,10 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 
 Hero section image --- Julia Khalimova on [Pexels](https://www.pexels.com/photo/cooked-shrimp-and-seashell-dish-3649208/)
 
+Home page info section images
+
+- Alexander Zvir on [Pexels](https://www.pexels.com/photo/silver-and-orange-fish-on-ice-3731945/)
+- George Desipris on [Pexels](https://www.pexels.com/photo/assorted-fishing-boats-752882/)
+
+
 All icons from [FontAwesome](https://fontawesome.com/search?m=free)
