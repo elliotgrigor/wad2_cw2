@@ -205,6 +205,21 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 
 ### Admin Interface
 
+- **Global**
+	- Added register link to header
+- **Register**
+	- New page --- *Not mentioned in design document*
+- **Dashboard**
+	- Removed --- *Adds bloat; only displays functionality of other sections*
+- **Menu**
+	- Added special section for each dish type
+	- Replaced icons with text for edit/remove functions
+- **Messages**
+	- Added view button to each message
+	- Unread dot highlight displays to left of name instead of right
+- **FAQs**
+	- Added support for pinned FAQs
+	- Replaced icons with text for edit/remove functions
 
 ## Credits
 
