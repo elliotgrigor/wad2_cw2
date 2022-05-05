@@ -115,4 +115,58 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 
 ## Changes
 
-WIP.
+### Database
+
+**Dish Schema**
+```javascript
+{
+	"name": String,
+	"description": String,
+	"content": {
+		"ingredients": [ String ],
+		"allergyInfo": {
+			"allergens": [ String ],
+			"advice": String
+		}
+	},
+	"chefSpecial": Boolean,
+	"vegetarian": Boolean, // Added
+	"vegan": Boolean,      // Added
+	"dishType": String,
+	"price": String,       // Changed from Number to String to support trailing 0s
+	"hidden": Boolean,     // Added
+	"slug": String         // Renamed from urlSlug to slug
+}
+```
+
+**Staff Schema** *(no changes)*
+```javascript
+{
+	"staffId": String,
+	"firstName": String,
+	"lastName": String,
+	"password": String,
+	"email": String
+}
+```
+
+**Message Schema** *(no changes)*
+```javascript
+{
+	"name": String,
+	"email": String,
+	"subject": String,
+	"body": String,
+	"sentAt": Date,
+	"unread": Boolean
+}
+```
+
+**FAQ Schema**
+```javascript
+{
+	"question": String,
+	"answer": String,
+	"pinned": Boolean // Added
+}
+```
