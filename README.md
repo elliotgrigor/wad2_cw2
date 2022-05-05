@@ -84,6 +84,8 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 - **About**
 	- Describes restaurant's philosophy
 	- Lists information about where food is sourced
+- **Login**
+	- Form to access the admin interface
 
 ---
 
@@ -171,6 +173,8 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 }
 ```
 
+---
+
 ### Main Site
 
 - **Home**
@@ -196,3 +200,7 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 	- Kept contact details displayed in mobile view
 - **About**
 	- *No changes*
+
+---
+
+### Admin Interface
