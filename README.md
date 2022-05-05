@@ -214,12 +214,23 @@ A live version of the site can be found [here](https://pingu-seafood-shack.herok
 - **Menu**
 	- Added special section for each dish type
 	- Replaced icons with text for edit/remove functions
+	- **Add/Edit Dish**
+		- Changed from grid to column layout
+		- Added toggles for marking as vegetarian/vegan
+		- Added toggle to hide dish from menu
+		- Added field for setting URL slug name
+		- Added cancel button
 - **Messages**
 	- Added view button to each message
 	- Unread dot highlight displays to left of name instead of right
+	- **View Message**
+		- Added email to message
 - **FAQs**
 	- Added support for pinned FAQs
 	- Replaced icons with text for edit/remove functions
+	- **Add/Edit FAQ**
+		- Added toggle for pinning FAQ
+		- Added cancel button
 
 ## Credits
 
