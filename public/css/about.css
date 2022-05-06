@@ -27,7 +27,10 @@
 
   color: #333;
 }
-.philosophy__text {}
+.philosophy__text {
+  font-size: 1.2rem;
+  font-style: italic;
+}
 
 .rule {
   height: 2px;
@@ -70,11 +73,15 @@
   flex: 2;
 }
 .foodsources__text {
+  font-size: 1.5rem;
+
   flex: 3;
 
   padding: 2rem;
 }
 .foodsources__text--reverse {
+  font-size: 1.5rem;
+
   flex: 3;
 
   padding: 2rem;
